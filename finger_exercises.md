@@ -1,6 +1,6 @@
 # Table of Contents
 - [Unit 1: Python Basics, Incomplete section](#unit-1--python-basics--incomplete-section)
-  * [1. Introduction to Python](#1-introduction-to-python)
+  * [Lecture 1. Introduction to Python](#lecture-1-introduction-to-python)
     + [Exercises 1](#exercises-1)
     + [Exercises 2](#exercises-2)
     + [Exercises 3](#exercises-3)
@@ -11,12 +11,25 @@
     + [Exercise 8](#exercise-8)
     + [Exercise 9](#exercise-9)
     + [Exercise 10](#exercise-10)
-  * [2. Core Elements of Programs](#2-core-elements-of-programs)
+  * [Lecture 2. Core Elements of Programs](#lecture-2-core-elements-of-programs)
 - [Unit 2: dummy](#unit-2--dummy)
+  * [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
+  * [Lecture 4. Functions](#lecture-4-functions)
+  * [Lecture 5. Tuples and Lists](#lecture-5-tuples-and-lists)
+  * [Lecture 6. Dictionaries](#lecture-6-dictionaries)
+  * [Lecture 7. Testing and Debugging](#lecture-7-testing-and-debugging)
+  * [Lecture 8. Exceptions and Assertions](#lecture-8-exceptions-and-assertions)
+  * [Lecture 9. Classes and Inheritance](#lecture-9-classes-and-inheritance)
+  * [Lecture 10. An Extended Example](#lecture-10-an-extended-example)
+- [Unit 3: dummy](#unit-3--dummy)
+  * [Lecture 11. Computational Complexity](#lecture-11-computational-complexity)
+  * [Lecture 12. Searching and Sorting Algorithms](#lecture-12-searching-and-sorting-algorithms)
+  * [Lecture 13. Visualization of Data](#lecture-13-visualization-of-data)
+  * [Lecture 14. Summary](#lecture-14-summary)
 
 # Unit 1: Python Basics, Incomplete section
 
-## 1. Introduction to Python
+## Lecture 1. Introduction to Python
 
 ### Exercises 1
 4/4 points (graded)
@@ -353,7 +366,18 @@ While you could simply type these expressions into your IDE, we encourage you to
 - [x] bool `True`
 
 
-## 2. Core Elements of Programs
-
-
+## Lecture 2. Core Elements of Programs
 # Unit 2: dummy
+## Lecture 3. Simple Algorithms
+## Lecture 4. Functions
+## Lecture 5. Tuples and Lists
+## Lecture 6. Dictionaries
+## Lecture 7. Testing and Debugging
+## Lecture 8. Exceptions and Assertions
+## Lecture 9. Classes and Inheritance
+## Lecture 10. An Extended Example
+# Unit 3: dummy
+## Lecture 11. Computational Complexity
+## Lecture 12. Searching and Sorting Algorithms
+## Lecture 13. Visualization of Data
+## Lecture 14. Summary
