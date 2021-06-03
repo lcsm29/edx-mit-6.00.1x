@@ -1,4 +1,3 @@
-# Table of Contents
 - [Unit 1: Python Basics, Incomplete section](#unit-1--python-basics--incomplete-section)
   * [Lecture 1. Introduction to Python](#lecture-1-introduction-to-python)
     + [Exercises 1](#exercises-1)
@@ -12,6 +11,13 @@
     + [Exercise 9](#exercise-9)
     + [Exercise 10](#exercise-10)
   * [Lecture 2. Core Elements of Programs](#lecture-2-core-elements-of-programs)
+    + [Exercise 1](#exercise-1)
+    + [Exercise 2](#exercise-2)
+    + [Exercise 3](#exercise-3)
+    + [Exercise. hello world](#exercise-hello-world)
+    + [Exercise. happy](#exercise-happy)
+    + [Exercise 4](#exercise-4)
+    + [Exercise. while](#exercise-while)
 - [Unit 2: dummy](#unit-2--dummy)
   * [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
   * [Lecture 4. Functions](#lecture-4-functions)
@@ -26,6 +32,7 @@
   * [Lecture 12. Searching and Sorting Algorithms](#lecture-12-searching-and-sorting-algorithms)
   * [Lecture 13. Visualization of Data](#lecture-13-visualization-of-data)
   * [Lecture 14. Summary](#lecture-14-summary)
+
 
 # Unit 1: Python Basics, Incomplete section
 
@@ -129,36 +136,11 @@ For each of the following expressions, indicate the type of the expression. Whil
 
 `Note: The Python 'None' keyword`
 
-* 3.14
-- [ ] NoneType
-- [ ] int
-- [x] float
-- [ ] bool
-
-* 34
-- [ ] NoneType
-- [x] int
-- [ ] float
-- [ ] bool
-
-
-* True
-- [ ] NoneType
-- [ ] int
-- [ ] float
-- [x] bool
-
-* None
-- [x] NoneType
-- [ ] int
-- [ ] float
-- [ ] bool
-
-* 3.0
-- [ ] NoneType
-- [ ] int
-- [x] float
-- [ ] bool
+* `3.14`: float
+* `34`: int
+* `True`: bool
+* `None`: NoneType
+* `3.0`: float
 
 
 ### Exercise 6
@@ -188,41 +170,21 @@ Below is a transcript of a session with the Python shell. For each expression be
 
 Assume that the expressions are evaluated in the order shown - that is, each problem part is evaluated directly after the previous problem part(s).
 
-1. 
+1. float `5.0`
 ```
 >>> a = 3
 >>> a + 2.0 
 ```
-- [ ] NoneType
-- [ ] int
-- [x] float
-- [ ] bool
-
-`5.0`
-
-2. 
+2. float `4.0`
 ```
 >>> a = a + 1.0
 >>> a
 ```
-- [ ] NoneType
-- [ ] int
-- [x] float
-- [ ] bool
-
-`4.0`
-
-3. 
+3. NoneType `error` (as this gives you `NameError: name 'b' is not defined`)
 ```
 >>> a = 3
 >>> b
 ```
-- [ ] NoneType
-- [ ] int
-- [x] float
-- [ ] bool
-
-`error` (as this gives you `NameError: name 'b' is not defined`)
 
 
 ### Exercise 8
@@ -235,7 +197,6 @@ For each of the following expressions, indicate the value returned, or if the ev
 <br>
 Remember that in Python words are case-sensitive. The word `True` is a Python keyword (it is the value of the Boolean type) and is not the same as the word `true`. Refer to the Python documentation on Boolean values https://docs.python.org/3/library/stdtypes.html#boolean-values
 </details>
-
 
 <details>
 <summary>Hint: Priority order of Boolean operations</summary>
@@ -265,7 +226,6 @@ evaluates to `True`, because the expression inside the parentheses must be evalu
 Overall, you should always use parenthesis when writing expressions to make it clear what order you wish to have Python evaluate your expression. As we've seen here, `not (True and False)` is different from `(not True) and False` - but it's easy to see how Python will evaluate it when you use parentheses. A statement like `not True and False` can bring confusion!
 </details>
 
-
 * `3 > 4`: `False`
 * `4.0 > 3.999`: `True`
 * `4 > 4`: `False`
@@ -287,27 +247,18 @@ Below is a transcript of a session with the Python shell. For each expression be
 
 Assume that the expressions are evaluated in the order shown - that is, each problem part is evaluated directly after the previous problem part(s).
 
-1. 
+1. int `3`
 ```
 >>> a = 3
 >>> a == 5.0
 >>> a 
 ```
-- [ ] NoneType
-- [x] int `3`
-- [ ] float
-- [ ] bool
-
-2.
+2. bool `True`
 ```
 >>> b = 10
 >>> c = b > 9
 >>> c 
 ```
-- [ ] NoneType
-- [ ] int
-- [ ] float
-- [x] bool `True`
 
 
 ### Exercise 10
@@ -317,53 +268,14 @@ For each of the following expressions, indicate the type of the expression and t
 
 While you could simply type these expressions into your IDE, we encourage you to answer them directly since this will help reinforce your understanding of basic Python expressions.
 
-* `3 + 5.0`
-- [ ] NoneType
-- [ ] int
-- [x] float `8.0`
-- [ ] bool
-
-* `5/2`
-- [ ] NoneType
-- [ ] int
-- [x] float `2.5`
-- [ ] bool
-
-* `5/2 == 5/2.0`
-- [ ] NoneType
-- [ ] int
-- [ ] float
-- [x] bool `True`
-
-* `5/2.0`
-- [ ] NoneType
-- [ ] int
-- [x] float `2.5`
-- [ ] bool
-
-* `round(2.6)`
-- [ ] NoneType
-- [x] int `3`
-- [ ] float
-- [ ] bool
-
-* `int(2.6)`
-- [ ] NoneType
-- [x] int `2`
-- [ ] float
-- [ ] bool
-
-* `2.0 + 5.0`
-- [ ] NoneType
-- [ ] int
-- [x] float `7.0`
-- [ ] bool
-
-* `5*2 == 5.0 * 2.0`
-- [ ] NoneType
-- [ ] int
-- [ ] float
-- [x] bool `True`
+* `3 + 5.0`: float `8.0`
+* `5/2`: float `2.5`
+* `5/2 == 5/2.0`: bool `True`
+* `5/2.0`: float `2.5`
+* `round(2.6)`: int `3`
+* `int(2.6)`: int `2`
+* `2.0 + 5.0`: float `7.0`
+* `5*2 == 5.0 * 2.0`: bool `True`
 
 
 ## Lecture 2. Core Elements of Programs
@@ -373,12 +285,10 @@ While you could simply type these expressions into your IDE, we encourage you to
 
 For each of the following expressions, indicate the value returned, or if the evaluation would lead to an error, write the word 'error' (note this is a word, not a string, no quotes). While you could simply type these expressions into your IDE, we encourage you to answer them directly since this will help reinforce your understanding of basic Python expressions.
 
-
 <details>
 <summary>Note: Advanced String Slicing</summary>
 <br>
 You've seen in lecture that you can slice a string with a call such as `s[i:j]`, which gives you a portion of string `s` from index `i` to index `j-1`. However this is not the only way to slice a string! If you omit the starting index, Python will assume that you wish to start your slice at index 0. If you omit the ending index, Python will assume you wish to end your slice at the end of the string. Check out this session with the Python shell:
-
 ```
 >>> s = 'Python is Fun!'
 >>> s[1:5]
@@ -393,7 +303,6 @@ You've seen in lecture that you can slice a string with a call such as `s[i:j]`,
 That last example is interesting! If you omit both the start and ending index, you see your original string!
 
 There's one other cool thing you can do with string slicing. You can add a third parameter, `k`, like this: `s[i:j:k]`. This gives a slice of the string `s` from index `i` to index `j-1`, with step size `k`. Check out the following examples:
-
 ```
 >>> s = 'Python is Fun!'
 >>> s[1:12:2]
@@ -413,6 +322,7 @@ The last example is similar to the example `s[:]`. With `s[::2]`, we're asking f
 * `"abcd"[0:2]`: `'ab'`
 * `"abcd"[:2]`: `'ab'`
 * `"abcd"[2:]`: `'cd'`
+
 
 ### Exercise 2
 NOTE: These exercises are ungraded.
@@ -480,7 +390,6 @@ str4 = str1 + str3
 4. `str3[1:3]`: string `'or'`
 5. `str3[:3]`: string `'wor'`
 
-
 * Exercise 2 part 4
 ```
 > str1 = 'hello'
@@ -493,6 +402,259 @@ str4 = str1 + str3
 3. `str4[1:9]`: string `'elloworl'`
 4. `str4[1:9:2]`: - string `'elwr'`
 5. `str4[::-1]`: string `'dlrowolleh'`
+
+
+### Exercise 3
+
+For each of the following expressions, indicate the value that prints out when the expression is evaluated. If the evaluation would lead to an error, write the word 'error'; if nothing would print out, write the word 'blank'.
+
+While you could simply type these expressions into your IDE, we encourage you to answer them directly since this will help reinforce your understanding of basic Python expressions.
+
+If the temperatures seem weird to you, like most of the world, you probably use the Celsius system. We Americans still use the crazy [Fahrenheit system...](https://www.fahrenheittocelsius.com/)
+
+1. blank
+```python:
+if 6 > 7:
+   print("Yep")
+```
+2. Nope
+```python:
+if 6 > 7:
+   print("Yep")
+else:
+   print("Nope")
+```
+3. Regal!
+```python:
+var = 'Panda'
+if var == "panda":
+   print("Cute!")
+elif var == "Panda":
+   print("Regal!")
+else:
+   print("Ugly...")
+```
+4. Hot
+```python:
+temp = 120
+if temp > 85:
+   print("Hot")
+elif temp > 100:
+   print("REALLY HOT!")
+elif temp > 60:
+   print("Comfortable") 
+else:
+   print("Cold")
+```
+5. Cold
+```python:
+temp = 50
+if temp > 85:
+   print("Hot")
+elif temp > 100:
+   print("REALLY HOT!")
+elif temp > 60:
+   print("Comfortable")
+else:
+   print("Cold")
+```
+
+
+### Exercise. hello world
+5.0/5.0 points (graded)
+
+Write a piece of Python code that prints out the string hello world
+`print('hello world')`
+
+
+### Exercise. happy
+5.0/5.0 points (graded)
+
+Write a piece of Python code that prints out the string 'hello world' if the value of an integer variable, happy, is strictly greater than 2.
+```python:
+if happy > 2:
+    print('hello world')
+```
+Note: one liner such as `print('hello world' if happy > 2 else '')` would be considered as incorrect because it prints a blank line
+
+
+### Exercise 4
+5/5 points (graded)
+
+Below are some short Python programs. For each program, answer the associated question.
+
+Try to answer the questions without running the code. Check your answers, then run the code for the ones you get wrong.
+
+This question is going to ask you what some simple loops print out. If you're asked what code like this prints:
+```python:
+num = 5
+if num > 2:
+    print(num)
+    num -= 1
+print(num)
+```
+write what it prints out, separating what appears on a new line by a comma and a space. So the answer for the above code would be:
+```
+5, 4
+```
+If a given loop will not terminate, write the phrase 'infinite loop' (no quotes) in the box. Recall that you can stop an infinite loop in your program by typing CTRL+c in the console.
+
+<details>
+<summary>Note: What does +=, -=, *=, /= stand for?</summary>
+<br>
+`a += b` is equivalent to `a = a + b`
+
+`a -= b` is equivalent to `a = a - b`
+
+`a *= b` is equivalent to `a = a * b`
+
+`a /= b` is equivalent to `a = a / b`
+</details>
+
+1. `0, 1, 2, 3, 4, 5, Outside of loop, 6`
+```python:
+num = 0
+while num <= 5:
+    print(num)
+    num += 1
+
+print("Outside of loop")
+print(num) 
+```
+
+2. `infinite loop`
+```python:
+numberOfLoops = 0
+numberOfApples = 2
+while numberOfLoops < 10:
+    numberOfApples *= 2
+    numberOfApples += numberOfLoops
+    numberOfLoops -= 1
+print("Number of apples: " + str(numberOfApples))
+```
+
+3. `9, 8, 7, 6, 5, 4, 3`
+```python:
+num = 10
+while num > 3:
+    num -= 1
+    print(num) 
+```
+
+4. `10, 9, 8, 7, Breaking out of loop, Outside of loop`
+```python:
+num = 10
+while True:
+    if num < 7:
+        print('Breaking out of loop')
+        break
+    print(num)
+    num -= 1
+print('Outside of loop')
+```
+
+5. `num is: 100`
+```python:
+num = 100
+while not False:
+    if num < 0:
+        break
+print('num is: ' + str(num))
+```
+
+### Exercise. while
+
+* Exercise: while exercise 1
+
+5.0/5.0 points (graded)
+
+In this problem you'll be given a chance to practice writing some while loops.
+
+1. Convert the following into code that uses a while loop.
+
+prints `2`
+
+prints `4`
+
+prints `6`
+
+prints `8`
+
+prints `10`
+
+prints `Goodbye!`
+
+```python:
+n = 2
+while n <= 10:
+    print(n)
+    n += 2
+print('Goodbye!')
+```
+
+* Exercise: while exercise 2
+
+5.0/5.0 points (graded)
+
+2. Convert the following into code that uses a while loop.
+
+prints `Hello!`
+
+prints `10`
+
+prints `8`
+
+prints `6`
+
+prints `4`
+
+prints `2`
+
+```python:
+n = 10
+print('Hello!')
+while n:
+    print(n)
+    n -= 2
+```
+
+* Exercise: while exercise 3
+
+5.0/5.0 points (graded)
+
+Write a while loop that sums the values 1 through `end`, inclusive. `end` is a variable that we define for you. So, for example, if we define `end` to be 6, your code should print out the result: 
+```
+21
+```
+which is 1 + 2 + 3 + 4 + 5 + 6.
+
+For problems such as these, do not include ```input``` statements or define variables we will provide for you. Our automating testing will provide values so write your code in the following box assuming these variables are already defined.
+
+
+<details>
+<summary>Hint: Don't Use A Variable Called 'sum'</summary>
+<br>
+For reasons related to our grader, you cannot call your variable `sum`. Call it anything else, but not `sum`. If you do, you will be marked incorrectly.
+
+This is because `sum` is a Python built-in function for summing a list of numbers – we prevent you from using it because if you did it'd defeat the point of the exercise.
+
+Take it as a lesson – overwriting built-in functions is generally bad practice anyway (you'd not call a variable `print`, or `while` or `elif` - because if you did, how would you use those built-in functions/keywords?). A general rule of thumb is: when writing code in Idle, if a word turns orange or purple, then it is special in Python - it is either a keyword or a built in function. In Canopy, the color is green. Don't give your variables the same name as any of the Python keywords or built in functions.
+
+Here is a list of Python keywords. https://docs.python.org/3/reference/lexical_analysis.html#keywords
+
+Here is a list of Python built-in functions. https://docs.python.org/3/reference/lexical_analysis.html#keywords
+
+You will learn more about functions in the next lecture sequence!
+</details>
+
+```python:
+s = 0
+while end:
+    s += end
+    end -= 1
+print(s)
+```
+
 
 # Unit 2: dummy
 ## Lecture 3. Simple Algorithms
