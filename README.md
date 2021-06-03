@@ -1,12 +1,19 @@
 ## [edX MIT 6.00.1x](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) - Intro to CS and Programming Using Python
-I have already [finished](https://github.com/lcsm29/MIT6.0001) the same course on OCW ([MIT 6.0001 Fall 2016](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/)) a few weeks ago (at least finished the problem sets), but that one was pretty old and some provided materials started to break down (e.g. [feedparser](https://github.com/lcsm29/MIT6.0001/commit/c53684d2d6d06465bd0d08087161be7b7d529ee4#diff-d3d78a8e23517614c0c0c8a862b804341cf46d02c80d4db7a515b0f0d299468e)). Also, I don't know whether my implementation or style is acceptable or not, as I don't have anyone to review my code. My code passed the provided unit tests, but that's about it. Then, I found this newer course on edX. The one thing that hooks me to the course is graded assignements and exams, because that's exactly what I needed. So I enrolled to the course. I'm still not sure what exactly the 'graded' means. If it means another sets of automated unit tests, then it's almost useless. If it means grading by human, then it might be useful.
+I have already [finished](https://github.com/lcsm29/MIT6.0001) the same course on OCW ([MIT 6.0001 Fall 2016](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/)) a few weeks ago (at least finished the problem sets), but that one was pretty old and some provided materials started to break down (e.g. [feedparser](https://github.com/lcsm29/MIT6.0001/commit/c53684d2d6d06465bd0d08087161be7b7d529ee4#diff-d3d78a8e23517614c0c0c8a862b804341cf46d02c80d4db7a515b0f0d299468e)). Also, I don't know whether my implementation or style is acceptable or not, as I don't have anyone to review my code. My code have passed the provided unit tests, but that's about it.
+
+Then, I found [this newer course](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) on edX. The one thing that hooks me to the course is graded assignements and exams, because that's exactly what I needed. So I enrolled to the course. This one seems to have different finger exercises and problem sets, compare to the OCW course, but both are graded automatically by unit testers. There might be some other graded assignments or exams behind the paywall. I guess I have to pay to figure it out.
 
 ## Contents
 * [Finger Exercises](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/finger_exercises.md): All finger exercises and the answers
 * [Problem Sets](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/problem_sets.md): Provide a link to each solution of each problem set
 
+## Some Random Info
+* 📅 **Started** on June 3, 2021
+* ℹ️ **Python Versions I used**: [3.9.5](https://www.python.org/downloads/release/python-395/)
+* 🔗 **Link to my repo for OCW courses:** [MIT6.0001](https://github.com/lcsm29/MIT6.0001), [MIT6.0002](https://github.com/lcsm29/MIT6.0002) (work in progress)
+
 ## Resources
-The following resources are the carbon copy of the resource page of the course.
+The following resources are from the resource page of the course.
 
 ### Documentations
 * [Official Python 3 Documentation](https://docs.python.org/3/library/index.html) - "official"/technical explanation of what a particular function/operator does, examples of correct syntax, what the various libraries are, etc.
