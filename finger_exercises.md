@@ -1,3 +1,4 @@
+# Table of Contents
 - [Unit 1: Python Basics, Incomplete section](#unit-1--python-basics--incomplete-section)
   * [Lecture 1. Introduction to Python](#lecture-1-introduction-to-python)
     + [Exercises 1](#exercises-1)
@@ -18,6 +19,10 @@
     + [Exercise. happy](#exercise-happy)
     + [Exercise 4](#exercise-4)
     + [Exercise. while](#exercise-while)
+    + [Exercise. for](#exercise-for)
+    + [Exercise 5](#exercise-5-1)
+    + [Exercise 6](#exercise-6-1)
+    + [Exercise 7](#exercise-7-1)
 - [Unit 2: dummy](#unit-2--dummy)
   * [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
   * [Lecture 4. Functions](#lecture-4-functions)
@@ -570,7 +575,7 @@ print('num is: ' + str(num))
 
 In this problem you'll be given a chance to practice writing some while loops.
 
-1. Convert the following into code that uses a while loop.
+Convert the following into code that uses a while loop.
 
 prints `2`
 
@@ -596,7 +601,7 @@ print('Goodbye!')
 
 5.0/5.0 points (graded)
 
-2. Convert the following into code that uses a while loop.
+Convert the following into code that uses a while loop.
 
 prints `Hello!`
 
@@ -630,7 +635,6 @@ which is 1 + 2 + 3 + 4 + 5 + 6.
 
 For problems such as these, do not include ```input``` statements or define variables we will provide for you. Our automating testing will provide values so write your code in the following box assuming these variables are already defined.
 
-
 <details>
 <summary>Hint: Don't Use A Variable Called 'sum'</summary>
 <br>
@@ -654,6 +658,278 @@ while end:
     end -= 1
 print(s)
 ```
+
+### Exercise. for
+
+5.0/5.0 points (graded)
+
+* Exercise: for exercise 1
+
+Convert the following code into code that uses a for loop.
+
+prints `2`
+
+prints `4`
+
+prints `6`
+
+prints `8`
+
+prints `10`
+
+prints `Goodbye!`
+
+```
+for i in range(2, 11, 2):
+    print(i)
+print('Goodbye!')
+```
+
+* Exercise: for exercise 2
+
+5.0/5.0 points (graded)
+
+Convert the following into code that uses a while loop.
+
+prints `Hello!`
+
+prints `10`
+
+prints `8`
+
+prints `6`
+
+prints `4`
+
+prints `2`
+
+```python:
+print('Hello!')
+for i in range(10, 1, -2):
+    print(i)
+```
+
+* Exercise: for exercise 3
+
+5.0/5.0 points (graded)
+
+Write a while loop that sums the values 1 through `end`, inclusive. `end` is a variable that we define for you. So, for example, if we define `end` to be 6, your code should print out the result: 
+```
+21
+```
+which is 1 + 2 + 3 + 4 + 5 + 6.
+
+For problems such as these, do not include ```input``` statements or define variables we will provide for you. Our automating testing will provide values so write your code in the following box assuming these variables are already defined.
+
+```
+a = 0
+for i in range(1, end + 1):
+    a += i
+print(a)
+```
+
+### Exercise 5
+5/5 points (graded)
+
+Below are some short Python programs. For each program, answer the associated question.
+
+Try to answer the questions without running the code. Check your answers, then run the code for the ones you get wrong.
+
+This question is going to ask you what some simple loops print out. If you're asked what code like this prints:
+```
+num = 5
+if num > 2:
+    print(num)
+    num -= 1
+print(num)
+```
+write what it prints out, separating what appears on a new line by a comma and a space. So the answer for the above code would be:
+```
+5, 4
+```
+If a given loop will not terminate, write the phrase 'infinite loop' in the box.
+
+1. `0, 1, 2, 3, 4, 4`
+```
+num = 10
+for num in range(5):
+    print(num)
+print(num)
+```
+2. `0.0, 1.0, 2.0, 3.0, 4.0`
+```
+divisor = 2
+for num in range(0, 10, 2):
+    print(num/divisor) 
+```
+3. `0, Foo!, 4, 8, 12, 16, Foo!`
+```
+for variable in range(20):
+    if variable % 4 == 0:
+        print(variable)
+    if variable % 16 == 0:
+        print('Foo!') 
+```
+4. `h, o, l, a`
+```
+for letter in 'hola':
+    print(letter)  
+```
+5. `Letter # 0 is S, 1`
+```
+count = 0
+for letter in 'Snow!':
+    print('Letter # ' + str(count) + ' is ' + str(letter))
+    count += 1
+    break
+print(count)
+```
+
+### Exercise 6
+
+15/15 points (graded)
+
+Below are some short Python programs. For each program, answer the associated questions.
+
+Try to answer the questions without running the code. Check your answers, then run the code for the ones you get wrong. You'll learn the most this way, by figuring things out, instead of just running the code and reading off the answers.
+
+* 1.
+```python:
+myStr = '6.00x'
+
+for char in myStr:
+    print(char)
+
+print('done')
+```
+1. How many times does `6` print out? `1`
+2. How many times does `.` print out? `1`
+3. How many times does `0` print out? `2`
+4. How many times does `x` print out? `1`
+5. How many times does `done` print out? `1`
+
+
+* 2.
+```python:
+greeting = 'Hello!'
+count = 0
+
+for letter in greeting:
+    count += 1
+    if count % 2 == 0:
+        print(letter)
+    print(letter)
+
+print('done')
+```
+1. How many times does `H` print out? `1`
+2. How many times does `e` print out? `2`
+3. How many times does `l` print out? `3`
+4. How many times does `o` print out? `1`
+5. How many times does `!` print out? `2`
+6. How many times does `done` print out? `1`
+
+
+* 3. 
+```python:
+school = 'Massachusetts Institute of Technology'
+numVowels = 0
+numCons = 0
+
+for char in school:
+    if char == 'a' or char == 'e' or char == 'i' \
+       or char == 'o' or char == 'u':
+        numVowels += 1
+    elif char == 'o' or char == 'M':
+        print(char)
+    else:
+        numCons -= 1
+
+print('numVowels is: ' + str(numVowels))
+print('numCons is: ' + str(numCons)) 
+```
+1. How many times does `o` print out? Disregard the `o`'s in last two print statements. `0`
+2. How many times does `M` print out? `1`
+3. What will the value of the variable `numVowels` be? `11`
+4. What will the value of the variable `numCons` be? `-25`
+
+
+### Exercise 7
+5/5 points (graded)
+
+Here is some code:
+
+**Code Sample**
+```
+iteration = 0
+count = 0
+while iteration < 5:
+    for letter in "hello, world":
+        count += 1
+    print("Iteration " + str(iteration) + "; count is: " + str(count))
+    iteration += 1 
+```
+We wish to re-write the above code, but instead of nesting a for loop inside a while loop, we want to nest a while loop inside a for loop. Which of the following loops gives the same output as the **Code Sample**?
+
+Try to answer the following questions by just reading the code. Reading code is a very good skill to have (and will help you both in your programming career and on your exams!). It is okay to check your answers that you obtain from just reading the code, then in your interpreter run the code for the ones you got wrong on your first attempt.
+
+Test 1
+```
+for iteration in range(5):
+    count = 0
+    while True:
+        for letter in "hello, world":
+            count += 1
+        print("Iteration " + str(iteration) + "; count is: " + str(count))
+```
+- [x] No, Test 1 does not give the same output as the Code Sample
+
+Test 2
+```
+for iteration in range(5):
+    count = 0
+    while True:
+        for letter in "hello, world":
+            count += 1
+        print("Iteration " + str(iteration) + "; count is: " + str(count))
+        break
+```
+- [x] No, Test 2 does not give the same output as the Code Sample
+
+Test 3
+```
+count = 0
+phrase = "hello, world"
+for iteration in range(5):
+    index = 0
+    while index < len(phrase):
+        count += 1
+        index += 1
+    print("Iteration " + str(iteration) + "; count is: " + str(count))
+```
+- [x] Yes, Test 3 gives the same output as the Code Sample
+
+Test 4
+```
+count = 0
+phrase = "hello, world"
+for iteration in range(5):
+    while True:
+        count += len(phrase)
+        break
+    print("Iteration " + str(iteration) + "; count is: " + str(count))
+```
+- [x] Yes, Test 4 gives the same output as the Code Sample
+
+Test 5
+```
+count = 0
+phrase = "hello, world"
+for iteration in range(5):
+    count += len(phrase)
+    print("Iteration " + str(iteration) + "; count is: " + str(count))
+```
+- [x] Yes, Test 5 gives the same output as the Code Sample
 
 
 # Unit 2: dummy
