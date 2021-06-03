@@ -367,6 +367,133 @@ While you could simply type these expressions into your IDE, we encourage you to
 
 
 ## Lecture 2. Core Elements of Programs
+
+### Exercise 1
+7/7 points (graded)
+
+For each of the following expressions, indicate the value returned, or if the evaluation would lead to an error, write the word 'error' (note this is a word, not a string, no quotes). While you could simply type these expressions into your IDE, we encourage you to answer them directly since this will help reinforce your understanding of basic Python expressions.
+
+
+<details>
+<summary>Note: Advanced String Slicing</summary>
+<br>
+You've seen in lecture that you can slice a string with a call such as `s[i:j]`, which gives you a portion of string `s` from index `i` to index `j-1`. However this is not the only way to slice a string! If you omit the starting index, Python will assume that you wish to start your slice at index 0. If you omit the ending index, Python will assume you wish to end your slice at the end of the string. Check out this session with the Python shell:
+
+```
+>>> s = 'Python is Fun!'
+>>> s[1:5]
+'ytho'
+>>> s[:5]
+'Pytho'
+>>> s[1:]
+'ython is Fun!'
+>>> s[:]
+'Python is Fun!'
+```
+That last example is interesting! If you omit both the start and ending index, you see your original string!
+
+There's one other cool thing you can do with string slicing. You can add a third parameter, `k`, like this: `s[i:j:k]`. This gives a slice of the string `s` from index `i` to index `j-1`, with step size `k`. Check out the following examples:
+
+```
+>>> s = 'Python is Fun!'
+>>> s[1:12:2]
+'yhni u'
+>>> s[1:12:3]
+'yoiF'
+>>> s[::2]
+'Pto sFn'
+```
+The last example is similar to the example `s[:]`. With `s[::2]`, we're asking for the full string `s` (from index 0 through 13), with a step size of 2 - so we end up with every other character in `s`. Pretty cool!
+</details>
+
+* `"a" + "bc"`: `'abc'`
+* `3 * "bc"`: `bcbcbc`
+* `"3" * "bc"`: `error` (TypeError: can't multiply sequence by non-int of type 'str')
+* `"abcd"[2]`: `'c'`
+* `"abcd"[0:2]`: `'ab'`
+* `"abcd"[:2]`: `'ab'`
+* `"abcd"[2:]`: `'cd'`
+
+### Exercise 2
+NOTE: These exercises are ungraded.
+
+* Exercise 2 part 1
+
+For each of the expressions below, specify its type and value. If it generates an error, select type 'NoneType' and write the word 'error' (note this is a word, not a string, no quotes) in the box for the value. While you could simply type these expressions into your IDE, we encourage you to answer them directly since this will help reinforce your understand of basic Python expressions.
+
+Assume we've made the following assignments:
+
+```
+> str1 = 'hello'
+> str2 = ','
+> str3 = 'world'
+```
+<details>
+<summary>Note: The Python 'in' operator</summary>
+<br>
+The operators `in` and `not in` test for collection membership (a 'collection' refers to a string, list, tuple or dictionary - don't worry, we will cover lists, tuples and dictionaries soon!). The expression
+```
+element in coll
+```
+evaluates to `True` if `element` is a member of the collection `coll`, and `False` otherwise.
+
+The expression
+```
+element not in coll
+```
+evaluates to `True` if element is `not` a member of the collection `coll`, and `False` otherwise.
+
+Note this returns the negation of `element in coll` - that is, the expression `element not in coll` is equivalent to the expression `not (element in coll)`.
+</details>
+
+1. `str1`: string `'hello'`
+2. `str1[0]`: string `'h'`
+3. `str1[1]`: string `'e'`
+4. `str1[-1]`: string `'o'`
+5. `len(str1)`: int `5`
+
+* Exercise 2 part 2
+```
+> str1 = 'hello'
+> str2 = ','
+> str3 = 'world'
+```
+1. `str1[len(str1)]`: NoneType `error` (IndexError: string index out of range)
+2. `str1 + str2 + str3`: string `'hello,world'`
+3. `str1 + str2 + ' ' + str3`: string `'hello, world'`
+4. `str3 * 3`: string `'worldworldworld'`
+5. `'hello' == str1`: boolean `True`
+
+* Exercise 2 part 3
+```
+> str1 = 'hello'
+> str2 = ','
+> str3 = 'world'
+```
+1. `'HELLO' == str1`: boolean `False`
+2. `'a' in str3`: boolean `False`
+3. boolean `True`
+```
+str4 = str1 + str3
+'low' in str4
+```
+4. `str3[1:3]`: string `'or'`
+5. `str3[:3]`: string `'wor'`
+
+
+* Exercise 2 part 4
+```
+> str1 = 'hello'
+> str2 = ','
+> str3 = 'world'
+> str4 = str1 + str3
+```
+1. `str3[:-1]`: string `'worl'`
+2. `str1[1:]`: string `'ello'`
+3. `str4[1:9]`: string `'elloworl'`
+4. `str4[1:9:2]`: - string `'elwr'`
+5. `str4[::-1]`: string `'dlrowolleh'`
+
 # Unit 2: dummy
 ## Lecture 3. Simple Algorithms
 ## Lecture 4. Functions
