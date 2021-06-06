@@ -56,7 +56,6 @@
 - [x] ***True***
 - [ ] False
 
-
 **3. True or False? Computer Science is the study of how to build efficient machines that run programs.**
 - [ ] True
 - [x] ***False***
@@ -66,7 +65,6 @@
 - [ ] Convert electricity to numbers
 - [ ] Display results to a screen
 - [x] Remember the results
-
 
 ### Exercises 2
 3/3 points (graded)
@@ -82,7 +80,6 @@
 **3. True or False? A recipe for deducing the square root involves guessing a starting value for y. Without another recipe to be told how to pick a starting number, the computer cannot generate one on its own.**
 - [x] ***True***
 - [ ] False
-
 
 ### Exercises 3
 5/5 points (graded)
@@ -111,13 +108,13 @@
 - [ ] True
 - [x] False
 
-
 ### Exercises 4
 3/3 points (graded)
 
 Choose the term described by each of the following definitions.
 
 Definitions:
+
 **1. Determines whether a string is legal**
 - [ ] Semantics
 - [ ] Static semantics
@@ -133,7 +130,6 @@ Definitions:
 - [ ] Static semantics
 - [ ] Syntax
 
-
 ### Exercise 5
 5/5 points (graded)
 
@@ -146,7 +142,6 @@ For each of the following expressions, indicate the type of the expression. Whil
 * `True`: bool
 * `None`: NoneType
 * `3.0`: float
-
 
 ### Exercise 6
 10/10 points (graded)
@@ -166,7 +161,6 @@ For decimal answers, give the full result, or four decimal places of accuracy (w
 * `2**3 + 1`: `9`
 * `2.1 ** 2.0`: `4.41`
 * `2.2 * 3.0`: `6.6000`
-
 
 ### Exercise 7
 6/6 points (graded)
@@ -190,7 +184,6 @@ Assume that the expressions are evaluated in the order shown - that is, each pro
 >>> a = 3
 >>> b
 ```
-
 
 ### Exercise 8
 12/12 points (graded)
@@ -244,7 +237,6 @@ Overall, you should always use parenthesis when writing expressions to make it c
 * `4 > 5 or 3 < 4 and 9 > 8`: `True`
 * `not(4 > 3 and 100 > 6)`: `False`
 
-
 ### Exercise 9
 4/4 points (graded)
 
@@ -264,7 +256,6 @@ Assume that the expressions are evaluated in the order shown - that is, each pro
 >>> c = b > 9
 >>> c 
 ```
-
 
 ### Exercise 10
 16/16 points (graded)
@@ -332,7 +323,7 @@ The last example is similar to the example `s[:]`. With `s[::2]`, we're asking f
 ### Exercise 2
 NOTE: These exercises are ungraded.
 
-* Exercise 2 part 1
+#### Exercise 2 part 1
 
 For each of the expressions below, specify its type and value. If it generates an error, select type 'NoneType' and write the word 'error' (note this is a word, not a string, no quotes) in the box for the value. While you could simply type these expressions into your IDE, we encourage you to answer them directly since this will help reinforce your understand of basic Python expressions.
 
@@ -367,7 +358,7 @@ Note this returns the negation of `element in coll` - that is, the expression `e
 4. `str1[-1]`: string `'o'`
 5. `len(str1)`: int `5`
 
-* Exercise 2 part 2
+#### Exercise 2 part 2
 ```
 > str1 = 'hello'
 > str2 = ','
@@ -379,7 +370,7 @@ Note this returns the negation of `element in coll` - that is, the expression `e
 4. `str3 * 3`: string `'worldworldworld'`
 5. `'hello' == str1`: boolean `True`
 
-* Exercise 2 part 3
+#### Exercise 2 part 3
 ```
 > str1 = 'hello'
 > str2 = ','
@@ -395,7 +386,7 @@ str4 = str1 + str3
 4. `str3[1:3]`: string `'or'`
 5. `str3[:3]`: string `'wor'`
 
-* Exercise 2 part 4
+#### Exercise 2 part 4
 ```
 > str1 = 'hello'
 > str2 = ','
@@ -408,7 +399,6 @@ str4 = str1 + str3
 4. `str4[1:9:2]`: - string `'elwr'`
 5. `str4[::-1]`: string `'dlrowolleh'`
 
-
 ### Exercise 3
 
 For each of the following expressions, indicate the value that prints out when the expression is evaluated. If the evaluation would lead to an error, write the word 'error'; if nothing would print out, write the word 'blank'.
@@ -417,19 +407,21 @@ While you could simply type these expressions into your IDE, we encourage you to
 
 If the temperatures seem weird to you, like most of the world, you probably use the Celsius system. We Americans still use the crazy [Fahrenheit system...](https://www.fahrenheittocelsius.com/)
 
-1. blank
+1. `blank`
 ```python:
 if 6 > 7:
    print("Yep")
 ```
-2. Nope
+
+2. `Nope`
 ```python:
 if 6 > 7:
    print("Yep")
 else:
    print("Nope")
 ```
-3. Regal!
+
+3. `Regal!`
 ```python:
 var = 'Panda'
 if var == "panda":
@@ -439,7 +431,8 @@ elif var == "Panda":
 else:
    print("Ugly...")
 ```
-4. Hot
+
+4. `Hot`
 ```python:
 temp = 120
 if temp > 85:
@@ -451,7 +444,8 @@ elif temp > 60:
 else:
    print("Cold")
 ```
-5. Cold
+
+5. `Cold`
 ```python:
 temp = 50
 if temp > 85:
@@ -464,12 +458,13 @@ else:
    print("Cold")
 ```
 
-
 ### Exercise. hello world
 5.0/5.0 points (graded)
 
 Write a piece of Python code that prints out the string hello world
-`print('hello world')`
+```python:
+print('hello world')
+```
 
 
 ### Exercise. happy
@@ -480,7 +475,7 @@ Write a piece of Python code that prints out the string 'hello world' if the val
 if happy > 2:
     print('hello world')
 ```
-Note: one liner such as `print('hello world' if happy > 2 else '')` would be considered as incorrect because it prints a blank line
+* Note: `print('hello world' if happy > 2 else '')` would be considered as incorrect on auto grader, because it prints a blank line when `happy <= 2`
 
 
 ### Exercise 4
@@ -569,26 +564,20 @@ print('num is: ' + str(num))
 
 ### Exercise. while
 
-* Exercise: while exercise 1
-
+#### Exercise: while exercise 1
 5.0/5.0 points (graded)
 
 In this problem you'll be given a chance to practice writing some while loops.
 
 Convert the following into code that uses a while loop.
-
-prints `2`
-
-prints `4`
-
-prints `6`
-
-prints `8`
-
-prints `10`
-
-prints `Goodbye!`
-
+```
+prints 2
+prints 4
+prints 6
+prints 8
+prints 10
+prints Goodbye!
+```
 ```python:
 n = 2
 while n <= 10:
@@ -597,24 +586,18 @@ while n <= 10:
 print('Goodbye!')
 ```
 
-* Exercise: while exercise 2
-
+#### Exercise: while exercise 2
 5.0/5.0 points (graded)
 
 Convert the following into code that uses a while loop.
-
-prints `Hello!`
-
-prints `10`
-
-prints `8`
-
-prints `6`
-
-prints `4`
-
-prints `2`
-
+```
+prints Hello!
+prints 10
+prints 8
+prints 6
+prints 4
+prints 2
+```
 ```python:
 n = 10
 print('Hello!')
@@ -623,8 +606,7 @@ while n:
     n -= 2
 ```
 
-* Exercise: while exercise 3
-
+#### Exercise: while exercise 3
 5.0/5.0 points (graded)
 
 Write a while loop that sums the values 1 through `end`, inclusive. `end` is a variable that we define for you. So, for example, if we define `end` to be 6, your code should print out the result: 
@@ -660,57 +642,43 @@ print(s)
 ```
 
 ### Exercise. for
-
 5.0/5.0 points (graded)
 
-* Exercise: for exercise 1
-
+#### Exercise: for exercise 1
 Convert the following code into code that uses a for loop.
-
-prints `2`
-
-prints `4`
-
-prints `6`
-
-prints `8`
-
-prints `10`
-
-prints `Goodbye!`
-
 ```
+prints 2
+prints 4
+prints 6
+prints 8
+prints 10
+prints Goodbye!
+```
+```python:
 for i in range(2, 11, 2):
     print(i)
 print('Goodbye!')
 ```
 
-* Exercise: for exercise 2
-
+#### Exercise: for exercise 2
 5.0/5.0 points (graded)
 
 Convert the following into code that uses a while loop.
-
-prints `Hello!`
-
-prints `10`
-
-prints `8`
-
-prints `6`
-
-prints `4`
-
-prints `2`
-
+```
+prints Hello!
+prints 10
+prints 8
+prints 6
+prints 4
+prints 2
+```
 ```python:
 print('Hello!')
 for i in range(10, 1, -2):
     print(i)
 ```
 
-* Exercise: for exercise 3
-
+#### Exercise: for exercise 3
 5.0/5.0 points (graded)
 
 Write a while loop that sums the values 1 through `end`, inclusive. `end` is a variable that we define for you. So, for example, if we define `end` to be 6, your code should print out the result: 
@@ -721,7 +689,7 @@ which is 1 + 2 + 3 + 4 + 5 + 6.
 
 For problems such as these, do not include ```input``` statements or define variables we will provide for you. Our automating testing will provide values so write your code in the following box assuming these variables are already defined.
 
-```
+```python:
 a = 0
 for i in range(1, end + 1):
     a += i
@@ -756,12 +724,14 @@ for num in range(5):
     print(num)
 print(num)
 ```
+
 2. `0.0, 1.0, 2.0, 3.0, 4.0`
 ```
 divisor = 2
 for num in range(0, 10, 2):
     print(num/divisor) 
 ```
+
 3. `0, Foo!, 4, 8, 12, 16, Foo!`
 ```
 for variable in range(20):
@@ -770,11 +740,13 @@ for variable in range(20):
     if variable % 16 == 0:
         print('Foo!') 
 ```
+
 4. `h, o, l, a`
 ```
 for letter in 'hola':
     print(letter)  
 ```
+
 5. `Letter # 0 is S, 1`
 ```
 count = 0
@@ -808,7 +780,6 @@ print('done')
 4. How many times does `x` print out? `1`
 5. How many times does `done` print out? `1`
 
-
 * 2.
 ```python:
 greeting = 'Hello!'
@@ -828,7 +799,6 @@ print('done')
 4. How many times does `o` print out? `1`
 5. How many times does `!` print out? `2`
 6. How many times does `done` print out? `1`
-
 
 * 3. 
 ```python:
@@ -852,7 +822,6 @@ print('numCons is: ' + str(numCons))
 2. How many times does `M` print out? `1`
 3. What will the value of the variable `numVowels` be? `11`
 4. What will the value of the variable `numCons` be? `-25`
-
 
 ### Exercise 7
 5/5 points (graded)
@@ -932,17 +901,44 @@ for iteration in range(5):
 - [x] Yes, Test 5 gives the same output as the Code Sample
 
 
-# Unit 2: dummy
+# Unit 2: Simple Programs
 ## Lecture 3. Simple Algorithms
+
+
 ## Lecture 4. Functions
+
+
+# Unit 3: Structured Programs
 ## Lecture 5. Tuples and Lists
+
+
 ## Lecture 6. Dictionaries
+
+
+# Unit 4: Good Programming Practices
 ## Lecture 7. Testing and Debugging
+
+
 ## Lecture 8. Exceptions and Assertions
+
+
+# Unit 5: Object Oriented Programming
 ## Lecture 9. Classes and Inheritance
+
+
 ## Lecture 10. An Extended Example
-# Unit 3: dummy
+
+
+# Unit 6: Algorithmic Complexity
 ## Lecture 11. Computational Complexity
+
+
 ## Lecture 12. Searching and Sorting Algorithms
+
+
+# Unit 7: Plotting and Final Thoughts
 ## Lecture 13. Visualization of Data
+
+
 ## Lecture 14. Summary
+
