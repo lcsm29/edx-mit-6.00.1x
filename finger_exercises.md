@@ -1,5 +1,5 @@
 # Table of Contents
-- [Unit 1: Python Basics, Incomplete section](#unit-1-python-basics--incomplete-section)
+- [Unit 1: Python Basics, Incomplete section](#unit-1-python-basics-incomplete-section)
   * [Lecture 1. Introduction to Python](#lecture-1-introduction-to-python)
     + [Exercises 1](#exercises-1)
     + [Exercises 2](#exercises-2)
@@ -14,27 +14,41 @@
   * [Lecture 2. Core Elements of Programs](#lecture-2-core-elements-of-programs)
     + [Exercise 1](#exercise-1)
     + [Exercise 2](#exercise-2)
+      - [Exercise 2 part 1](#exercise-2-part-1)
+      - [Exercise 2 part 2](#exercise-2-part-2)
+      - [Exercise 2 part 3](#exercise-2-part-3)
+      - [Exercise 2 part 4](#exercise-2-part-4)
     + [Exercise 3](#exercise-3)
     + [Exercise. hello world](#exercise-hello-world)
     + [Exercise. happy](#exercise-happy)
     + [Exercise 4](#exercise-4)
     + [Exercise. while](#exercise-while)
+      - [Exercise: while exercise 1](#exercise-while-exercise-1)
+      - [Exercise: while exercise 2](#exercise-while-exercise-2)
+      - [Exercise: while exercise 3](#exercise-while-exercise-3)
     + [Exercise. for](#exercise-for)
+      - [Exercise: for exercise 1](#exercise-for-exercise-1)
+      - [Exercise: for exercise 2](#exercise-for-exercise-2)
+      - [Exercise: for exercise 3](#exercise-for-exercise-3)
     + [Exercise 5](#exercise-5-1)
     + [Exercise 6](#exercise-6-1)
     + [Exercise 7](#exercise-7-1)
-- [Unit 2: dummy](#unit-2-dummy)
+- [Unit 2: Simple Programs](#unit-2-simple-programs)
   * [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
   * [Lecture 4. Functions](#lecture-4-functions)
+- [Unit 3: Structured Programs](#unit-3-structured-programs)
   * [Lecture 5. Tuples and Lists](#lecture-5-tuples-and-lists)
   * [Lecture 6. Dictionaries](#lecture-6-dictionaries)
+- [Unit 4: Good Programming Practices](#unit-4-good-programming-practices)
   * [Lecture 7. Testing and Debugging](#lecture-7-testing-and-debugging)
   * [Lecture 8. Exceptions and Assertions](#lecture-8-exceptions-and-assertions)
+- [Unit 5: Object Oriented Programming](#unit-5-object-oriented-programming)
   * [Lecture 9. Classes and Inheritance](#lecture-9-classes-and-inheritance)
   * [Lecture 10. An Extended Example](#lecture-10-an-extended-example)
-- [Unit 3: dummy](#unit-3-dummy)
+- [Unit 6: Algorithmic Complexity](#unit-6-algorithmic-complexity)
   * [Lecture 11. Computational Complexity](#lecture-11-computational-complexity)
   * [Lecture 12. Searching and Sorting Algorithms](#lecture-12-searching-and-sorting-algorithms)
+- [Unit 7: Plotting and Final Thoughts](#unit-7-plotting-and-final-thoughts)
   * [Lecture 13. Visualization of Data](#lecture-13-visualization-of-data)
   * [Lecture 14. Summary](#lecture-14-summary)
 
@@ -135,7 +149,11 @@ Definitions:
 
 For each of the following expressions, indicate the type of the expression. While you could simply type these expressions into your shell, we encourage you to answer them directly since this will help reinforce your understanding of basic Python expressions.
 
-`Note: The Python 'None' keyword`
+<details>
+<summary>Note: The Python 'None' keyword</summary>
+<br>
+In Python, the keyword None is frequently used to represent the absence of a value. None is the only value in Python of type NoneType.
+</details>
 
 * `3.14`: float
 * `34`: int
@@ -150,7 +168,12 @@ For each of the following expressions, indicate the value returned, or if the ev
 
 For decimal answers, give the full result, or four decimal places of accuracy (whichever is shortest).
 
-`Floating point errors`
+<details>
+<summary>Floating point errors</summary>
+<br>
+Decimal numbers cannot be stored exactly in the computer because the computer does not have an infinite amount of memory. So decimal numbers are rounded when stored. When you do calculations with these numbers, your final result will be different than the actual result. For example, you may get something like 5.0000000044 instead of 5.0. This is called floating-point rounding error.
+</details>
+
 * `6 + 12 -3`: `15`
 * `2 * 3.0`: `6.0`
 * `- - 4`: `4`
