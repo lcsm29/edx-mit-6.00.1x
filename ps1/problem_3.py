@@ -1,10 +1,5 @@
-longest = ''
-for i in range(len(s)):
-    i_long = s[i]
-    for j in range(i + 1, len(s)):
-        if s[j] < i_long[-1]:
-            break
-        i_long = s[i:j + 1]
-    if len(i_long) > len(longest):
-        longest = i_long
-print('Longest substring in alphabetical order is:', longest)
+cur = lng = s[0]
+for c in s[1:]:
+    cur = '' if c < cur[-1] else cur
+    lng, cur = max(lng, cur + c, key=len), cur + c
+print('Longest substring in alphabetical order is:', lng)
