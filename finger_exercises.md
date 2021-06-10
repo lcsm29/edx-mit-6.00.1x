@@ -26,17 +26,17 @@
 
 ## Lecture 1. Introduction to Python
 * [Lecture 1. Introduction to Python](#lecture-1-introduction-to-python)    
-  + [Exercises 1](#exercises-1)
-  + [Exercises 2](#exercises-2)
-  + [Exercises 3](#exercises-3)
-  + [Exercises 4](#exercises-4)
+  + [Exercise 1](#exercise-1)
+  + [Exercise 2](#exercise-2)
+  + [Exercise 3](#exercise-3)
+  + [Exercise 4](#exercise-4)
   + [Exercise 5](#exercise-5)
   + [Exercise 6](#exercise-6)
   + [Exercise 7](#exercise-7)
   + [Exercise 8](#exercise-8)
   + [Exercise 9](#exercise-9)
   + [Exercise 10](#exercise-10)
-### Exercises 1
+### Exercise 1
 4/4 points (graded)
 
 **1. What is the difference between an Algorithm and a Program?**
@@ -59,7 +59,7 @@
 - [ ] Display results to a screen
 - [x] Remember the results
 
-### Exercises 2
+### Exercise 2
 3/3 points (graded)
 
 **1. True or False? Declarative knowledge refers to statements of fact.**
@@ -74,7 +74,7 @@
 - [x] ***True***
 - [ ] False
 
-### Exercises 3
+### Exercise 3
 5/5 points (graded)
 
 **1. True or False? A stored program computer is designed to compute precisely one computation, such as a square root, or the trajectory of a missile.**
@@ -101,7 +101,7 @@
 - [ ] True
 - [x] False
 
-### Exercises 4
+### Exercise 4
 3/3 points (graded)
 
 Choose the term described by each of the following definitions.
@@ -279,21 +279,21 @@ While you could simply type these expressions into your IDE, we encourage you to
 
 ## Lecture 2. Core Elements of Programs
 * [Lecture 2. Core Elements of Programs](#lecture-2-core-elements-of-programs)
-  + [Exercise 1](#exercise-1)
-  + [Exercise 2](#exercise-2)
+  + [Exercise 1](#exercise-1-1)
+  + [Exercise 2](#exercise-2-1)
     - [Exercise 2 part 1](#exercise-2-part-1)
     - [Exercise 2 part 2](#exercise-2-part-2)
     - [Exercise 2 part 3](#exercise-2-part-3)
     - [Exercise 2 part 4](#exercise-2-part-4)
-  + [Exercise 3](#exercise-3)
-  + [Exercise. hello world](#exercise-hello-world)
-  + [Exercise. happy](#exercise-happy)
-  + [Exercise 4](#exercise-4)
-  + [Exercise. while](#exercise-while)
+  + [Exercise 3](#exercise-3-1)
+  + [Exercise: hello world](#exercise-hello-world)
+  + [Exercise: happy](#exercise-happy)
+  + [Exercise 4](#exercise-4-1)
+  + [Exercise: while](#exercise-while)
     - [Exercise: while exercise 1](#exercise-while-exercise-1)
     - [Exercise: while exercise 2](#exercise-while-exercise-2)
     - [Exercise: while exercise 3](#exercise-while-exercise-3)
-  + [Exercise. for](#exercise-for)
+  + [Exercise: for](#exercise-for)
     - [Exercise: for exercise 1](#exercise-for-exercise-1)
     - [Exercise: for exercise 2](#exercise-for-exercise-2)
     - [Exercise: for exercise 3](#exercise-for-exercise-3)
@@ -485,7 +485,7 @@ else:
    print("Cold")
 ```
 
-### Exercise. hello world
+### Exercise: hello world
 5.0/5.0 points (graded)
 
 Write a piece of Python code that prints out the string hello world
@@ -494,7 +494,7 @@ print('hello world')
 ```
 
 
-### Exercise. happy
+### Exercise: happy
 5.0/5.0 points (graded)
 
 Write a piece of Python code that prints out the string 'hello world' if the value of an integer variable, happy, is strictly greater than 2.
@@ -590,7 +590,7 @@ while not False:
 print('num is: ' + str(num))
 ```
 
-### Exercise. while
+### Exercise: while
 
 #### Exercise: while exercise 1
 5.0/5.0 points (graded)
@@ -670,7 +670,7 @@ while end:
 print(s)
 ```
 
-### Exercise. for
+### Exercise: for
 5.0/5.0 points (graded)
 
 #### Exercise: for exercise 1
@@ -934,10 +934,10 @@ for iteration in range(5):
 
 ## Lecture 3. Simple Algorithms
 * [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
-  + [Exercise 1](#exercise-1-1)
-  + [Exercise 2](#exercise-2-1)
-  + [Exercise. guess my number](#exercise-guess-my-number)
-  + [Exercise 3](#exercise-3-1)
+  + [Exercise 1](#exercise-1-2)
+  + [Exercise 2](#exercise-2-2)
+  + [Exercise: guess my number](#exercise-guess-my-number)
+  + [Exercise 3](#exercise-3-2)
 ### Exercise 1
 14/14 points (graded)
 
@@ -1073,7 +1073,7 @@ Select the answer that best describes what occurs when the modified code is exec
 - [ ] Script successfully completes, but prints out `succeeded:` followed by some number not really close to 5.0
 - [ ] Script enters an infinite loop and never terminates
 
-### Exercise. guess my number
+### Exercise: guess my number
 10.0/10.0 points (graded)
 
 In this problem, you'll create a program that guesses a secret number!
@@ -1220,21 +1220,21 @@ while user_input != 'c':
 
 ## Lecture 4. Functions
 * [Lecture 4. Functions](#lecture-4-functions)
-  + [Exercise 1](#exercise-1-2)
-  + [Exercise. square](#exercise-square)
-  + [Exercise. eval quadratic](#exercise-eval-quadratic)
-  + [Exercise 2](#exercise-2-2)
-  + [Exercise 3](#exercise-3-2)
-  + [Exercise 4](#exercise-4-1)
+  + [Exercise 1](#exercise-1-3)
+  + [Exercise: square](#exercise-square)
+  + [Exercise: eval quadratic](#exercise-eval-quadratic)
+  + [Exercise 2](#exercise-2-3)
+  + [Exercise 3](#exercise-3-3)
+  + [Exercise 4](#exercise-4-2)
   + [Exercise 5](#exercise-5-2)
   + [Exercise 6](#exercise-6-2)
-  + [Exercise. fourth power](#exercise-fourth-power)
-  + [Exercise. odd](#exercise-odd)
-  + [Exercise. power iter](#exercise-power-iter)
-  + [Exercise. power recur](#exercise-power-recur)
-  + [Exercise. gcd iter](#exercise-gcd-iter)
-  + [Exercise. gcd recur](#exercise-gcd-recur)
-  + [Exercise. as in](#exercise-as-in)
+  + [Exercise: fourth power](#exercise-fourth-power)
+  + [Exercise: odd](#exercise-odd)
+  + [Exercise: power iter](#exercise-power-iter)
+  + [Exercise: power recur](#exercise-power-recur)
+  + [Exercise: gcd iter](#exercise-gcd-iter)
+  + [Exercise: gcd recur](#exercise-gcd-recur)
+  + [Exercise: as in](#exercise-as-in)
   + [Exercise 7](#exercise-7-2)
 ### Exercise 1
 6/6 points (graded)
@@ -1325,7 +1325,7 @@ def f(x, y):
    x + y - 2
 ```
 
-### Exercise. square
+### Exercise: square
 5/5 points (graded)
 
 Write a Python function, `square`, that takes in one number and returns the square of that number.
@@ -1339,7 +1339,7 @@ def square(x):
     '''
     return x ** 2
 ```
-### Exercise. eval quadratic
+### Exercise: eval quadratic
 5/5 points (graded)
 
 Write a Python function, `evalQuadratic(a, b, c, x)`, that returns the value of the quadratic <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=ax^2 %2B +bx %2B c">
@@ -1555,7 +1555,7 @@ str1
 ```
 15. `str2.replace('one', 'seven')`: `string`, `Number seven - the larch`
 
-### Exercise. fourth power
+### Exercise: fourth power
 5.0/5.0 points (graded)
 
 Write a Python function, `fourthPower`, that takes in one number and returns that value raised to the fourth power.
@@ -1571,7 +1571,7 @@ def fourthPower(x):
     return square(square(x))
 ```
 
-### Exercise. odd
+### Exercise: odd
 5.0/5.0 points (graded)
 
 Write a Python function, `odd`, that takes in one number and returns `True` when the number is odd and `False` otherwise.
@@ -1589,7 +1589,7 @@ def odd(x):
     return x % 2 == 1
 ```
 
-### Exercise. power iter
+### Exercise: power iter
 5.0/5.0 points (graded)
 
 Write an iterative function iterPower(base, exp) that calculates the exponential <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> by simply using successive multiplication. For example, `iterPower(base, exp)` should compute <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> by multiplying base times itself exp times. Write such a function below.
@@ -1609,7 +1609,7 @@ def iterPower(base, exp):
     return answer
 ```
 
-### Exercise. power recur
+### Exercise: power recur
 5.0/5.0 points (graded)
 
 In Problem 1, we computed an exponential by iteratively executing successive multiplications. We can use the same idea, but in a recursive function.
@@ -1664,7 +1664,7 @@ To convince yourself this is true, put in real numbers for `base` and `exp`; the
 **If you are getting the error stating that "Your code should be recursive" when you already make a call to** `recurPower`: check your indention -- specifically, a common mistake is that your function and docstring do not start at the same indentation level.
 
 
-### Exercise. gcd iter
+### Exercise: gcd iter
 5.0/5.0 points (graded)
 
 The greatest common divisor of two positive integers is the largest integer that divides each of them without remainder. For example,
@@ -1731,7 +1731,7 @@ def gcdIter(a, b):
             return a_div
  
 ```
-### Exercise. gcd recur
+### Exercise: gcd recur
 5.0/5.0 points (graded)
 
 The greatest common divisor of two positive integers is the largest integer that divides each of them without remainder. For example,
@@ -1763,7 +1763,7 @@ def gcdRecur(a, b):
     return b if a == 0 else gcdRecur(b % a, a)
 ```
 
-### Exercise. as in
+### Exercise: as in
 5.0/5.0 points (graded)
 
 We can use the idea of **bisection search** to determine if a character is in a string, so long as the string is sorted in alphabetical order.
