@@ -1,38 +1,7 @@
 # Table of Contents
 - [Unit 1: Python Basics, Incomplete section](#unit-1-python-basics-incomplete-section)
   * [Lecture 1. Introduction to Python](#lecture-1-introduction-to-python)
-    + [Exercises 1](#exercises-1)
-    + [Exercises 2](#exercises-2)
-    + [Exercises 3](#exercises-3)
-    + [Exercises 4](#exercises-4)
-    + [Exercise 5](#exercise-5)
-    + [Exercise 6](#exercise-6)
-    + [Exercise 7](#exercise-7)
-    + [Exercise 8](#exercise-8)
-    + [Exercise 9](#exercise-9)
-    + [Exercise 10](#exercise-10)
   * [Lecture 2. Core Elements of Programs](#lecture-2-core-elements-of-programs)
-    + [Exercise 1](#exercise-1)
-    + [Exercise 2](#exercise-2)
-      - [Exercise 2 part 1](#exercise-2-part-1)
-      - [Exercise 2 part 2](#exercise-2-part-2)
-      - [Exercise 2 part 3](#exercise-2-part-3)
-      - [Exercise 2 part 4](#exercise-2-part-4)
-    + [Exercise 3](#exercise-3)
-    + [Exercise. hello world](#exercise-hello-world)
-    + [Exercise. happy](#exercise-happy)
-    + [Exercise 4](#exercise-4)
-    + [Exercise. while](#exercise-while)
-      - [Exercise: while exercise 1](#exercise-while-exercise-1)
-      - [Exercise: while exercise 2](#exercise-while-exercise-2)
-      - [Exercise: while exercise 3](#exercise-while-exercise-3)
-    + [Exercise. for](#exercise-for)
-      - [Exercise: for exercise 1](#exercise-for-exercise-1)
-      - [Exercise: for exercise 2](#exercise-for-exercise-2)
-      - [Exercise: for exercise 3](#exercise-for-exercise-3)
-    + [Exercise 5](#exercise-5-1)
-    + [Exercise 6](#exercise-6-1)
-    + [Exercise 7](#exercise-7-1)
 - [Unit 2: Simple Programs](#unit-2-simple-programs)
   * [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
   * [Lecture 4. Functions](#lecture-4-functions)
@@ -56,7 +25,17 @@
 # Unit 1: Python Basics, Incomplete section
 
 ## Lecture 1. Introduction to Python
-
+* [Lecture 1. Introduction to Python](#lecture-1-introduction-to-python)    
+  + [Exercises 1](#exercises-1)
+  + [Exercises 2](#exercises-2)
+  + [Exercises 3](#exercises-3)
+  + [Exercises 4](#exercises-4)
+  + [Exercise 5](#exercise-5)
+  + [Exercise 6](#exercise-6)
+  + [Exercise 7](#exercise-7)
+  + [Exercise 8](#exercise-8)
+  + [Exercise 9](#exercise-9)
+  + [Exercise 10](#exercise-10)
 ### Exercises 1
 4/4 points (graded)
 
@@ -298,6 +277,28 @@ While you could simply type these expressions into your IDE, we encourage you to
 
 
 ## Lecture 2. Core Elements of Programs
+* [Lecture 2. Core Elements of Programs](#lecture-2-core-elements-of-programs)
+  + [Exercise 1](#exercise-1)
+  + [Exercise 2](#exercise-2)
+    - [Exercise 2 part 1](#exercise-2-part-1)
+    - [Exercise 2 part 2](#exercise-2-part-2)
+    - [Exercise 2 part 3](#exercise-2-part-3)
+    - [Exercise 2 part 4](#exercise-2-part-4)
+  + [Exercise 3](#exercise-3)
+  + [Exercise. hello world](#exercise-hello-world)
+  + [Exercise. happy](#exercise-happy)
+  + [Exercise 4](#exercise-4)
+  + [Exercise. while](#exercise-while)
+    - [Exercise: while exercise 1](#exercise-while-exercise-1)
+    - [Exercise: while exercise 2](#exercise-while-exercise-2)
+    - [Exercise: while exercise 3](#exercise-while-exercise-3)
+  + [Exercise. for](#exercise-for)
+    - [Exercise: for exercise 1](#exercise-for-exercise-1)
+    - [Exercise: for exercise 2](#exercise-for-exercise-2)
+    - [Exercise: for exercise 3](#exercise-for-exercise-3)
+  + [Exercise 5](#exercise-5-1)
+  + [Exercise 6](#exercise-6-1)
+  + [Exercise 7](#exercise-7-1)
 
 ### Exercise 1
 7/7 points (graded)
@@ -925,11 +926,461 @@ for iteration in range(5):
 
 
 # Unit 2: Simple Programs
+
 ## Lecture 3. Simple Algorithms
+* [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
+  + [Exercise 1.](#exercise-1)
+  + [Exercise 2](#exercise-2-1)
+  + [Exercise. guess my number](#exercise-guess-my-number)
+  + [Exercise 3](#exercise-3-1)
+### Exercise 1.
+14/14 points (graded)
+
+Below are some short Python programs. For each program, answer the associated questions.
+
+Try to answer the questions without running the code. Check your answers, then run the code for the ones you get wrong.
+
+* 1.
+```
+iteration = 0
+count = 0
+while iteration < 5:
+    # the variable 'letter' in the loop stands for every 
+    # character, including spaces and commas!
+    for letter in "hello, world": 
+        count += 1
+    print("Iteration " + str(iteration) + "; count is: " + str(count))
+    iteration += 1 
+```
+1. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 0? `12`
+2. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 1? `24`
+3. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 2? `36`
+4. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 3? `48`
+5. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 4? `60`
+
+* 2.
+```
+iteration = 0
+while iteration < 5:
+    count = 0
+    for letter in "hello, world":
+        count += 1
+    print("Iteration " + str(iteration) + "; count is: " + str(count))
+    iteration += 1 
+```
+1. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 0? `12`
+2. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 1? `12`
+3. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 2? `12`
+4. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 3? `12`
+5. What is the value of the variable `count` that is printed out (at the `print` statement) on iteration 4? `12`
+
+* 3.
+```
+iteration = 0
+while iteration < 5:
+    count = 0
+    for letter in "hello, world":
+        count += 1
+        if iteration % 2 == 0:
+            break
+    print("Iteration " + str(iteration) + "; count is: " + str(count))
+    iteration += 1 
+```
+1. How many times will the `print` statement be executed? `5`
+2. What is the largest value of the variable `iteration` that will be printed out (at the `print` statement)? `4`
+3. What is the largest value of the variable `count` that will be printed out (at the `print` statement)? `12`
+4. What is the smallest value of the variable `count` that will be printed out (at the `print` statement)? `1`
+
+### Exercise 2
+3/3 points (graded)
+
+Consider the following code:
+```
+x = 25
+epsilon = 0.01
+step = 0.1
+guess = 0.0
+
+while guess <= x:
+    if abs(guess**2 -x) < epsilon:
+        break
+    else:
+        guess += step
+
+if abs(guess**2 - x) >= epsilon:
+    print('failed')
+else:
+    print('succeeded: ' + str(guess))
+```
+If this code is executed, it will print `succeeded: 4.9999999999998` (or `succeeded: 5.0`). Remember floating point errors?
+
+Now suppose we try the following:
+```
+x = 25
+epsilon = 0.01
+step = 0.1
+guess = 0.0
+
+while guess <= x:
+    if abs(guess**2 -x) >= epsilon:
+        guess += step
+
+if abs(guess**2 - x) >= epsilon:
+    print('failed')
+else:
+    print('succeeded: ' + str(guess))
+```
+Select the answer that best describes what occurs when the above code is executed:
+- [ ] Script successfully completes, and prints out `succeeded: 4.9999999999998` (or `succeeded: 5.0`)
+- [ ] Script successfully completes, but prints out `failed`
+- [ ] Script successfully completes, but prints out `succeeded:` followed by some number not really close to 5.0
+- [x] Script enters an infinite loop and never terminates
+
+Now suppose we try the following:
+```
+x = 25
+epsilon = 0.01
+step = 0.1
+guess = 0.0
+
+while abs(guess**2-x) >= epsilon:
+    if guess <= x:
+        guess += step
+    else:
+        break
+
+if abs(guess**2 - x) >= epsilon:
+    print('failed')
+else:
+    print('succeeded: ' + str(guess))
+```
+Select the answer that best describes what occurs when the above code is executed:
+- [x] Script successfully completes, and prints out `succeeded: 4.9999999999998` (or `succeeded: 5.0`)
+- [ ] Script successfully completes, but prints out `failed`
+- [ ] Script successfully completes, but prints out `succeeded:` followed by some number not really close to 5.0
+- [ ] Script enters an infinite loop and never terminates
+
+Finally, let's use the same code as immediately above, but change the first line to x = 23. Note that the square root of 23 is roughly 4.7958.
+
+Select the answer that best describes what occurs when the modified code is executed:
+- [ ] Script successfully completes, and prints out `succeeded: 4.9999999999998` (or `succeeded: 5.0`)
+- [x] Script successfully completes, but prints out `failed`
+- [ ] Script successfully completes, but prints out `succeeded:` followed by some number not really close to 5.0
+- [ ] Script enters an infinite loop and never terminates
+
+### Exercise. guess my number
+10.0/10.0 points (graded)
+
+In this problem, you'll create a program that guesses a secret number!
+
+The program works as follows: you (the user) thinks of an integer between 0 (inclusive) and 100 (not inclusive). The computer makes guesses, and you give it input - is its guess too high or too low? Using bisection search, the computer will guess the user's secret number!
+
+Here is a transcript of an example session:
+```
+Please think of a number between 0 and 100!
+Is your secret number 50?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 75?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 87?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. h
+Is your secret number 81?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 84?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. h
+Is your secret number 82?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 83?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. c
+Game over. Your secret number was: 83
+```
+<details>
+<summary>Hint: Endpoints</summary>
+<br>
+** Your program should use bisection search. So think carefully what that means. What will the first guess always be? How should you calculate subsequent guesses?
+
+** Your initial endpoints should be 0 and 100. Do not optimize your subsequent endpoints by making them be the halfway point plus or minus 1. Rather, just make them be the halfway point.
+</details>
+<details>
+<summary>Python Trick: Printing on the same line</summary>
+<br>
+Try the following in your console:
+
+* Notice how if we have two print statements
+
+print("Hi")
+
+print("there")
+
+* The output will have each string on a separate line:
+
+Hi
+
+there
+
+* Now try adding the following:
+
+print("Hi",end='')
+
+print("there")
+
+print("Hi",end='*')
+
+print("there")
+
+* The output will place the subsequent string on the same line
+
+* and will connect the two prints with the character given by end
+
+Hithere
+
+Hi*there
+</details>
+<details>
+<summary>Click to See Test Cases</summary>
+<br>
+Test Cases to Test Your Code With. Be sure to test these on your own machine - and that you get the same output! - before running your code on this webpage!
+
+Test case 1. Secret guess = 42
+```
+Please think of a number between 0 and 100!
+Is your secret number 50?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. h
+Is your secret number 25?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 37?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 43?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. h
+Is your secret number 40?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 41?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 42?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. c
+Game over. Your secret number was: 42
+```
+
+Test case 2. Secret guess = 91
+```
+Please think of a number between 0 and 100!
+Is your secret number 50?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 75?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 87?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 93?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. h
+Is your secret number 90?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. l
+Is your secret number 91?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. y
+Sorry, I did not understand your input.
+Is your secret number 91?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. c
+Game over. Your secret number was: 91
+```
+</details>
+
+Note: your program should use input to obtain the user's input! Be sure to handle the case when the user's input is not one of h, l, or c.
+
+When the user enters something invalid, you should print out a message to the user explaining you did not understand their input. Then, you should re-ask the question, and prompt again for input. For example:
+```
+Is your secret number 91?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. y
+Sorry, I did not understand your input.
+Is your secret number 91?
+Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. c
+```
+
+```python:
+print('Please think of a number between 0 and 100!')
+l, h, user_input = 0, 100, ''
+txt = ('''Enter 'h' to indicate the guess is too high. \
+Enter 'l' to indicate the guess is too low. \
+Enter 'c' to indicate I guessed correctly. ''')
+while user_input != 'c':
+    m = (l + h) // 2
+    user_input = ''
+    while 1:
+        print('Is your secret number {}?'.format(m))
+        user_input = input(txt)
+        if user_input in ('l', 'h', 'c'): break
+        else: print('Sorry, I did not understand your input.')
+    if user_input == 'h': h, m = m, (l + m) // 2
+    elif user_input == 'l': l, m = m, (h + m) // 2
+    else: print('Game over. Your secret number was:', m)
+```
+### Exercise 3
+4/4 points (graded)
+
+1. True or False? The internal computer representation of any number is always an approximation. `False`
+2. The decimal 11 is what binary?: `1011`
+3. True or False? The internal representation of the decimal number 1/10 = 0.1 requires an infinite number of digits. `True`
+4. After many computations, you get two floating numbers stored in variables `a` and `b`. Your code compares the numbers with `a == b`. `Doing the comparison will sometimes lead to a correct program.`
 
 
 ## Lecture 4. Functions
+* [Lecture 4. Functions](#lecture-4-functions)
+  + [Exercise 1](#exercise-1-1)
+  + [Exercise 2](#exercise-2-2)
+  + [Exercise 3](#exercise-3-2)
+  + [Exercise 4](#exercise-4-1)
+  + [Exercise 5](#exercise-5-2)
+  + [Exercise 6](#exercise-6-2)
+  + [Exercise. fourth power](#exercise-fourth-power)
+  + [Exercise. odd](#exercise-odd)
+  + [Exercise. power iter](#exercise-power-iter)
+  + [Exercise. power recur](#exercise-power-recur)
+  + [Exercise. gcd iter](#exercise-gcd-iter)
+  + [Exercise. gcd recur](#exercise-gcd-recur)
+  + [Exercise. as in](#exercise-as-in)
+  + [Exercise 7](#exercise-7-2)
+### Exercise 1
 
+### Exercise 2
+
+### Exercise 3
+### Exercise 4
+4/4 points (graded)
+
+Below is a transcript of a session with the Python shell. Provide the type and value of the expressions being evaluated. If evaluating an expression would cause an error, select NoneType and write 'error' in the box. If the result is a function, select function and write 'function' in the box.
+
+To get the most out of this problem, try to figure out the answers by reading the code, not running it. Run the code in your interpreter only after you've checked your answers a few times.
+
+**Hint**: If you are confused, you may find it helpful to draw out an environment diagram similar to what was presented in lecture.
+1. `int` `4`
+```
+>>> a = 10
+>>> def f(x):
+      return x + a
+>>> a = 3
+>>> f(1)
+```
+
+2. `int` `19`
+```
+>>> x = 12
+>>> def g(x):
+      x = x + 1
+      def h(y):
+          return x + y
+      return h(6)
+>>> g(x)
+```
+
+### Exercise 5
+4/4 points (graded)
+
+Enter the value of the expressions below.
+
+To get the most out of this problem, try to figure out the answers by reading the code, not running it. Run the code only after you've used up a few of your checks.
+
+**Hint**: If you are confused, you may find it helpful to draw out an environment diagram similar to what was presented in lecture.
+
+1. `11`
+```
+def foo(x, y = 5):
+   def bar(x):
+      return x + 1
+   return bar(y * 2)
+          
+foo(3)
+```
+
+2. `1`
+```
+def foo(x, y = 5):
+   def bar(x):
+      return x + 1
+   return bar(y * 2)
+
+foo(3, 0)
+```
+
+3. `5`
+```
+def foo (x):
+   def bar (z, x = 0):
+      return z + x
+   return bar(3, x)
+
+foo(2)
+```
+
+4. `3`
+```
+def foo (x):
+   def bar (z, x = 0):
+      return z + x
+   return bar(3)
+
+foo(5)
+```
+
+### Exercise 6
+30/30 points (graded)
+
+As we'll see in subsequent lectures, everything in Python is an object. Objects are special because we can associate special functions, referred to as object methods, with the object. In this problem you'll be working with string objects, and their built-in methods.
+
+A complete description of the methods available to string objects can be found in the [Python library reference on string methods](http://docs.python.org/library/stdtypes.html#string-methods).
+
+In this exercise, we want you to get some experience in using methods as functions. The convention for object methods is to use the "dot" notation, so that if s is a string, evaluating s.upper will return the actual function, and evaluating s.upper() will cause the function itself to be evaluated (in this case it returns a new string, since strings are immutable) with every character now in upper case. An example of this follows:
+```
+>>> s = 'abc'
+>>> s.capitalize
+<built-in method capitalize of str object at 0x104c35878>
+>>> s.capitalize()
+'Abc'
+```
+For each of the expressions in this problem, specify its type and value. If it generates an error, select type 'NoneType' and put the word 'error' in the box for the value. If it would be a function, select type 'function' and put the word 'function' in the box for the value.
+
+Assume we've made the following assignments:
+```
+> str1 = 'exterminate!' 
+> str2 = 'number one - the larch'
+```
+Assume that the expressions are evaluated in the order shown - that is, each problem part is evaluated directly after the previous problem part(s).
+1. `str1.upper`: `function`, `function`
+2. `str1.upper()`: `string`, `EXTERMINATE!`
+3. `str1`: `string`, `exterminate!`
+4. `str1.isupper()`: `boolean`, `False`
+5. `str1.islower()`: `boolean`, `True`
+6. `string`, `Number one - the larch`
+```
+str2 = str2.capitalize()
+str2
+```
+7. `str2.swapcase()`: `string`, `nUMBER ONE - THE LARCH`
+8. `str1.index('e')`: `int`, `0`
+9. `str2.index('n')`: `int`, `8`
+10. `str2.find('n')`: `int`, `8`
+11. `str2.index('!')`: `NoneType`, `error`
+12. `str2.find('!')`: `int`, `-1` (***Note***: Be sure to make note of the difference between the `find` and `index` string methods...)
+13. `str1.count('e')`: `int`, `3`
+14. `string`, `*xt*rminat*!`
+```
+str1 = str1.replace('e', '*')
+str1
+```
+15. `str2.replace('one', 'seven')`: `string`, `Number seven - the larch`
+
+### Exercise. fourth power
+
+### Exercise. odd
+
+### Exercise. power iter
+
+### Exercise. power recur
+
+### Exercise. gcd iter
+
+### Exercise. gcd recur
+
+### Exercise. as in
+
+### Exercise 7
 
 # Unit 3: Structured Programs
 ## Lecture 5. Tuples and Lists
