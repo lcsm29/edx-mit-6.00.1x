@@ -929,11 +929,11 @@ for iteration in range(5):
 
 ## Lecture 3. Simple Algorithms
 * [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
-  + [Exercise 1.](#exercise-1)
+  + [Exercise 1](#exercise-1)
   + [Exercise 2](#exercise-2-1)
   + [Exercise. guess my number](#exercise-guess-my-number)
   + [Exercise 3](#exercise-3-1)
-### Exercise 1.
+### Exercise 1
 14/14 points (graded)
 
 Below are some short Python programs. For each program, answer the associated questions.
