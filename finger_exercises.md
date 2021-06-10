@@ -131,6 +131,7 @@ For each of the following expressions, indicate the type of the expression. Whil
 <details>
 <summary>Note: The Python 'None' keyword</summary>
 <br>
+
 In Python, the keyword None is frequently used to represent the absence of a value. None is the only value in Python of type NoneType.
 </details>
 
@@ -1236,6 +1237,7 @@ while user_input != 'c':
   + [Exercise. as in](#exercise-as-in)
   + [Exercise 7](#exercise-7-2)
 ### Exercise 1
+6/6 points (graded)
 
 #### Part1: Function Types
 For each of the following functions, specify the type of its return. You can assume each function is called with an appropriate argument, as specified by its docstring.
@@ -1324,12 +1326,111 @@ def f(x, y):
 ```
 
 ### Exercise. square
+5/5 points (graded)
 
+Write a Python function, `square`, that takes in one number and returns the square of that number.
+
+This function takes in one number and returns one number.
+
+```python:
+def square(x):
+    '''
+    x: int or float.
+    '''
+    return x ** 2
+```
 ### Exercise. eval quadratic
+5/5 points (graded)
+
+Write a Python function, `evalQuadratic(a, b, c, x)`, that returns the value of the quadratic <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=ax^2 %2B +bx %2B c">
+
+This function takes in four numbers and returns a single number.
+```python:
+def evalQuadratic(a, b, c, x):
+    '''
+    a, b, c: numerical values for the coefficients of a quadratic equation
+    x: numerical value at which to evaluate the quadratic.
+    '''
+    return a * x**2 + b * x + c
+```
 
 ### Exercise 2
+14/14 points (graded)
+
+You have the following function definitions:
+```
+def a(x):
+   '''
+   x: int or float.
+   '''
+   return x + 1
+
+def b(x):
+   '''
+   x: int or float.
+   '''
+   return x + 1.0
+  
+def c(x, y):
+   '''
+   x: int or float. 
+   y: int or float.
+   '''
+   return x + y
+
+def d(x, y):
+   '''
+   x: Can be of any type.
+   y: Can be of any type.
+   '''
+   return x > y
+
+def e(x, y, z):
+   '''
+   x: Can be of any type.
+   y: Can be of any type.
+   z: Can be of any type.
+   '''
+   return x >= y and x <= z
+
+def f(x, y):
+   '''
+   x: int or float.
+   y: int or float
+   '''
+   x + y - 2    
+```
+Below is a transcript of a session with the Python shell. Provide the type and value of the expressions being evaluated. If evaluating an expression would cause an error, select NoneType and write 'error' in the box. If the value of an expression is a function, select function as the type and write 'function' in the box.
+
+1. `a(6)`: `int`, `7`
+2. `a(-5.3)`: `float`, `-4.3`
+3. `a(a(a(6)))`: `int`, `9`
+4. `c(a(1), b(1))`: `float`, `4.0`
+5. `d('apple', 11.1)`: `NoneType`, `error`
+6. `e(a(3), b(4), c(3, 4))`: `boolean`, `False`
+7. `f`: `function`, `function`
 
 ### Exercise 3
+8/8 points (graded)
+
+Below is a transcript of a session with the Python shell. Provide the type and value of the expressions being evaluated. If evaluating an expression would cause an error, select NoneType and write 'error' in the box. If the result is a function, select function and write 'function' in the box. As always, try to do this problem by hand before turning to your interpreter.
+
+Assume the following definitions have been made:
+```
+def a(x, y, z):
+     if x:
+         return y
+     else:
+         return z
+
+def b(q, r):
+    return a(q>r, q, r)
+```
+1. `a(False, 2, 3)`: `int`, `3`
+2. `b(3, 2)`: `int`, `3`
+3. `a(3>2, a, b)`: `function`, `function`
+4. `b(a, b)`: `NoneType`, `error`
+
 ### Exercise 4
 4/4 points (graded)
 
@@ -1455,20 +1556,382 @@ str1
 15. `str2.replace('one', 'seven')`: `string`, `Number seven - the larch`
 
 ### Exercise. fourth power
+5.0/5.0 points (graded)
+
+Write a Python function, `fourthPower`, that takes in one number and returns that value raised to the fourth power.
+
+You should use the `square` procedure that you defined in an earlier exercise (you don't need to redefine `square` in this box; when you call `square`, the grader will use our definition).
+
+This function takes in one number and returns one number.
+```python:
+def fourthPower(x):
+    '''
+    x: int or float.
+    '''
+    return square(square(x))
+```
 
 ### Exercise. odd
+5.0/5.0 points (graded)
+
+Write a Python function, `odd`, that takes in one number and returns `True` when the number is odd and `False` otherwise.
+
+You should use the `%` (mod) operator, not `if`.
+
+This function takes in one number and returns a boolean.
+```python:
+def odd(x):
+    '''
+    x: int
+
+    returns: True if x is odd, False otherwise
+    '''
+    return x % 2 == 1
+```
 
 ### Exercise. power iter
+5.0/5.0 points (graded)
+
+Write an iterative function iterPower(base, exp) that calculates the exponential <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> by simply using successive multiplication. For example, `iterPower(base, exp)` should compute <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> by multiplying base times itself exp times. Write such a function below.
+
+This function should take in two values - base can be a float or an integer; exp will be an integer ≥ 0. It should return one numerical value. Your code must be iterative - use of the `**` operator is not allowed.
+```python:
+def iterPower(base, exp):
+    '''
+    base: int or float.
+    exp: int >= 0
+ 
+    returns: int or float, base^exp
+    '''
+    answer = 1
+    for _ in range(exp):
+        answer *= base
+    return answer
+```
 
 ### Exercise. power recur
+5.0/5.0 points (graded)
+
+In Problem 1, we computed an exponential by iteratively executing successive multiplications. We can use the same idea, but in a recursive function.
+
+Write a function `recurPower(base, exp)` which computes <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> by recursively calling itself to solve a smaller version of the same problem, and then multiplying the result by base to solve the initial problem.
+
+This function should take in two values - `base` can be a float or an integer; exp will be an integer ≥ 0. It should return one numerical value. Your code must be recursive - use of the `**` operator or looping constructs is not allowed.
+```python:
+def recurPower(base, exp):
+    '''
+    base: int or float.
+    exp: int >= 0
+ 
+    returns: int or float, base^exp
+    '''
+    return 1 if not exp else base * recurPower(base, exp - 1)
+```
+Note: In programming there are many ways to solve a problem. For your code to check correctly here, though, you must write your recursive function such that you make a recursive call directly to the function `recurPower`. Thank you for understanding.
+
+Hints
+<details>
+<summary>What should your base case be?</summary>
+<br>
+
+To figure out what base case to use, think about what the smallest value of exp can be.
+<details>
+<summary>Smallest value of exp?</summary>
+<br>
+
+Recall that `exp` will be an integer greater than or equal to zero - so, the smallest value of `exp` is zero. What is the value of <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> when `exp` equals zero, for any value of `base`?
+</details>
+</details>
+
+<details>
+<summary>Thinking about recursion</summary>
+<br>
+
+A good way to think about recursion is that recursion is the process of solving a given problem with a smaller instance of the same problem.
+
+So, how could we express <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> as a smaller instance of an exponential equation?
+<details>
+<summary>How to break down the equation</summary>
+<br>
+
+<img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}%20=%20base{\cdot}base^{exp-1}">
+
+To convince yourself this is true, put in real numbers for `base` and `exp`; then, work through the recursion over and over until you reach your base case.
+</details>
+</details>
+
+
+**If you are getting the error stating that "Your code should be recursive" when you already make a call to** `recurPower`: check your indention -- specifically, a common mistake is that your function and docstring do not start at the same indentation level.
+
 
 ### Exercise. gcd iter
+5.0/5.0 points (graded)
 
+The greatest common divisor of two positive integers is the largest integer that divides each of them without remainder. For example,
+
+* gcd(2, 12) = 2
+
+* gcd(6, 12) = 6
+
+* gcd(9, 12) = 3
+
+* gcd(17, 12) = 1
+
+Write an iterative function, `gcdIter(a, b)`, that implements this idea. One easy way to do this is to begin with a test value equal to the smaller of the two input arguments, and iteratively reduce this test value by 1 until you either reach a case where the test divides both `a` and `b` without remainder, or you reach 1.
+```python:
+from math import sqrt
+
+
+def gcdIter(a, b):
+    '''
+    a, b: positive integers
+    
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    def get_pfactors(num):
+        def get_smallest_prime(num):
+            for i in range(2, int(sqrt(num)) + 1):
+                if num % i == 0: return i
+            return num
+        factors = []
+        prime, divided = 2, num
+        while prime <= divided:
+            prime = get_smallest_prime(divided)
+            if prime <= divided:
+                divided //= prime
+                factors.append(prime)
+        return factors
+    
+    def get_combs(factors_lst):
+        def combs(factors_lst):
+            if len(factors_lst) == 0:
+                return [[]]
+            combinations = []
+            for c in combs(factors_lst[1:]):
+                combinations += [c, c + [factors_lst[0]]]
+            return combinations
+        dirty_lst = combs(factors_lst)[1:]
+        clean_lst = []
+        for lst in dirty_lst:
+            if lst not in clean_lst:
+                clean_lst.append(lst)
+        return clean_lst
+
+    def get_divs(num, combs_lst):
+        divisors = [1]
+        for l in combs_lst:
+            prd = 1
+            for elem in l:
+                prd *= elem
+            divisors.append(prd)
+        return divisors
+
+    for a_div in reversed(get_divs(a, get_combs(get_pfactors(a)))):
+        if b % a_div == 0:
+            return a_div
+ 
+```
 ### Exercise. gcd recur
+5.0/5.0 points (graded)
+
+The greatest common divisor of two positive integers is the largest integer that divides each of them without remainder. For example,
+
+* gcd(2, 12) = 2
+
+* gcd(6, 12) = 6
+
+* gcd(9, 12) = 3
+
+* gcd(17, 12) = 1
+
+A clever mathematical trick (due to Euclid) makes it easy to find greatest common divisors. Suppose that `a` and `b` are two positive integers:
+
+* If b = 0, then the answer is a
+
+* Otherwise, gcd(a, b) is the same as gcd(b, a % b)
+
+[See this website for an example of Euclid's algorithm being used to find the gcd.](https://en.wikipedia.org/wiki/Euclidean_algorithm#Worked_example)
+
+Write a function `gcdRecur(a, b)` that implements this idea recursively. This function takes in two positive integers and returns one integer.
+```python:
+def gcdRecur(a, b):
+    '''
+    a, b: positive integers
+    
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    return b if a == 0 else gcdRecur(b % a, a)
+```
 
 ### Exercise. as in
+5.0/5.0 points (graded)
 
+We can use the idea of **bisection search** to determine if a character is in a string, so long as the string is sorted in alphabetical order.
+
+First, test the middle character of a string against the character you're looking for (the "test character"). If they are the same, we are done - we've found the character we're looking for!
+
+If they're not the same, check if the test character is "smaller" than the middle character. If so, we need only consider the lower half of the string; otherwise, we only consider the upper half of the string. (Note that you can compare characters using Python's `<` function.)
+
+Implement the function `isIn(char, aStr)` which implements the above idea recursively to test if `char` is in `aStr`. `char` will be a single character and `aStr` will be a string that is in alphabetical order. The function should return a boolean value.
+
+As you design the function, think very carefully about what the base cases should be.
+
+```python:
+def isIn(char, aStr):
+    '''
+    char: a single character
+    aStr: an alphabetized string
+    
+    returns: True if char is in aStr; False otherwise
+    '''
+    if len(aStr) == 0:
+        return False
+    elif len(aStr) == 1:
+        return True if char == aStr else False
+    else:
+        m = len(aStr) // 2
+        if aStr[m] == char:
+            return True
+        else:
+            return isIn(char, aStr[:m]) if aStr[m] > char else isIn(char, aStr[m:])
+```
+
+Note: In programming there are many ways to solve a problem. For your code to check correctly here, though, you must write your recursive function such that you make a recursive call directly to the function `isIn`. Thank you for understanding.
+
+Hints
+<details>
+<summary>Basic function structuring</summary>
+<br>
+
+Be very careful about how you slice the string in the recursive cases! Before you execute the recursive cases, you test the middle character - so if you reach the recursive cases, you know the middle character cannot be a match, right? So be careful to not include this character when you make your recursive call!
+</details>
+<details>
+<summary>What should your base case be?</summary>
+<br>
+
+You should be thinking about 3 situations:
+* What happens when the string is empty?
+* What happens when the string is of length 1?
+* What happens when the test character equals the middle character?
+</details>
+<details>
+<summary>What should your recursive case be?</summary>
+<br>
+
+You should be thinking about 2 situations:
+* What happens when the test character is smaller than the middle character?
+* What happens when it is larger?
+</details>
+
+**If you are getting the error stating that "Your code should be recursive" when you already make a call to `isIn`**: check your indention -- specifically, a common mistake is that your function and docstring do not start at the same indentation level.
 ### Exercise 7
+4/4 points (graded)
+
+1. Assume the two files below are in the same folder. You run inventory.py. What happens?
+- [x] prints `aa`
+- [ ] prints `AA`
+- [ ] There is an error.
+<details>
+<summary>batteries.py</summary>
+<br>
+
+```
+aa = "AA"
+aaa = "AAA"
+c = "C"
+d = "D"
+```
+</details>
+<details>
+<summary>inventory.py</summary>
+<br>
+
+```
+aa = "aa"
+tripleA = "aaa"
+print(aa)
+```
+</details>
+
+2. Assume the two files below are in the same folder. You run inventory.py. What happens?
+- [ ] prints `aa`
+- [ ] prints `AA`
+- [x] There is an error.
+<details>
+<summary>batteries.py</summary>
+<br>
+
+```
+aa = "AA"
+aaa = "AAA"
+c = "C"
+d = "D"
+```
+</details>
+<details>
+<summary>inventory.py</summary>
+<br>
+
+```
+aa = "aa"
+tripleA = "aaa"
+print(batteries.aa)
+```
+</details>
+
+3. Assume the two files below are in the same folder. You run inventory.py. What happens?
+- [ ] prints `aa`
+- [x] prints `AA`
+- [ ] There is an error.
+<details>
+<summary>batteries.py</summary>
+<br>
+
+```
+aa = "AA"
+aaa = "AAA"
+c = "C"
+d = "D"
+```
+</details>
+<details>
+<summary>inventory.py</summary>
+<br>
+
+```
+import batteries
+aa = "aa"
+tripleA = "aaa"
+print(batteries.aa)
+```
+</details>
+
+4. Assume the two files below are in the same folder. You run inventory.py. What happens?
+- [ ] prints `AA AAA C D`
+- [ ] prints `aa aaa c d`
+- [x] prints `aa AAA C D`
+- [ ] There is an error.
+<details>
+<summary>batteries.py</summary>
+<br>
+
+```
+aa = "AA"
+aaa = "AAA"
+c = "C"
+d = "D"
+```
+</details>
+<details>
+<summary>inventory.py</summary>
+<br>
+
+```
+from batteries import *
+aa = "aa"
+print(aa, aaa, c, d)
+```
+</details>
 
 # Unit 3: Structured Programs
 ## Lecture 5. Tuples and Lists
@@ -1503,4 +1966,3 @@ str1
 
 
 ## Lecture 14. Summary
-
