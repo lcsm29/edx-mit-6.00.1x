@@ -5,7 +5,9 @@ Then, I found [this newer course](https://www.edx.org/course/introduction-to-com
 
 ## Contents
 * [Finger Exercises](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/finger_exercises.md): All finger exercises and the answers
-* [Problem Sets](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/problem_sets.md): Provide a link to each solution of each problem set
+* [Problem Sets](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/problem_sets.md): Provide links to the solutions for each problem set
+* [Others](https://github.com/lcsm29/edx-mit-6.00.1x/tree/main/others)
+  * [Complete Programming Experience: Polysum](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/others/polysum.py)
 
 ## Some Random Info
 * 📅 **Started** on June 3, 2021
