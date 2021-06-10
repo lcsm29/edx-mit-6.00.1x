@@ -308,6 +308,7 @@ For each of the following expressions, indicate the value returned, or if the ev
 <details>
 <summary>Note: Advanced String Slicing</summary>
 <br>
+
 You've seen in lecture that you can slice a string with a call such as `s[i:j]`, which gives you a portion of string `s` from index `i` to index `j-1`. However this is not the only way to slice a string! If you omit the starting index, Python will assume that you wish to start your slice at index 0. If you omit the ending index, Python will assume you wish to end your slice at the end of the string. Check out this session with the Python shell:
 ```
 >>> s = 'Python is Fun!'
@@ -361,6 +362,7 @@ Assume we've made the following assignments:
 <details>
 <summary>Note: The Python 'in' operator</summary>
 <br>
+
 The operators `in` and `not in` test for collection membership (a 'collection' refers to a string, list, tuple or dictionary - don't worry, we will cover lists, tuples and dictionaries soon!). The expression
 ```
 element in coll
@@ -526,6 +528,7 @@ If a given loop will not terminate, write the phrase 'infinite loop' (no quotes)
 <details>
 <summary>Note: What does +=, -=, *=, /= stand for?</summary>
 <br>
+
 `a += b` is equivalent to `a = a + b`
 
 `a -= b` is equivalent to `a = a - b`
@@ -644,15 +647,16 @@ For problems such as these, do not include ```input``` statements or define vari
 <details>
 <summary>Hint: Don't Use A Variable Called 'sum'</summary>
 <br>
+
 For reasons related to our grader, you cannot call your variable `sum`. Call it anything else, but not `sum`. If you do, you will be marked incorrectly.
 
 This is because `sum` is a Python built-in function for summing a list of numbers – we prevent you from using it because if you did it'd defeat the point of the exercise.
 
 Take it as a lesson – overwriting built-in functions is generally bad practice anyway (you'd not call a variable `print`, or `while` or `elif` - because if you did, how would you use those built-in functions/keywords?). A general rule of thumb is: when writing code in Idle, if a word turns orange or purple, then it is special in Python - it is either a keyword or a built in function. In Canopy, the color is green. Don't give your variables the same name as any of the Python keywords or built in functions.
 
-Here is a list of Python keywords. https://docs.python.org/3/reference/lexical_analysis.html#keywords
+Here is a [list of Python keywords](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
 
-Here is a list of Python built-in functions. https://docs.python.org/3/reference/lexical_analysis.html#keywords
+Here is a [list of Python built-in functions](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
 
 You will learn more about functions in the next lecture sequence!
 </details>
@@ -929,7 +933,7 @@ for iteration in range(5):
 
 ## Lecture 3. Simple Algorithms
 * [Lecture 3. Simple Algorithms](#lecture-3-simple-algorithms)
-  + [Exercise 1](#exercise-1)
+  + [Exercise 1](#exercise-1-1)
   + [Exercise 2](#exercise-2-1)
   + [Exercise. guess my number](#exercise-guess-my-number)
   + [Exercise 3](#exercise-3-1)
@@ -1097,6 +1101,7 @@ Game over. Your secret number was: 83
 <details>
 <summary>Hint: Endpoints</summary>
 <br>
+
 ** Your program should use bisection search. So think carefully what that means. What will the first guess always be? How should you calculate subsequent guesses?
 
 ** Your initial endpoints should be 0 and 100. Do not optimize your subsequent endpoints by making them be the halfway point plus or minus 1. Rather, just make them be the halfway point.
@@ -1106,39 +1111,31 @@ Game over. Your secret number was: 83
 <br>
 Try the following in your console:
 
-* Notice how if we have two print statements
-
+```
+# Notice how if we have two print statements
 print("Hi")
-
 print("there")
 
-* The output will have each string on a separate line:
-
+# The output will have each string on a separate line:
 Hi
-
 there
 
-* Now try adding the following:
-
+# Now try adding the following:
 print("Hi",end='')
-
 print("there")
-
 print("Hi",end='*')
-
 print("there")
 
-* The output will place the subsequent string on the same line
-
-* and will connect the two prints with the character given by end
-
+# The output will place the subsequent string on the same line
+# and will connect the two prints with the character given by end
 Hithere
-
 Hi*there
+```
 </details>
 <details>
 <summary>Click to See Test Cases</summary>
 <br>
+
 Test Cases to Test Your Code With. Be sure to test these on your own machine - and that you get the same output! - before running your code on this webpage!
 
 Test case 1. Secret guess = 42
@@ -1160,7 +1157,6 @@ Is your secret number 42?
 Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. c
 Game over. Your secret number was: 42
 ```
-
 Test case 2. Secret guess = 91
 ```
 Please think of a number between 0 and 100!
@@ -1223,7 +1219,9 @@ while user_input != 'c':
 
 ## Lecture 4. Functions
 * [Lecture 4. Functions](#lecture-4-functions)
-  + [Exercise 1](#exercise-1-1)
+  + [Exercise 1](#exercise-1-2)
+  + [Exercise. square](#exercise-square)
+  + [Exercise. eval quadratic](#exercise-eval-quadratic)
   + [Exercise 2](#exercise-2-2)
   + [Exercise 3](#exercise-3-2)
   + [Exercise 4](#exercise-4-1)
@@ -1238,6 +1236,96 @@ while user_input != 'c':
   + [Exercise. as in](#exercise-as-in)
   + [Exercise 7](#exercise-7-2)
 ### Exercise 1
+
+#### Part1: Function Types
+For each of the following functions, specify the type of its return. You can assume each function is called with an appropriate argument, as specified by its docstring.
+
+If the output can be either an int or a float, select num, which isn't a real Python type, but which we'll use to indicate that either basic numeric type is legal.
+
+In fact, in Python, booleans True and False can be operated on as if they were the integers 1 and 0; but it is ugly and confusing to take advantage of this fact, and we will resolutely pretend that it isn't true.
+<details>
+<summary>What are those lines under the function definitions?</summary>
+<br>
+In this and future problems, you'll see function definitions that look like this:
+
+```
+def a(x):
+   '''
+   x: int or float.
+   '''
+   return x + 1
+```
+What are those three lines between `def a(x):` and `return x + 1`? These lines are called the docstring of the function. A docstring is a special type of comment that is used to document what your function is doing. Typically, docstrings will explain what the function expects the type(s) of the argument(s) to be, and what the function is returning.
+
+In Python, docstrings appear immediately after the `def` line of a function, before the body. Docstrings start and end with triple quotes - this can be triple single quotes or triple double quotes, it doesn't matter as long as they match. To sum up this general form:
+```
+def my_function(argument):
+   """
+   Docstring goes here. Explain what type argument(s) should have, and what your function
+   is going to return.
+   """
+   < Code for your function (the body of the function) goes here >
+```
+As you begin coding your own functions, we strongly encourage you to document all your functions by using properly-formatted docstrings!
+</details>
+
+1. Indicate the type of the output that the function `a` will yield. `num`
+```
+def a(x):
+   '''
+   x: int or float.
+   '''
+   return x + 1
+```
+2. Indicate the type of the output that the function `b` will yield. `float`
+```
+def b(x):
+   '''
+   x: int or float.
+   '''
+   return x + 1.0
+```
+3. Indicate the type of the output that the function `c` will yield. `num`
+```
+def c(x, y):
+   '''
+   x: int or float. 
+   y: int or float.
+   '''
+   return x + y
+```
+4. Indicate the type of the output that the function `d` will yield. `boolean`
+```
+def d(x, y):
+   '''
+   x: Can be int or float.
+   y: Can be int or float.
+   '''
+   return x > y
+```
+5. Indicate the type of the output that the function `e` will yield. `boolean`
+```
+def e(x, y, z):
+   '''
+   x: Can be int or float.
+   y: Can be int or float.
+   z: Can be int or float.
+   '''
+   return x >= y and x <= z
+```
+6. Indicate the type of the output that the function `f` will yield. `NoneType`
+```
+def f(x, y):
+   '''
+   x: int or float.
+   y: int or float
+   '''
+   x + y - 2
+```
+
+### Exercise. square
+
+### Exercise. eval quadratic
 
 ### Exercise 2
 
