@@ -1608,6 +1608,12 @@ def iterPower(base, exp):
         answer *= base
     return answer
 ```
+```python:
+# The following one liner is not only extremely dirty but also extremely inefficient.
+# But it works for any non-negative integer exponent.
+# Requirements: Python 3.8+ (which means it won't pass the grader, since it's still on Python 3.5)
+def iterPower(b, e, a=1, l=[1]): return [a:=a*n for n in l + [b for _ in range(e)]][e]
+```
 
 ### Exercise: power recur
 5.0/5.0 points (graded)
