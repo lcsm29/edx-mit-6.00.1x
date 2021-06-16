@@ -1614,6 +1614,11 @@ def iterPower(base, exp):
 # Requirements: Python 3.8+ (which means it won't pass the grader, since it's still on Python 3.5)
 def iterPower(b, e, a=1, l=[1]): return [a:=a*n for n in l + [b for _ in range(e)]][e]
 ```
+```python:
+# The following one liner is written by one of the community TAs of the course, kiwitrader.
+# This one passes the grader, but it's even slower than my already extremely inefficient one liner.
+def iterPower(b, e): return eval('*'.join(str(b) for _ in range(e))) if e else 1
+```
 
 ### Exercise: power recur
 5.0/5.0 points (graded)
