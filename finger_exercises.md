@@ -1342,7 +1342,7 @@ def square(x):
 ### Exercise: eval quadratic
 5/5 points (graded)
 
-Write a Python function, `evalQuadratic(a, b, c, x)`, that returns the value of the quadratic <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=ax^2 %2B +bx %2B c">
+Write a Python function, `evalQuadratic(a, b, c, x)`, that returns the value of the quadratic <img src="https://render.githubusercontent.com/render/math?math=\color{white}ax^2 %2B bx %2B c">
 
 This function takes in four numbers and returns a single number.
 ```python:
@@ -1592,7 +1592,7 @@ def odd(x):
 ### Exercise: power iter
 5.0/5.0 points (graded)
 
-Write an iterative function iterPower(base, exp) that calculates the exponential <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> by simply using successive multiplication. For example, `iterPower(base, exp)` should compute <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> by multiplying base times itself exp times. Write such a function below.
+Write an iterative function iterPower(base, exp) that calculates the exponential <img src="https://render.githubusercontent.com/render/math?math=\color{white}base^{exp}"> by simply using successive multiplication. For example, `iterPower(base, exp)` should compute <img src="https://render.githubusercontent.com/render/math?math=\color{white}base^{exp}"> by multiplying base times itself exp times. Write such a function below.
 
 This function should take in two values - base can be a float or an integer; exp will be an integer ≥ 0. It should return one numerical value. Your code must be iterative - use of the `**` operator is not allowed.
 ```python:
@@ -1625,7 +1625,7 @@ def iterPower(b, e): return eval('*'.join(str(b) for _ in range(e))) if e else 1
 
 In Problem 1, we computed an exponential by iteratively executing successive multiplications. We can use the same idea, but in a recursive function.
 
-Write a function `recurPower(base, exp)` which computes <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> by recursively calling itself to solve a smaller version of the same problem, and then multiplying the result by base to solve the initial problem.
+Write a function `recurPower(base, exp)` which computes <img src="https://render.githubusercontent.com/render/math?math=\color{white}base^{exp}"> by recursively calling itself to solve a smaller version of the same problem, and then multiplying the result by base to solve the initial problem.
 
 This function should take in two values - `base` can be a float or an integer; exp will be an integer ≥ 0. It should return one numerical value. Your code must be recursive - use of the `**` operator or looping constructs is not allowed.
 ```python:
@@ -1650,7 +1650,7 @@ To figure out what base case to use, think about what the smallest value of exp 
 <summary>Smallest value of exp?</summary>
 <br>
 
-Recall that `exp` will be an integer greater than or equal to zero - so, the smallest value of `exp` is zero. What is the value of <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> when `exp` equals zero, for any value of `base`?
+Recall that `exp` will be an integer greater than or equal to zero - so, the smallest value of `exp` is zero. What is the value of <img src="https://render.githubusercontent.com/render/math?math=\color{white}base^{exp}"> when `exp` equals zero, for any value of `base`?
 </details>
 </details>
 
@@ -1660,12 +1660,12 @@ Recall that `exp` will be an integer greater than or equal to zero - so, the sma
 
 A good way to think about recursion is that recursion is the process of solving a given problem with a smaller instance of the same problem.
 
-So, how could we express <img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}"> as a smaller instance of an exponential equation?
+So, how could we express <img src="https://render.githubusercontent.com/render/math?math=\color{white}base^{exp}"> as a smaller instance of an exponential equation?
 <details>
 <summary>How to break down the equation</summary>
 <br>
 
-<img style="background: white;" src="https://render.githubusercontent.com/render/math?math=base^{exp}%20=%20base{\cdot}base^{exp-1}">
+<img src="https://render.githubusercontent.com/render/math?math=\color{white}base^{exp}%20=%20base{\cdot}base^{exp-1}">
 
 To convince yourself this is true, put in real numbers for `base` and `exp`; then, work through the recursion over and over until you reach your base case.
 </details>
