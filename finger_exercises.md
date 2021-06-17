@@ -2015,7 +2015,28 @@ def oddTuples(aTup):
 ```
 
 ### Exercise 2
+16/16 points (graded)
 
+For each of the expressions below, specify its type and value. If it generates an error, select type 'NoneType' and put the word 'error' in the box for the value.
+
+Assume we've made the following assignment:
+```
+x = [1, 2, [3, 'John', 4], 'Hi'] 
+```
+Additionally, assume that the expressions are evaluated in the order shown - that is, each problem part is evaluated directly after the previous problem part(s).
+
+* `x[0]`: `int`, `1`
+* `x[1]`: `list`, `[3, 'John', 4]`
+* `x[-1]`: `string`, `'Hi'`
+* `x[2][2]`: `int`, `4`
+* `x[0:1]`: `list`, `[1]`
+* `2 in x`: `boolean`, `True`
+* `3 in x`: `boolean`, `False`
+* `list`, `[8, 2, [3, 'John', 4], 'Hi']`
+```
+x[0] = 8
+x
+```
 
 ### Exercise 3
 
