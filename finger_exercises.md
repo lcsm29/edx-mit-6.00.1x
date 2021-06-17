@@ -1953,7 +1953,7 @@ print(aa, aaa, c, d)
   + [Exercise 2](#exercise-2-4)
   + [Exercise 3](#exercise-3-4)
   + [Exercise 4](#exercise-4-3)
-  + [Exercise: apply to each 1](#exercise-apply-to-each-1)
+  + [Exercise: apply to each](#exercise-apply-to-each)
   + [Exercise 5](#exercise-5-3)
 
 ### Exercise 1
@@ -1997,7 +1997,6 @@ When a tuple has only one element, you must specify it as follows: (elt,). Here 
 * `2 in x`: `boolean`, `True`
 * `3 in x`: `boolean`, `False`
 * `x[0] = 8`: `NoneType`, `error`
-</details>
 
 ### Exercise: odd tuples
 5/5 points (graded)
@@ -2074,9 +2073,52 @@ listB.pop()
 * `listA`: `list`, `[4, 3, 6, 1, 4, 4, 1, 0, 100]`
 
 ### Exercise 4
+16/16 points (graded)
 
+For the last expression in each question below, specify its type and value. If it generates an error, select type 'NoneType' and put the word 'error' in the box for the value.
 
-### Exercise: apply to each 1
+1. `boolean`, `True`
+```
+>>> aList = [0, 1, 2, 3, 4, 5]
+>>> bList = aList
+>>> aList[2] = 'hello'
+>>> aList == bList
+```
+2. `boolean`, `True`
+```
+>>> aList is bList
+```
+3. `list`, `[0, 1, 'hello', 3, 4, 5]`
+```
+>>> aList
+```
+4. `list`, `[0, 1, 'hello', 3, 4, 5]`
+```
+>>> bList
+```
+5. `boolean`, `True`
+```
+>>> cList = [6, 5, 4, 3, 2]
+>>> dList = []
+>>> for num in cList:
+        dList.append(num)
+>>> cList == dList
+```
+6. `boolean`, `False`
+```
+>>> cList is dList
+```
+7. `list`, `[6, 5, 20, 3, 2]`
+```
+>>> cList[2] = 20
+>>> cList
+```
+8. `list`, `[6, 5, 4, 3, 2]`
+```
+>>> dList
+```
+
+### Exercise: apply to each
 
 
 ### Exercise 5
