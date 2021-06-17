@@ -2220,6 +2220,63 @@ def inc(a):
 
 ### Exercise 1
 
+Suppose we evaluate the following expressions:
+```
+animals = {'a': 'aardvark', 'b': 'baboon', 'c': 'coati'}
+
+animals['d'] = 'donkey'
+```
+
+1. `{'a': 'aardvark', 'b': 'baboon', 'c': 'coati', 'd': 'donkey'}`
+```
+>>> animals
+```
+2. `'coati'`
+```
+>>> animals['c']
+```
+3. `error`
+```
+>>> animals['donkey']
+```
+4. `4`
+```
+>>> len(animals)
+```
+5. `'anteater'`
+```
+>>> animals['a'] = 'anteater'
+>>> animals['a']
+```
+6. `8`
+```
+>>> len(animals['a'])
+```
+7. `False`
+```
+>>> 'baboon' in animals
+```
+8. `True`
+```
+>>> 'donkey' in animals.values()
+```
+9. `True`
+```
+>>> 'b' in animals
+```
+10. `dict_keys(['a', 'b', 'c', 'd'])`
+```
+>>> animals.keys()
+```
+11. `3`
+```
+>>> del animals['b']
+>>> len(animals)
+```
+12. `dict_values(['anteater', 'coati', 'donkey'])`
+```
+>>> animals.values()
+```
 
 ### Exercise: how many
 
