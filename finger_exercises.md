@@ -1957,7 +1957,47 @@ print(aa, aaa, c, d)
   + [Exercise 5](#exercise-5-3)
 
 ### Exercise 1
+26/26 points (graded)
 
+For each of the expressions below, specify its type and value. If it generates an error, select type 'NoneType' and put the word 'error' in the box for the value.
+
+Assume we've made the following assignment:
+```
+x = (1, 2, (3, 'John', 4), 'Hi')
+```
+<details>
+<summary>Hints: Single Element Tuples</summary>
+<br>
+
+When a tuple has only one element, you must specify it as follows: (elt,). Here is an example shell session that illustrates the difference:
+```
+>>> tup1 = (5)
+>>> print(tup1)
+5
+>>> type(tup1)
+<type 'int'>
+>>> tup2 = (5,)
+>>> print(tup2)
+(5,)
+>>> type(tup2)
+<type 'tuple'>
+```
+</details>
+
+* `x[0]`: `int`, `1`
+* `x[2]`: `tuple`, `(3, 'John', 4)`
+* `x[-1]`: `string`, `'Hi'`
+* `x[2][2]`: `int`, `4`
+* `x[2][-1]`: `int`, `4`
+* `x[-1][-1]`: `string`, `'i'`
+* `x[-1][2]`: `NoneType`, `error`
+* `x[0:1]`: `tuple`, `(1,)`
+* `x[0:-1]`: `tuple`, `(1, 2, (3, 'John', 4))`
+* `len(x)`: `int`, `4`
+* `2 in x`: `boolean`, `True`
+* `3 in x`: `boolean`, `False`
+* `x[0] = 8`: `NoneType`, `error`
+</details>
 
 ### Exercise: odd tuples
 
