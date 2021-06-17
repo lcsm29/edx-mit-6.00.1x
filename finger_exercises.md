@@ -1947,8 +1947,49 @@ print(aa, aaa, c, d)
 # Unit 3: Structured Programs
 ## Lecture 5. Tuples and Lists
 
+* [Lecture 5. Tuples and Lists](#lecture-5-tuples-and-lists)
+  + [Exercise 1](#exercise-1-4)
+  + [Exercise: odd tuples](#exercise-odd-tuples)
+  + [Exercise 2](#exercise-2-4)
+  + [Exercise 3](#exercise-3-4)
+  + [Exercise 4](#exercise-4-3)
+  + [Exercise: apply to each 1](#exercise-apply-to-each-1)
+  + [Exercise 5](#exercise-5-3)
+
+### Exercise 1
+
+
+### Exercise: odd tuples
+
+
+### Exercise 2
+
+
+### Exercise 3
+
+
+### Exercise 4
+
+
+### Exercise: apply to each 1
+
+
+### Exercise 5
+
 
 ## Lecture 6. Dictionaries
+* [Lecture 6. Dictionaries](#lecture-6-dictionaries)
+  + [Exercise 1](#exercise-1-5)
+  + [Exercise: how many](#exercise-how-many)
+  + [Exercise: biggest](#exercise-biggest)
+
+### Exercise 1
+
+
+### Exercise: how many
+
+
+### Exercise: biggest
 
 
 # Unit 4: Good Programming Practices
