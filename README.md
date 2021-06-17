@@ -4,10 +4,9 @@ I have already [finished](https://github.com/lcsm29/MIT6.0001) the same course o
 Then, I found [this newer course](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) on edX. The one thing that hooks me to the course is graded assignements and exams, because that's exactly what I needed. So I enrolled for the course. Although this one seems to have somewhat different finger exercises and problem sets, compare to the OCW course, but they are still graded automatically by unit testers. There might be some other graded assignments or exams behind the paywall. I guess I have to pay to figure it out.
 
 ## Contents
-* [Finger Exercises](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/finger_exercises.md): All finger exercises and the answers
-* [Problem Sets](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/problem_sets.md): Provide links to the solutions for each problem set
-* [Others](https://github.com/lcsm29/edx-mit-6.00.1x/tree/main/others)
-  * [Complete Programming Experience: Polysum](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/others/polysum.py)
+* [finger_exercises.md](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/finger_exercises.md): containing all finger exercises and the answers
+* [problem_sets.md](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/problem_sets.md): containing all problem sets and links to the solution
+* [others](https://github.com/lcsm29/edx-mit-6.00.1x/tree/main/others)/[polysum.py](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/others/polysum.py): solution for Complete Programming Experience: Polysum
 
 ## Some Random Info
 * 📅 **Started** on June 3, 2021
