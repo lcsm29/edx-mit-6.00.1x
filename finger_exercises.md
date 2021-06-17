@@ -2119,7 +2119,71 @@ For the last expression in each question below, specify its type and value. If i
 ```
 
 ### Exercise: apply to each
+#### Exercise: apply to each 1
+5/5 points (graded)
 
+Here is the code for a function `applyToEach`:
+```
+def applyToEach(L, f):
+    for i in range(len(L)):
+        L[i] = f(L[i])
+```
+Assume that
+```
+testList = [1, -4, 8, -9]
+```
+For each of the following questions (which you may assume is evaluated independently of the previous questions, so that testList has the value indicated above), provide an expression using `applyToEach`, so that after evaluation `testList` has the indicated value. You may need to write a simple procedure in each question to help with this process.
+
+Example Question:
+```
+>>> print(testList)
+[5, -20, 40, -45]
+```
+<details>
+<summary>Solution to Example Question</summary>
+<br>
+
+```
+def timesFive(a):
+    return a * 5
+
+applyToEach(testList, timesFive)
+```
+</details>
+
+```
+>>> print(testList)
+[1, 4, 8, 9]
+```
+```python:
+applyToEach(testList, abs)
+```
+
+#### Exercise: apply to each 2
+5/5 points (graded)
+
+```
+>>> print(testList)
+[2, -3, 9, -8]
+```
+```python:
+def plusone(n):
+    return n + 1
+applyToEach(testList, plusone)
+```
+
+#### Exercise: apply to each 3
+5/5 points (graded)
+
+```
+>>> print(testList)
+[1, 16, 64, 81]
+```
+```python:
+def sqrd(n):
+    return n**2
+applyToEach(testList, sqrd)
+```
 
 ### Exercise 5
 
