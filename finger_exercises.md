@@ -2186,7 +2186,31 @@ applyToEach(testList, sqrd)
 ```
 
 ### Exercise 5
+3/3 points (graded)
 
+Here is a different piece of code for working with lists:
+```
+def applyEachTo(L, x):
+    result = []
+    for i in range(len(L)):
+        result.append(L[i](x))
+    return result
+```
+Suppose that you are given the following functions:
+```
+def square(a):
+    return a*a
+
+def halve(a):
+    return a/2
+
+def inc(a):
+    return a+1
+```
+
+1. `applyEachTo([inc, square, halve, abs], -3)`: `[-2, 9, -1.5, 3]`
+2. `applyEachTo([inc, square, halve, abs], 3.0)`: `[4.0, 9.0, 1.5, 3.0]`
+2. `applyEachTo([inc, max, int], -3)`: `error`
 
 ## Lecture 6. Dictionaries
 * [Lecture 6. Dictionaries](#lecture-6-dictionaries)
