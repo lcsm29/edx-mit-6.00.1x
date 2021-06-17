@@ -13,10 +13,10 @@
 - [Unit 3: Structured Types](#unit-3-structured-types)
   * [Problem Set 3](#problem-set-3)
     + [Introduction](#introduction-1)
-    + [Problem 1 - Is the Word Guessed](#problem-1----is-the-word-guessed)
+    + [Problem 1 - Is the Word Guessed](#problem-1---is-the-word-guessed)
     + [Problem 2 - Getting the User's Guess](#problem-2---getting-the-users-guess)
-    + [Problem 3 - Getting the User's Guess](#problem-3---printing-out-all-available-letters)
-    + [Problem 4 - Printing Out all Available Letters](#problem-4---the-game)
+    + [Problem 3 - Printing Out all Available Letters](#problem-3---printing-out-all-available-letters)
+    + [Problem 4 - The Game](#problem-4---the-game)
 
 # Unit 1: Python Basics
 ## Problem Set 1
