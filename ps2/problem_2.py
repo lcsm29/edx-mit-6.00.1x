@@ -34,3 +34,8 @@ print('Lowest Payment:', bisect(balance, annualInterestRate, 10))
 balance = 3926  # test case 3, expected 360
 annualInterestRate = 0.2
 print('Lowest Payment:', bisect(balance, annualInterestRate, 10))
+
+# short version
+n = lambda b, p, m, i=12: b - p + m*(b-p) if i==1 else n(b - p + m*(b-p), p, m, i-1)
+def min_pnmt(b, m): return next(p for p in range(0, b, 10) if n(b, p, m) <= 0)
+print('Lowest Payment:', min_pnmt(balance, annualInterestRate / 12))
