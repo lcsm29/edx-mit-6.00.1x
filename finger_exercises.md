@@ -1795,10 +1795,8 @@ def isIn(char, aStr):
     
     returns: True if char is in aStr; False otherwise
     '''
-    if len(aStr) == 0:
-        return False
-    elif len(aStr) == 1:
-        return True if char == aStr else False
+    if len(aStr) <= 1:
+        return char == aStr
     else:
         m = len(aStr) // 2
         if aStr[m] == char:
