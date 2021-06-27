@@ -9,7 +9,7 @@ def bisect(bal, apr, eps):
     h = bal * (1 + apr / 12)**12 / 12
     m = (l + h) / 2
     while h - l > eps:
-        tmp = bal_next_year(balance, m, apr / 12)
+        tmp = bal_next_year(bal, m, apr / 12)
         if tmp < 0:
             m, h = (m + l) / 2, m
         if tmp > 0:
