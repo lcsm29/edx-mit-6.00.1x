@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 Learning Curve Since Mar 29, 2021
+Copyright (c) 2021 [lcsm29](https://github.com/lcsm29)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
