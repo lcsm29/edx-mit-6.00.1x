@@ -818,8 +818,98 @@ These are the provided test functions:
 * **test_isValidWord()**: Test the isValidWord() implementation.
 
 ### Problem 1 - Word Scores
+[Solution for Problem Set 4, Problem 1](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_1.py)
+10.0/10.0 points (graded)
+
+The first step is to implement some code that allows us to calculate the score for a single word. The function getWordScore should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
+
+<details>
+<summary>A Reminder of the Scoring Rules</summary>
+<br>
+
+**Scoring**
+* The score for the hand is the sum of the scores for each word formed.
+* The score for a word is the sum of the points for letters in the word, multiplied by the length of the word, plus 50 points if all `n` letters are used on the first word created.
+* Letters are scored as in Scrabble; A is worth 1, B is worth 3, C is worth 3, D is worth 2, E is worth 1, and so on. We have defined the dictionary `SCRABBLE_LETTER_VALUES` that maps each lowercase letter to its Scrabble letter value.
+* For example, `'weed'` would be worth `32` points (`(4+1+1+2)` for the four letters, then multiply by `len('weed')` to get `(4+1+1+2)*4 = 32`). Be sure to check that the hand actually has 1 `'w'`, 2 `'e'`s, and 1 `'d'` before scoring the word!
+* As another example, if n=7 and you make the word `'waybill'` on the first try, it would be worth `155` points (the base score for `'waybill'` is `(4+1+4+3+1+1+1)*7=105`, plus an additional `50` point bonus for using all `n` letters).
+</details>
+
+#### Hints
+* You may assume that the input `word` is always either a string of lowercase letters, or the empty string `""`.
+* You will want to use the `SCRABBLE_LETTER_VALUES` dictionary defined at the top of `ps4a.py`. You should not change its value.
+* Do **not** assume that there are always `7` letters in a hand! The parameter `n` is the number of letters required for a bonus score (the maximum number of letters in the hand). Our goal is to keep the code modular - if you want to try playing your word game with `n=10` or `n=4`, you will be able to do it by simply changing the value of `HAND_SIZE`!
+* **Testing**: If this function is implemented properly, and you run `test_ps4a.py`, you should see that the `test_getWordScore()` tests pass. Also test your implementation of `getWordScore`, using some reasonable English words.
+
+Fill in the code for `getWordScore` in `ps4a.py` and be sure you've passed the appropriate tests in `test_ps4a.py` before pasting your function definition here.
 
 ### Problem 2 - Dealing with Hands
+[Solution for Problem Set 4, Problem 2](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_2.py)
+10.0/10.0 points (graded)
+
+<span style="color:red">**Please read this problem entirely!!**</span> The majority of this problem consists of learning how to read code, which is an incredibly useful and important skill. At the end, you will implement a short function. Be sure to take your time on this problem - it may seem easy, but reading someone else's code can be challenging and this is an important exercise.
+
+#### Representing hands
+A **hand** is the set of letters held by a player during the game. The player is initially dealt a set of random letters. For example, the player could start out with the following hand: `a, q, l, m, u, i, l`. In our program, a hand will be represented as a dictionary: the keys are (lowercase) letters and the values are the number of times the particular letter is repeated in that hand. For example, the above hand would be represented as:
+
+```python:
+hand = {'a':1, 'q':1, 'l':2, 'm':1, 'u':1, 'i':1}    
+```
+
+Notice how the repeated letter `'l'` is represented. Remember that with a dictionary, the usual way to access a value is `hand['a']`, where `'a'` is the key we want to find. However, this only works if the key is in the dictionary; otherwise, we get a `KeyError`. To avoid this, we can use the call `hand.get('a', 0)`. This is the "safe" way to access a value if we are not sure the key is in the dictionary. `d.get(key,default)` returns the value for key if key is in the dictionary `d`, else `default`. If `default` is not given, it returns `None`, so that this method never raises a `KeyError`. For example:
+```
+>>> hand['e']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'e'
+>>> hand.get('e', 0)
+0
+```
+
+#### Converting words into dictionary representation
+One useful function we've defined for you is `getFrequencyDict`, defined near the top of `ps4a.py`. When given a string of letters as an input, it returns a dictionary where the keys are letters and the values are the number of times that letter is represented in the input string. For example:
+```shell:
+>>> getFrequencyDict("hello")
+{'h': 1, 'e': 1, 'l': 2, 'o': 1}
+```
+As you can see, this is the same kind of dictionary we use to represent hands.
+
+#### Displaying a hand
+Given a hand represented as a dictionary, we want to display it in a user-friendly way. We have provided the implementation for this in the `displayHand` function. Take a few minutes right now to read through this function carefully and understand what it does and how it works.
+
+#### Generating a random hand
+The hand a player is dealt is a set of letters chosen at random. We provide you with the implementation of a function that generates this random hand, `dealHand`. The function takes as input a positive integer `n`, and returns a new object, a hand containing `n` lowercase letters. Again, take a few minutes (right now!) to read through this function carefully and understand what it does and how it works.
+
+#### Removing letters from a hand (you implement this)
+The player starts with a hand, a set of letters. As the player spells out words, letters from this set are used up. For example, the player could start out with the following hand: `a, q, l, m, u, i, l`. The player could choose to spell the word `quail`. This would leave the following letters in the player's hand: `l, m`. Your task is to implement the function `updateHand`, which takes in two inputs - a `hand` and a `word` (string). `updateHand` uses letters from the hand to spell the word, and then returns a copy of the `hand`, containing only the letters remaining. For example:
+```shell:
+>>> hand = {'a':1, 'q':1, 'l':2, 'm':1, 'u':1, 'i':1}
+>>> displayHand(hand) # Implemented for you
+a q l l m u i
+>>> hand = updateHand(hand, 'quail') # You implement this function!
+>>> hand
+{'a':0, 'q':0, 'l':1, 'm':1, 'u':0, 'i':0}
+>>> displayHand(hand)
+l m
+```
+Implement the `updateHand` function. Make sure this function has no side effects: i.e., it must not mutate the hand passed in. Before pasting your function definition here, be sure you've passed the appropriate tests in `test_ps4a.py`.
+
+#### Hints
+<details>
+<summary>Testing</summary>
+<br>
+
+**Testing**: Make sure the `test_updateHand()` tests pass. You will also want to test your implementation of `updateHand` with some reasonable inputs.
+</details>
+
+<details>
+<summary>Copying Dictionaries</summary>
+<br>
+
+You may wish to review the ".copy" method of Python dictionaries (review this and other Python dictionary methods [here](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict)).
+</details>
+
+Your implementation of updateHand should be short (ours is 4 lines of code). It does not need to call any helper functions.
 
 ### Problem 3 - Valid Words
 
