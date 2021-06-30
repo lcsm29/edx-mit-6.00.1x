@@ -2354,28 +2354,268 @@ def biggest(aDict):
   + [Exercise 7](#exercise-7-3)
 
 ### Exercise 1
+1/1 point (graded)
 
+Consider the following code specification:
+```
+def size(aSet):
+   """
+   aSet is a collection of objects, which might be empty.
+   Objects are assumed to be of the same type.
+   """
+```
+Here is a set of possible test cases to include in a black box test suite. Indicate which of the following conditions would make a good black box test suite for the function `size` by clicking on the appropriate choice(s).
+<details>
+<summary>Review: Black Box Test Suites</summary>
+<br>
 
+Black-box testing is a method of software testing that tests the *functionality* of an application. Recall from the lecture that a way to think about black-box testing is to look at both:
+
+* The possible paths through the specification.
+* The possible boundary cases.
+
+Undoubtably many - if not all - of the listed tests look like they would be pretty good for testing the function `size`. However, we want you to think critically about the way `size` is specified - including possible boundary cases - and pick a set of tests that adequately and fully tests all paths and boundary conditions. Be sure the set of tests you pick does not have extraneous, useless, or repetitive tests.
+</details>
+
+- [x] Empty set
+- [x] Set of size 1
+- [ ] Set of odd size
+- [ ] Set of even size
+- [x] Set of size greater than 1
+- [ ] Set whose size is a prime number
 ### Exercise 2
+1/1 point (graded)
 
+Consider the following code specification:
+```
+def union(set1, set2):
+   """
+   set1 and set2 are collections of objects, each of which might be empty.
+   Each set has no duplicates within itself, but there may be objects that
+   are in both sets. Objects are assumed to be of the same type.
+
+   This function returns one set containing all elements from
+   both input sets, but with no duplicates.
+   """
+```
+Indicate which of the conditions below would combine to make a good black box test suite for the function `union` by selecting the appropriate choice(s).
+
+- [x] `set1` is an empty set; `set2` is an empty set
+- [x] `set1` is an empty set; `set2` is of size greater than or equal to 1
+- [x] `set1` is of size greater than or equal to 1; `set2` is an empty set
+- [x] `set1` and `set2` are both nonempty sets which do not contain any objects in common
+- [x] `set1` and `set2` are both nonempty sets which contain objects in common
 
 ### Exercise 3
+1/1 point (graded)
 
+Consider the following function definition:
+```
+def maxOfThree(a,b,c) :
+    """
+    a, b, and c are numbers
+
+    returns: the maximum of a, b, and c        
+    """
+    if a > b:
+        bigger = a
+
+    else:
+        bigger = b
+
+    if c > bigger:
+        bigger = c
+
+    return bigger
+```
+Assume that `maxOfThree` is called with numbers as arguments.
+
+Which of the following test suites would make a path-complete glass box test suite for `maxOfThree`?
+
+<details>
+<summary>Review: Glass Box Test Suites</summary>
+<br>
+
+Recall from the lecture that a path-complete glass box test suite would find test cases that go through every possible path in the code. This is different from black-box testing, because in black-box testing you only have the function specification. For glass-box testing, you actually know how the function you are testing is defined. Thus you can use this definition to figure out how many different paths through the code exist, and then pick a test suite based on that knowledge.
+
+Undoubtably many - if not all - of the listed tests look like they would be pretty good for testing the function `maxOfThree`. However, we want you to think critically about the way `maxOfThree` is defined - including possible boundary cases - and pick a set of tests that adequately and fully tests all paths and boundary conditions. A good first step will be to look at the function definition and figure out what paths through the code exist. Then, look through the suggested test suites one test at a time and see if the suite tests every single path.
+</details>
+
+- [x] Test Suite A: `maxOfThree(2, -10, 100)`, `maxOfThree(7, 9, 10)`, `maxOfThree(6, 1, 5)`, `maxOfThree(0, 40, 20)`
+- [ ] Test Suite B: `maxOfThree(10, 100, -20)`, `maxOfThree(99, 0, 20)`, `maxOfThree(1, 60, 300)`
+- [ ] Test Suite C: `maxOfThree(0, 0, 0)`, `maxOfThree(-3, -10, -1)`, `maxOfThree(10, 30, 100)`, `maxOfThree(0, -9, 11)`, `maxOfThree(-10, 0, 30)`
 
 ### Exercise 4
+1/1 point (graded)
 
+Consider the following function definition:
+```
+def union(set1, set2):
+   """
+   set1 and set2 are collections of objects, each of which might be empty.
+   Each set has no duplicates within itself, but there may be objects that
+   are in both sets. Objects are assumed to be of the same type.
+
+   This function returns one set containing all elements from
+   both input sets, but with no duplicates.
+   """
+   if len(set1) == 0:
+      return set2
+   elif set1[0] in set2:
+      return union(set1[1:], set2)
+   else:
+      return set1[0] + union(set1[1:], set2)
+```
+Assume that `union` is called with strings as arguments.
+
+Please select the best glass box test suite for the function `union` from the following options:
+
+- [ ] Test Suite A: union('',''), union('','a'), union('','ab'), union('a',''), union('a','b'), union('c','ab'), union('de',''), union('ab','c'), union('cd','ab')
+- [ ] Test Suite B: union('abc',''), union('abc','a'), union('abc','ab'), union('abc','d'), union('abc', 'abcd')
+- [ ] Test Suite C: union('','abc'), union('a','abc'), union('ab','abc'), union('abc','abc')
+- [x] Test Suite D: union('','abc'), union('a','abc'), union('ab','abc'), union('d','abc')
 
 ### Exercise 5
+1/1 point (graded)
 
+Consider the following function definition:
+```
+def foo(x, a):
+   """
+   x: a positive integer argument
+   a: a positive integer argument
+
+   returns an integer
+   """
+   count = 0
+   while x >= a:
+      count += 1
+      x = x - a
+   return count
+```
+Please select the best glass box test suite for the function `foo` from the following options.
+
+- [ ] Test Suite A: `foo(2, 5)`, `foo(5, 6)`, `foo(9, 7)`
+- [x] Test Suite B: `foo(10, 3)`, `foo(1, 4)`, `foo(10, 6)`
+- [ ] Test Suite C: `foo(100, 5)`, `foo(96, 5)`, `foo(22, 5)`
 
 ### Exercise: integer division
+5/5 points (graded)
 
+Consider the following function definition:
+```
+def integerDivision(x, a):
+    """
+    x: a non-negative integer argument
+    a: a positive integer argument
+
+    returns: integer, the integer division of x divided by a.
+    """
+    while x >= a:
+        count += 1
+        x = x - a
+    return count
+```
+When we call
+```
+print(integerDivision(5, 3))
+```
+we get the following error message:
+```
+File "temp.py", line 9, in integerDivision
+    count += 1
+UnboundLocalError: local variable 'count' referenced before assignment
+```
+Your task is to modify the code for integerDivision so that this error does not occur.
+```python:
+def integerDivision(x, a, count=0):
+    """
+    x: a non-negative integer argument
+    a: a positive integer argument
+
+    returns: integer, the integer division of x divided by a.
+    """
+    while x >= a:
+        count += 1
+        x = x - a
+    return count
+```
 
 ### Exercise 6
+2/2 points (graded)
 
+Consider the following function definition:
+```
+def rem(x, a):
+    """
+    x: a non-negative integer argument
+    a: a positive integer argument
+
+    returns: integer, the remainder when x is divided by a.
+    """
+    if x == a:
+        return 0
+    elif x < a:
+        return x
+    else:
+        rem(x-a, a)
+```
+When we call
+```
+rem(2, 5)
+```
+the shell returns 2. When we call
+```
+rem(5, 5)
+```
+the shell returns 0. But when we call
+```
+rem(7, 5)
+```
+the shell does not return anything! Using this information, choose what line of code should be changed from the following choices:
+
+- [ ] `if x == a:`
+- [ ] `return 0`
+- [ ] `elif x < a:`
+- [ ] `return x`
+- [ ] `else:`
+- [x] `rem(x-a, a)`
+
+How should this line be rewritten?
+```python:
+return rem(x-a, a)
+```
 
 ### Exercise 7
 
+Consider the following function definition:
+```
+def f(n):
+   """
+   n: integer, n >= 0.
+   """
+   if n == 0:
+      return n
+   else:
+      return n * f(n-1)
+```
+When we call `f(3)` we expect the result 6, but we get 0.
+
+When we call `f(1)` we expect the result 1, but we get 0.
+
+When we call `f(0)` we expect the result 1, but we get 0.
+
+Using this information, choose what line of code should be changed from the following choices:
+
+- [ ] `if n == 0:`
+- [x] `return n`
+- [ ] `else:`
+- [ ] `return n * f(n-1)`
+
+How should this line be rewritten?
+```python:
+return 1
+```
 
 ## Lecture 8. Exceptions and Assertions
 * [Lecture 8. Exceptions and Assertions](#lecture-7-exceptions-and-assertions)
@@ -2385,16 +2625,190 @@ def biggest(aDict):
   + [Exercise 3](#exercise-3-6)
 
 ### Exercise 1
+5/5 points (graded)
 
+Try to answer the following questions by just reading the code. Reading code is a very good skill to have (and will help you both in your programming career and on your exams!). It is okay to check your answers that you obtain from just reading the code, then in your interpreter run the code for the ones you got wrong on your first attempt.
+
+What error (if any) is raised when the following code snippets are attempted?
+
+* `'1' / '2'`: `TypeError`
+* `'1' / 2`: `TypeError`
+* `int('1') / 2.0`: `No error is raised`
+* `ValueError`
+```
+mylist = [10, 20, 30]
+mylist.index(11)
+```
+* `NameError`
+```
+A=2
+3*a
+```
 
 ### Exercise 2
+11/11 points (graded)
 
+Below are some short Python programs. For each program, answer the associated question.
+
+Try to answer the questions without running the code. Check your answers, then run the code for the ones you get wrong.
+
+These questions will ask you to write what the code prints out. If an exception is raised that is not handled by the code write "error" (no quotes), in addition to any other text that is output.
+
+The function in the following questions takes a list of integers `numbers` and a position `index`, and divides each entry in the list of numbers by the value at entry `index`.
+
+Write what it prints out, separating what appears on a new line by a comma and a space.
+
+1. 
+```
+def fancy_divide(numbers,index):
+    try:
+        denom = numbers[index]
+        for i in range(len(numbers)):
+            numbers[i] /= denom
+    except IndexError:
+        print("-1")
+    else:
+        print("1")
+    finally:
+        print("0")
+```
+* What does `fancy_divide([0, 2, 4], 1)` print out? `1, 0`
+* What does `fancy_divide([0, 2, 4], 4)` print out? `-1, 0`
+* What does `fancy_divide([0, 2, 4], 0)` print out? `0, error` (`ZeroDivisionError`)
+
+2. 
+```
+def fancy_divide(numbers, index):
+    try:
+        denom = numbers[index]
+        for i in range(len(numbers)):
+            numbers[i] /= denom
+    except IndexError:
+        fancy_divide(numbers, len(numbers) - 1)
+    except ZeroDivisionError:
+        print("-2")
+    else:
+        print("1")
+    finally:
+        print("0")
+```
+* What does `fancy_divide([0, 2, 4], 1)` print out? `1, 0`
+* What does `fancy_divide([0, 2, 4], 4)` print out? `1, 0, 0`
+* What does `fancy_divide([0, 2, 4], 0)` print out? `-2, 0`
+
+3. 
+```
+def fancy_divide(numbers, index):
+    try:
+        try:
+            denom = numbers[index]
+            for i in range(len(numbers)):
+                numbers[i] /= denom
+        except IndexError:
+            fancy_divide(numbers, len(numbers) - 1)
+        else:
+            print("1")
+        finally:
+            print("0")
+    except ZeroDivisionError:
+        print("-2")
+```
+* What does `fancy_divide([0, 2, 4], 1)` print out? `1, 0`
+* What does `fancy_divide([0, 2, 4], 4)` print out? `1, 0, 0`
+* What does `fancy_divide([0, 2, 4], 0)` print out? `0, -2`
+
+4. Does this code print 0 when you call `fancy_divide([0, 2, 4], 0)`? `No.`
+```
+def fancy_divide(list_of_numbers, index):
+    try:
+        try:
+            raise Exception("0")
+        finally:
+            denom = list_of_numbers[index]
+            for i in range(len(list_of_numbers)):
+                list_of_numbers[i] /= denom
+    except Exception as ex:
+        print(ex)
+```
+
+5. Does this code print 0 when you call `fancy_divide([0, 2, 4], 0)`? `Yes.` 
+```
+def fancy_divide(list_of_numbers, index):
+    try:
+        try:
+            denom = list_of_numbers[index]
+            for i in range(len(list_of_numbers)):
+                list_of_numbers[i] /= denom
+        finally:
+            raise Exception("0")
+    except Exception as ex:
+        print(ex)
+```
 
 ### Exercise: simple divide
+5/5 points (graded)
 
+Suppose we rewrite the FancyDivide function to use a helper function.
+```
+def fancy_divide(list_of_numbers, index):
+   denom = list_of_numbers[index]
+   return [simple_divide(item, denom) for item in list_of_numbers]
+
+
+def simple_divide(item, denom):
+   return item / denom
+```
+This code raises a `ZeroDivisionError` exception for the following call: `fancy_divide([0, 2, 4], 0)`
+
+Your task is to change the definition of `simple_divide` so that the call does not raise an exception. When dividing by 0, `fancy_divide` should return a list with all 0 elements. Any other error cases should still raise exceptions. You should only handle the `ZeroDivisionError`.
+
+```python:
+def simple_divide(item, denom):
+    try:
+        return item / denom
+    except ZeroDivisionError:
+        return 0
+```
 
 ### Exercise 3
+8/8 points (graded)
 
+Consider the function normalize that takes as input a list of positive numbers numbers and returns a list of numbers that are a fraction of the maximum element in the list. Try to answer the questions without running the code. Check your answers, then run the code for the ones you get wrong. You'll learn the most this way, by figuring things out, instead of just running the code and reading off the answers.
+```
+def normalize(numbers):
+    max_number = max(numbers)
+    for i in range(len(numbers)):
+        numbers[i] /= float(max_number)
+    return numbers
+```
+The code below tries to call normalize with one particular input. Answer the next 5 questions based on the following code.
+```
+try:
+      normalize([0, 0, 0])
+except ZeroDivisionError:
+      print('Invalid maximum element')
+```
+1. Does the `try` block throw (also known as raise) an exception? `Yes`
+2. What is the name of the exception the code is trying to catch? `ZeroDivisionError`
+3. What is the output? `Invalid maximum element`
+4. Since we are dividing by the maximum element in a list of positive numbers, we know that `normalize` will return a value between 0 and 1. What type of condition is this? `post condition`
+5. We also know the result is not meaningful when the maximum element is 0, so we want to ensure that the numbers in the list do not violate this. What type of condition is this? `pre condition`
+
+Now assume the definition of the function normalize is rewritten as follows
+```
+def normalize(numbers):
+    max_number = max(numbers)
+    assert(max_number != 0), "Cannot divide by 0"
+    for i in range(len(numbers)):
+        numbers[i]  /= float(max_number)
+        assert(0.0 <= numbers[i] <= 1.0), "output not between 0 and 1"
+    return numbers
+```    
+Answer the next 3 questions based on this code.
+
+1. Which condition does the line `assert(max_number != 0)` correspond to? `pre condition`
+2. Which condition does the line `assert(0.0 <= numbers[i] <= 1.0)` correspond to? `post condition`
+3. What does the function call `normalize([0, 0, 0])` print out? `AssertionError`
 
 # Unit 5: Object Oriented Programming
 ## Lecture 9. Classes and Inheritance
