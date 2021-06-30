@@ -2343,9 +2343,57 @@ def biggest(aDict):
 
 # Unit 4: Good Programming Practices
 ## Lecture 7. Testing and Debugging
+* [Lecture 7. Testing and Debugging](#lecture-7-testing-and-debugging)
+  + [Exercise 1](#exercise-1-6)
+  + [Exercise 2](#exercise-2-5)
+  + [Exercise 3](#exercise-3-5)
+  + [Exercise 4](#exercise-4-4)
+  + [Exercise 5](#exercise-5-4)
+  + [Exercise: integer division](#exercise-integer-division)
+  + [Exercise 6](#exercise-6-3)
+  + [Exercise 7](#exercise-7-3)
+
+### Exercise 1
+
+
+### Exercise 2
+
+
+### Exercise 3
+
+
+### Exercise 4
+
+
+### Exercise 5
+
+
+### Exercise: integer division
+
+
+### Exercise 6
+
+
+### Exercise 7
 
 
 ## Lecture 8. Exceptions and Assertions
+* [Lecture 8. Exceptions and Assertions](#lecture-7-exceptions-and-assertions)
+  + [Exercise 1](#exercise-1-7)
+  + [Exercise 2](#exercise-2-6)
+  + [Exercise: simple divide](#exercise-simple-divide)
+  + [Exercise 3](#exercise-3-6)
+
+### Exercise 1
+
+
+### Exercise 2
+
+
+### Exercise: simple divide
+
+
+### Exercise 3
 
 
 # Unit 5: Object Oriented Programming
