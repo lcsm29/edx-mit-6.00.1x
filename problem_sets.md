@@ -79,7 +79,7 @@ Say you've made a $5,000 purchase on a credit card with an 18% annual interest r
 
 You can think about this in the following way.
 
-At the beginning of month 0 (when the credit card statement arrives), assume you owe an amount we will call <img src="https://render.githubusercontent.com/render/math?math=\color{white}b_0">  (***b*** for ***balance***; subscript ***0*** to indicate this is the balance at month 0).
+At the beginning of month 0 (when the credit card statement arrives), assume you owe an amount we will call <img src="https://render.githubusercontent.com/render/math?math=\color{white}b_0">  (*b* for *balance*; subscript *0* to indicate this is the balance at month 0).
 
 Any payment you make during that month is deducted from the balance. Let's call the payment you make in month 0, <img src="https://render.githubusercontent.com/render/math?math=\color{white}p_0">. Thus, your **unpaid balance** for month 0, <img src="https://render.githubusercontent.com/render/math?math=\color{white}ub_0">, is equal to <img src="https://render.githubusercontent.com/render/math?math=\color{white}b_0 - p_0">.
 
@@ -500,7 +500,7 @@ Example Usage:
 '_ pp_ e'
 ```
 
-When inserting underscores into your string, it's a good idea to add at least a space after each one, so it's clear to the user how many unguessed letters are left in the string (compare the readability of `____` with `_ _ _ _` ). This is called ***usability*** - it's very important, when programming, to consider the usability of your program. If users find your program difficult to understand or operate, they won't use it!
+When inserting underscores into your string, it's a good idea to add at least a space after each one, so it's clear to the user how many unguessed letters are left in the string (compare the readability of `____` with `_ _ _ _` ). This is called *usability* - it's very important, when programming, to consider the usability of your program. If users find your program difficult to understand or operate, they won't use it!
 
 For this problem, you are free to use spacing in any way you wish - our grader will only check that the letters and underscores are in the proper order; it will not look at spacing. We do encourage you to think about usability when designing.
 
@@ -511,7 +511,7 @@ For this function, you may assume that all the letters in `secretWord` and `lett
 [Solution for Problem Set 3, Problem 3](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps3/problem_3_printing_out_all_available_letters.py)
 10.0/10.0 points (graded)
 
-Next, implement the function `getAvailableLetters` that takes in one parameter - a list of letters, `lettersGuessed`. This function returns a string that is comprised of lowercase English letters - all lowercase English letters that are ***not*** in `lettersGuessed`.
+Next, implement the function `getAvailableLetters` that takes in one parameter - a list of letters, `lettersGuessed`. This function returns a string that is comprised of lowercase English letters - all lowercase English letters that are **not** in `lettersGuessed`.
 
 Example Usage:
 ```
@@ -849,14 +849,14 @@ Fill in the code for `getWordScore` in `ps4a.py` and be sure you've passed the a
 
 <span style="color:red">**Please read this problem entirely!!**</span> The majority of this problem consists of learning how to read code, which is an incredibly useful and important skill. At the end, you will implement a short function. Be sure to take your time on this problem - it may seem easy, but reading someone else's code can be challenging and this is an important exercise.
 
-#### Representing hands
+#### **Representing hands**
 A **hand** is the set of letters held by a player during the game. The player is initially dealt a set of random letters. For example, the player could start out with the following hand: `a, q, l, m, u, i, l`. In our program, a hand will be represented as a dictionary: the keys are (lowercase) letters and the values are the number of times the particular letter is repeated in that hand. For example, the above hand would be represented as:
 
 ```python:
 hand = {'a':1, 'q':1, 'l':2, 'm':1, 'u':1, 'i':1}    
 ```
 
-Notice how the repeated letter `'l'` is represented. Remember that with a dictionary, the usual way to access a value is `hand['a']`, where `'a'` is the key we want to find. However, this only works if the key is in the dictionary; otherwise, we get a `KeyError`. To avoid this, we can use the call `hand.get('a', 0)`. This is the "safe" way to access a value if we are not sure the key is in the dictionary. `d.get(key,default)` returns the value for key if key is in the dictionary `d`, else `default`. If `default` is not given, it returns `None`, so that this method never raises a `KeyError`. For example:
+Notice how the repeated letter `'l'` is represented. Remember that with a dictionary, the usual way to access a value is `hand['a']`, where `'a'` is the key we want to find. However, this only works if the key is in the dictionary; otherwise, we get a `KeyError`. To avoid this, we can use the call `hand.get('a', 0)`. This is the "safe" way to access a value if we are not sure the key is in the dictionary. `d.get(key,default)` returns the value for `key` if `key` is in the dictionary `d`, else `default`. If `default` is not given, it returns `None`, so that this method never raises a `KeyError`. For example:
 ```
 >>> hand['e']
 Traceback (most recent call last):
@@ -866,7 +866,7 @@ KeyError: 'e'
 0
 ```
 
-#### Converting words into dictionary representation
+#### **Converting words into dictionary representation**
 One useful function we've defined for you is `getFrequencyDict`, defined near the top of `ps4a.py`. When given a string of letters as an input, it returns a dictionary where the keys are letters and the values are the number of times that letter is represented in the input string. For example:
 ```shell:
 >>> getFrequencyDict("hello")
@@ -874,13 +874,13 @@ One useful function we've defined for you is `getFrequencyDict`, defined near th
 ```
 As you can see, this is the same kind of dictionary we use to represent hands.
 
-#### Displaying a hand
+#### **Displaying a hand**
 Given a hand represented as a dictionary, we want to display it in a user-friendly way. We have provided the implementation for this in the `displayHand` function. Take a few minutes right now to read through this function carefully and understand what it does and how it works.
 
-#### Generating a random hand
+#### **Generating a random hand**
 The hand a player is dealt is a set of letters chosen at random. We provide you with the implementation of a function that generates this random hand, `dealHand`. The function takes as input a positive integer `n`, and returns a new object, a hand containing `n` lowercase letters. Again, take a few minutes (right now!) to read through this function carefully and understand what it does and how it works.
 
-#### Removing letters from a hand (you implement this)
+#### **Removing letters from a hand (you implement this)**
 The player starts with a hand, a set of letters. As the player spells out words, letters from this set are used up. For example, the player could start out with the following hand: `a, q, l, m, u, i, l`. The player could choose to spell the word `quail`. This would leave the following letters in the player's hand: `l, m`. Your task is to implement the function `updateHand`, which takes in two inputs - a `hand` and a `word` (string). `updateHand` uses letters from the hand to spell the word, and then returns a copy of the `hand`, containing only the letters remaining. For example:
 ```shell:
 >>> hand = {'a':1, 'q':1, 'l':2, 'm':1, 'u':1, 'i':1}
@@ -912,11 +912,368 @@ You may wish to review the ".copy" method of Python dictionaries (review this an
 Your implementation of updateHand should be short (ours is 4 lines of code). It does not need to call any helper functions.
 
 ### Problem 3 - Valid Words
+[Solution for Problem Set 4, Problem 3](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_3.py)
+10.0/10.0 points (graded)
+
+At this point, we have written code to generate a random hand and display that hand to the user. We can also ask the user for a word (Python's `input`) and score the word (using your `getWordScore`). However, at this point we have not written any code to verify that a word given by a player obeys the rules of the game. A *valid* word is in the word list; **and** it is composed entirely of letters from the current hand. Implement the `isValidWord` function.
+
+**Testing**: Make sure the `test_isValidWord` tests pass. In addition, you will want to test your implementation by calling it multiple times on the same hand - what should the correct behavior be? Additionally, the empty string (`''`) is not a valid word - if you code this function correctly, you shouldn't need an additional check for this condition.
+
+Fill in the code for `isValidWord` in `ps4a.py` and be sure you've passed the appropriate tests in `test_ps4a.py` before pasting your function definition here.
 
 ### Problem 4 - Hand Length
+[Solution for Problem Set 4, Problem 4](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_4.py)
+10.0/10.0 points (graded)
+
+We are now ready to begin writing the code that interacts with the player. We'll be implementing the `playHand` function. This function allows the user to play out a single hand. First, though, you'll need to implement the helper `calculateHandlen` function, which can be done in under five lines of code.
 
 ### Problem 5 - Playing a Hand
+[Solution for Problem Set 4, Problem 5](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_5.py)
+10.0/10.0 points (graded)
+
+In `ps4a.py`, note that in the function `playHand`, there is a bunch of *pseudocode*. This pseudocode is provided to help guide you in writing your function. Check out the [Why Pseudocode?](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/WhyPseudocode.pdf) resource to learn more about the What and Why of Pseudocode before you start coding your solution.
+
+**Note**: Do **not** assume that there will always be 7 letters in a hand! The parameter `n` represents the size of the hand.
+
+**Testing**: Before testing your code in the answer box, try out your implementation as if you were playing the game. Here is some example output of `playHand`:
+
+#### **Test Cases**
+<details>
+<summary>Case #1</summary>
+<br>
+
+Function Call:
+```
+wordList = loadWords()
+playHand({'h':1, 'i':1, 'c':1, 'z':1, 'm':2, 'a':1}, wordList, 7)
+```
+Output:
+```
+Current Hand:  a c i h m m z
+Enter word, or a "." to indicate that you are finished: him
+"him" earned 24 points. Total: 24 points
+
+Current Hand:  a c m z
+Enter word, or a "." to indicate that you are finished: cam
+"cam" earned 21 points. Total: 45 points
+
+Current Hand:  z
+Enter word, or a "." to indicate that you are finished: .
+Goodbye! Total score: 45 points.    
+```
+</details>
+<details>
+<summary>Case #2</summary>
+<br>
+
+Function Call:
+```
+wordList = loadWords()
+playHand({'w':1, 's':1, 't':2, 'a':1, 'o':1, 'f':1}, wordList, 7)
+```
+Output:
+```
+Current Hand:  a s t t w f o
+Enter word, or a "." to indicate that you are finished: tow
+"tow" earned 18 points. Total: 18 points
+
+Current Hand:  a s t f
+Enter word, or a "." to indicate that you are finished: tasf
+Invalid word, please try again.
+
+Current Hand:  a s t f
+Enter word, or a "." to indicate that you are finished: fast
+"fast" earned 28 points. Total: 46 points 
+
+Run out of letters. Total score: 46 points.  
+```
+</details>
+<details>
+<summary>Case #3</summary>
+<br>
+
+Function Call:
+```
+wordList = loadWords()
+playHand({'n':1, 'e':1, 't':1, 'a':1, 'r':1, 'i':2}, wordList, 7)
+```
+Output:
+```
+Current Hand: a r e t i i n
+Enter word, or a "." to indicate that you are finished: inertia
+"inertia" earned 99 points. Total: 99 points
+
+Run out of letters. Total score: 99 points.
+```
+</details>
+<details>
+<summary>Additional Testing</summary>
+<br>
+
+Be sure that, in addition to the listed tests, you test the same basic test conditions with varying values of `n`. `n` will never be smaller than the number of letters in the hand.
+</details>
+
 
 ### Problem 6 - Playing a Game
+[Solution for Problem Set 4, Problem 6](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_6.py)
+15.0/15.0 points (graded)
+
+A game consists of playing multiple hands. We need to implement one final function to complete our word-game program. Write the code that implements the `playGame` function. You should remove the code that is currently uncommented in the `playGame` body. Read through the specification and make sure you understand what this function accomplishes. For the game, you should use the `HAND_SIZE` constant to determine the number of cards in a hand.
+
+**Testing**: Try out this implementation as if you were playing the game. Try out different values for `HAND_SIZE` with your program, and be sure that you can play the wordgame with different hand sizes by modifying only the variable `HAND_SIZE`.
+
+#### **Sample Output**
+<details>
+<summary>Here is how the game output should look...</summary>
+<br>
+
+```
+Loading word list from file...
+   83667 words loaded.
+Enter n to deal a new hand, r to replay the last hand, or e to end game: r
+You have not played a hand yet. Please play a new hand first!
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+Current Hand: p z u t t t o
+Enter word, or a "." to indicate that you are finished: tot
+"tot" earned 9 points. Total: 9 points
+
+Current Hand: p z u t
+Enter word, or a "." to indicate that you are finished: .
+Goodbye! Total score: 9 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: r
+Current Hand: p z u t t t o
+Enter word, or a "." to indicate that you are finished: top
+"top" earned 15 points. Total: 15 points
+
+Current Hand: z u t t
+Enter word, or a "." to indicate that you are finished: tu
+Invalid word, please try again.
+
+Current Hand: z u t t
+Enter word, or a "." to indicate that you are finished: .
+Goodbye! Total score: 15 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+Current Hand: a q w f f i p
+Enter word, or a "." to indicate that you are finished: paw
+"paw" earned 24 points. Total: 24 points
+
+Current Hand: q f f i
+Enter word, or a "." to indicate that you are finished: qi
+"qi" earned 22 points. Total: 46 points
+
+Current Hand: f f
+Enter word, or a "." to indicate that you are finished: .
+Goodbye! Total score: 46 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+Current Hand: a r e t i i n
+Enter word, or a "." to indicate that you are finished: inertia
+"inertia" earned 99 points. Total: 99 points.
+
+Run out of letters. Total score: 99 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: x
+Invalid command.
+Enter n to deal a new hand, r to replay the last hand, or e to end game: e
+```
+</details>
+<details>
+<summary>Hints about the output</summary>
+<br>
+
+Be sure to inspect the above sample output carefully - very little is actually printed out in this function specifically. Most of the printed output actually comes from the code you wrote in `playHand` - be sure that your code is modular and uses function calls to the `playHand` helper function!
+
+You should also make calls to the `dealHand` helper function. You shouldn't make calls to any other helper function that we've written so far - in fact, this function can be written in about 15-20 lines of code.
+
+Here is the above output, with the output from `playHand` obscured:
+```
+Loading word list from file...
+   83667 words loaded.
+Enter n to deal a new hand, r to replay the last hand, or e to end game: r
+You have not played a hand yet. Please play a new hand first!
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+<call to playHand> 
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+<call to playHand> 
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+<call to playHand> 
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: x
+Invalid command.
+Enter n to deal a new hand, r to replay the last hand, or e to end game: e
+```
+</details>
+<details>
+<summary>Entering Your Code</summary>
+<br>
+
+Be sure to only paste your definition for `playGame` in the following box. Do not include any other function definitions.
+</details>
+<details>
+<summary>A cool trick about 'print'</summary>
+<br>
+
+A cool trick about `print`: you can make two or more print statements print to the same line! Try out the following code. It will separate the first and second line with a space, and the second and third line with a "?" rather than putting each on a new line.
+```
+print('Hello', end = " ")
+print('world', end="?")
+print('!')
+```
+</details>
 
 ### Problem 7 - You and your Computer
+[Solution for Problem Set 4, Problem 7](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_7.py)
+20.0/20.0 points (graded)
+
+Now that your computer can choose a word, you need to give the computer the option to play. Write the code that re-implements the `playGame` function. You will modify the function to behave as described below in the function's comments. As before, you should use the `HAND_SIZE` constant to determine the number of cards in a hand. Be sure to try out different values for `HAND_SIZE` with your program.
+
+#### **Sample Output and Hints**
+<details>
+<summary>Here is how the game output should look...</summary>
+<br>
+
+```
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+
+Enter u to have yourself play, c to have the computer play: u
+
+Current Hand: a s r e t t t
+Enter word, or a "." to indicate that you are finished: tatters
+"tatters" earned 99 points. Total: 99 points
+
+Run out of letters. Total score: 99 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: r
+
+Enter u to have yourself play, c to have the computer play: c
+
+Current Hand:  a s r e t t t
+"stretta" earned 99 points. Total: 99 points
+
+Total score: 99 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: x
+Invalid command.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+
+Enter u to have yourself play, c to have the computer play: me
+Invalid command.
+
+Enter u to have yourself play, c to have the computer play: you
+Invalid command.
+
+Enter u to have yourself play, c to have the computer play: c
+
+Current Hand:  a c e d x l n
+"axled" earned 65 points. Total: 65 points
+
+Current Hand:  c n
+Total score: 65 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+
+Enter u to have yourself play, c to have the computer play: u
+
+Current Hand: a p y h h z o
+Enter word, or a "." to indicate that you are finished: zap 
+"zap" earned 42 points. Total: 42 points
+
+Current Hand: y h h o
+Enter word, or a "." to indicate that you are finished: oy
+"oy" earned 10 points. Total: 52 points
+
+Current Hand: h h
+Enter word, or a "." to indicate that you are finished: .
+Goodbye! Total score: 52 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: r
+
+Enter u to have yourself play, c to have the computer play: c
+
+Current Hand:  a p y h h z o
+"hypha" earned 80 points. Total: 80 points
+
+Current Hand:  z o
+Total score: 80 points.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: e
+```
+</details>
+<details>
+<summary>Hints about the output</summary>
+<br>
+
+Be sure to inspect the above sample output carefully - very little is actually printed out in this function specifically. Most of the printed output actually comes from the code you wrote in `playHand` and `compPlayHand` - be sure that your code is modular and uses function calls to these helper functions!
+
+You should also make calls to the `dealHand` helper function. You shouldn't make calls to any other helper function that we've written so far - in fact, this function can be written in about 15-20 lines of code.
+
+Here is the above output, with the output from `playHand` and `compPlayHand` obscured:
+```
+Enter n to deal a new hand, r to replay the last hand, or e to end game: r
+You have not played a hand yet. Please play a new hand first!
+            
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+
+Enter u to have yourself play, c to have the computer play: u
+
+<call to playHand> 
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: r
+
+Enter u to have yourself play, c to have the computer play: c
+
+<call to compPlayHand> 
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: x
+Invalid command.
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+
+Enter u to have yourself play, c to have the computer play: me
+Invalid command.
+
+Enter u to have yourself play, c to have the computer play: you
+Invalid command.
+
+Enter u to have yourself play, c to have the computer play: c
+
+<call to compPlayHand> 
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: n
+
+Enter u to have yourself play, c to have the computer play: u
+
+<call to playHand> 
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: r
+
+Enter u to have yourself play, c to have the computer play: c
+
+<call to compPlayHand> 
+
+Enter n to deal a new hand, r to replay the last hand, or e to end game: e
+```
+</details>
+<details>
+<summary>A Note On Runtime</summary>
+<br>
+
+You may notice that things run slowly when the computer plays. This is to be expected. If you want (totally optional!), feel free to investigate ways of making the computer's turn go faster - one way is to preprocess the word list into a dictionary (string -> int) so looking up the score of a word becomes much faster in the `compChooseWord` function.
+
+Be careful though - you only want to do this preprocessing one time - probably right after we generate the wordList for you (at the bottom of the file). If you choose to do this, you'll have to modify what inputs your functions take (they'll probably take a word dictionary instead of a word list, for example).
+
+**IMPORTANT**:Don't worry about this issue when running your code in the checker below! We load a very small sample wordList (*much* smaller than 83667 words!) to avoid having your code time out. Your code will work even if you don't implement a form of pre-processing as described.
+</details>
+<details>
+<summary>Entering Your Code</summary>
+<br>
+
+Be sure to only paste your definition for playGame from `ps4b.py` in the following box. Do not include any other function definitions.
+</details>
