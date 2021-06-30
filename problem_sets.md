@@ -17,6 +17,17 @@
     + [Problem 2 - Getting the User's Guess](#problem-2---getting-the-users-guess)
     + [Problem 3 - Printing Out all Available Letters](#problem-3---printing-out-all-available-letters)
     + [Problem 4 - The Game](#problem-4---the-game)
+- [Unit 4: Good Programming Practices](#unit-4-good-programming-practices)
+  * [Problem Set 4](#problem-set-4)
+    + [Introduction](#introduction-2)
+    + [Getting Started](#getting-started)
+    + [Problem 1 - Word Scores](#problem-1---word-scores)
+    + [Problem 2 - Dealing with Hands](#problem-2---dealing-with-hands)
+    + [Problem 3 - Valid Words](#problem-3---valid-words)
+    + [Problem 4 - Hand Length](#problem-4---hand-length)
+    + [Problem 5 - Playing a Hand](#problem-5---playing-a-hand)
+    + [Problem 6 - Playing a Game](#problem-6---playing-a-game)
+    + [Problem 7 - You and your Computer](#problem-7---you-and-your-computer)
 
 # Unit 1: Python Basics
 ## Problem Set 1
@@ -673,3 +684,23 @@ None  #-- because you printed the function (and hence the return)
 All functions return something. If a function you write does not return anything (and just prints something to the console), then the default action in Python is to `return None`
 </details>
 <br><br>
+
+# Unit 4: Good Programming Practices
+## Problem Set 4
+### Introduction
+
+### Getting Started
+
+### Problem 1 - Word Scores
+
+### Problem 2 - Dealing with Hands
+
+### Problem 3 - Valid Words
+
+### Problem 4 - Hand Length
+
+### Problem 5 - Playing a Hand
+
+### Problem 6 - Playing a Game
+
+### Problem 7 - You and your Computer
