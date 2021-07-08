@@ -8,9 +8,37 @@ Then, I found [this newer course](https://www.edx.org/course/introduction-to-com
 * [problem_sets.md](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/problem_sets.md): containing all problem sets and links to the solution
 * [others](https://github.com/lcsm29/edx-mit-6.00.1x/tree/main/others)/[polysum.py](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/others/polysum.py): solution for Complete Programming Experience: Polysum
 
-## Some Random Info
+## Exam Info
+* **Eligibility**: a) Pay $75 **and** b) go through the automated ID verification process.
+  * Both midterm and final exams are behind the paywall, so unless you pay, you don't have an access to exams.
+  * You also need to verify your identity. The ID verification is handled by third-party, and it takes a few days to process, so make sure you get your ID verified before the exam starts.
+  * Once you verified your ID, it is valid for 2 years. I assume it's probably valid for other courses too for that period.
+* **Timed exam**: 8 hours from start to finish
+  * The course has a [timed exam](https://support.edx.org/hc/en-us/articles/360000037728) (8 hours), not a [proctored exam](https://support.edx.org/hc/en-us/articles/207249428). Thus, no webcam or software installation is required for monitoring.
+  * The 8 hour limit is more than generous. The exam is certainly not meant for 8 hours worth of continuous effort (more like 2-3 hours tops).
+  * I think they've implemented such generous limit to handle the extreme cases with some sort of disasters (e.g. edX down for everyone, local internet/power outrage, earthquake, tsunami, etc). It took about 60 minutes for me from start to finish.
+* **Randomized question bank**: The problem you get is randomly selected from a question bank.
+* **Difficulty**: Roughly on par with problem sets or finger exercises.
+* **Types of Problems**: a) Multiple choice problems, b) Coding problems
+  * Each multiple choice problem contains several multiple choice quizzes, while each coding problem contains only one problem.
+  * I got 2 multiple choice problems (each contains 7-10 multiple choice quizzes), and 5 coding problems for midterm exam.
+* **Number of Submissions Alloweds**: a) 1 submission for MC problems, b) 10 submission for coding problems.
+  * Don't be too hasty when you submit the answer of the quiz.
+* **Scoring**: Based on the result of the auto grader. No human involved in grading.
+  * score distribution by type: In my case, the ratio of the score of MC problems to coding problems was roughly 2:8. 20 Points for 17 MC quizzes, and 85 points for 5 coding problems.
+* **Things you're allowed and not allowed to do during the exams**:
+  * **Allowed**
+    1. Look up for resources a) which are posted on the platform (including the textbook), b) any other textbooks you possess, c) and any notes you've prepared youself
+    2. Use your IDEs, Python shells, or online Python interpreters to test your solutions for coding problems.
+  * **Not Allowed**:
+    1. Use the Internet to search for solutions
+    2. Communicate with any person about the exam
+    3. Run code provided in non-coding questions in your IDEs
+    4. Post anything related to the exam questions on the edX discussion forum or anywhere else. (Therefore, I won't post the problems and solutions here)
+
+## Some Other Random Info
 * 📅 **Started** on June 3, 2021
-* ℹ️ **Python Versions I used**: [3.9.5](https://www.python.org/downloads/release/python-395/)
+* ℹ️ **Python Versions I used**: [3.9.6](https://www.python.org/downloads/release/python-396/)
 * 🔗 **Link to my repo for OCW courses:** [MIT6.0001](https://github.com/lcsm29/MIT6.0001), [MIT6.0002](https://github.com/lcsm29/MIT6.0002) (work in progress)
 
 ## Resources
