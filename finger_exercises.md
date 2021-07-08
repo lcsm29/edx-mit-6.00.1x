@@ -2812,10 +2812,719 @@ Answer the next 3 questions based on this code.
 
 # Unit 5: Object Oriented Programming
 ## Lecture 9. Classes and Inheritance
+* [Lecture 9. Classes and Inheritance](#lecture-9-classes-and-inheritance)
+  + [Exercise 1](#exercise-1-8)
+  + [Exercise 2](#exercise-2-7)
+  + [Exercise 3](#exercise-3-7)
+  + [Exercise: coordinate](#exercise-coordinate)
+  + [Exercise: int set](#exercise-int-set)
+  + [Exercise: spell](#exercise-spell)
+  + [Exercise 4](#exercise-4-5)
 
+### Exercise 1
+5/5 points (graded)
+
+1. What method is called when an object is created?
+
+- [ ] `self`
+- [ ] `obj.self`
+- [ ] `init`
+- [x] `__init__`
+- [ ] `new`
+
+2. If you have an object instance, obj, and you want to call its doSomething() method (assuming it has one), how would you do this? (write the line of code you would use)
+```
+obj.doSomething()
+```
+
+3. True or False? An object's attributes must be defined in the object's `__init__` method.
+
+- [ ] True
+- [x] False
+
+4. The following code starts the definition of a class called Address. The class needs to have two attributes: number and streetName. Please add in the two lines of code that will create these attributes from the appropriate passed in parameters.
+```
+class Address(object):
+    def __init__(self, number, streetName):
+        # Line 1: Creating a number attribute
+        # Line 2: Creating a streetName attribute  
+```
+* What is the correct expression for # Line 1? `self.number = number`
+* What is the correct expression for # Line 2? `self.streetName = streetName`
+
+### Exercise 2
+4/4 points (graded)
+
+1. Consider the following code:
+```
+class Clock(object):
+    def __init__(self, time):
+	self.time = time
+    def print_time(self):
+	time = '6:30'
+	print(self.time)
+
+clock = Clock('5:30')
+clock.print_time()
+```
+What does the code print out? If you aren't sure, create a Python file and run it. `5:30`
+
+2. Consider the following code:
+```
+class Clock(object):
+    def __init__(self, time):
+	self.time = time
+    def print_time(self, time):
+	print(time)
+
+clock = Clock('5:30')
+clock.print_time('10:30')
+```
+What does the code print out? If you aren't sure, create a Python file and run it. `10:30`
+
+3. Consider the following code:
+```
+class Clock(object):
+    def __init__(self, time):
+        self.time = time
+    def print_time(self):
+        print(self.time)
+
+boston_clock = Clock('5:30')
+paris_clock = boston_clock
+paris_clock.time = '10:30'
+boston_clock.print_time()
+```
+What does the code print out? If you aren't sure, create a Python file and run it. `10:30`
+
+Are boston_clock and paris_clock different objects?
+
+- [ ] Yes
+- [x] No
+
+### Exercise 3
+24/24 points (graded)
+
+Below is a transcript of a session with the Python shell. Provide the type and value of the expressions being evaluated inside the `print`. If evaluating an expression would cause an error, select NoneType and write `error` in the box. If the result is a function, select function and write `function` in the box. As always, try to do this problem by hand before turning to your interpreter for help.
+
+Assume the following definitions have been made:
+```
+class Weird(object):
+    def __init__(self, x, y): 
+        self.y = y
+        self.x = x
+    def getX(self):
+        return x 
+    def getY(self):
+        return y
+
+class Wild(object):
+    def __init__(self, x, y): 
+        self.y = y
+        self.x = x
+    def getX(self):
+        return self.x 
+    def getY(self):
+        return self.y
+
+X = 7
+Y = 8
+```
+
+1. `NoneType`: `error`
+```
+w1 = Weird(X, Y)
+print(w1.getX())
+```
+
+2. `NoneType`: `error`
+```
+print(w1.getY())
+```
+
+3. `int`: `7`
+```
+w2 = Wild(X, Y)
+print(w2.getX())
+```
+
+4. `int`: `8`
+```
+print(w2.getY())
+```
+
+5. `int`: `17`
+```
+w3 = Wild(17, 18)
+print(w3.getX())
+```
+
+6. `int`: `18`
+```
+print(w3.getY())
+```
+
+7. `int`: `7`
+```
+w4 = Wild(X, 18)
+print(w4.getX())
+```
+
+8. `int`: `18`
+```
+print(w4.getY())
+```
+
+9.`int`: `31`
+```
+X = w4.getX() + w3.getX() + w2.getX()
+print(X)
+```
+
+10. `int`: `7`
+```
+print(w4.getX())
+```
+
+11. `int`: `44`
+```
+Y = w4.getY() + w3.getY()
+Y = Y + w2.getY()
+print(Y)
+```
+
+12. `int`: `8`
+```
+print(w2.getY())
+```
+
+### Exercise: coordinate
+5/5 points (graded)
+
+Consider the following code from the last lecture video:
+```
+class Coordinate(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def getX(self):
+        # Getter method for a Coordinate object's x coordinate.
+        # Getter methods are better practice than just accessing an attribute directly
+        return self.x
+
+    def getY(self):
+        # Getter method for a Coordinate object's y coordinate
+        return self.y
+
+    def __str__(self):
+        return '<' + str(self.getX()) + ',' + str(self.getY()) + '>'
+```
+Your task is to define the following two methods for the `Coordinate` class:
+
+1. Add an `__eq__` method that returns True if coordinates refer to same point in the plane (i.e., have the same x and y coordinate).
+
+2. Define `__repr__`, a special method that returns a string that looks like a valid Python expression that could be used to recreate an object with the same value. In other words, `eval(repr(c)) == c` given the definition of `__eq__` from part 1.
+
+For more on `__repr__`, see this [SO post](https://stackoverflow.com/questions/452300/python-object-repr-self-should-be-an-expression).
+```python:
+class Coordinate(object):
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+    def getX(self):
+        # Getter method for a Coordinate object's x coordinate.
+        # Getter methods are better practice than just accessing an attribute directly
+        return self.x
+
+    def getY(self):
+        # Getter method for a Coordinate object's y coordinate
+        return self.y
+
+    def __str__(self):
+        return '<' + str(self.getX()) + ',' + str(self.getY()) + '>'
+        
+    def __eq__(self, other):
+        return self.getX() == other.getX() and self.getY() == other.getY()
+
+    def __repr__(self):
+        return 'Coordinate(' + str(self.getX()) + ',' + str(self.getY()) + ')'
+```
+
+### Exercise: int set
+5/5 points (graded)
+
+Consider the following code from the last lecture video:
+```
+class intSet(object):
+    """An intSet is a set of integers
+    The value is represented by a list of ints, self.vals.
+    Each int in the set occurs in self.vals exactly once."""
+
+    def __init__(self):
+        """Create an empty set of integers"""
+        self.vals = []
+
+    def insert(self, e):
+        """Assumes e is an integer and inserts e into self""" 
+        if not e in self.vals:
+            self.vals.append(e)
+
+    def member(self, e):
+        """Assumes e is an integer
+           Returns True if e is in self, and False otherwise"""
+        return e in self.vals
+
+    def remove(self, e):
+        """Assumes e is an integer and removes e from self
+           Raises ValueError if e is not in self"""
+        try:
+            self.vals.remove(e)
+        except:
+            raise ValueError(str(e) + ' not found')
+
+    def __str__(self):
+        """Returns a string representation of self"""
+        self.vals.sort()
+        return '{' + ','.join([str(e) for e in self.vals]) + '}'
+```
+
+Your task is to define the following two methods for the `intSet` class:
+
+1. Define an `intersect` method that returns a new `intSet` containing elements that appear in both sets. In other words,
+```
+s1.intersect(s2)
+```
+would return a new `intSet` of integers that appear in both `s1` and `s2`. Think carefully - what should happen if `s1` and `s2` have no elements in common?
+
+2. Add the appropriate method(s) so that `len(s)` returns the number of elements in `s`.
+
+Hint: look through the [Python docs](https://docs.python.org/3.3/reference/datamodel.html) to figure out what you'll need to solve this problem.
+```python:
+class intSet(object):
+    """An intSet is a set of integers
+    The value is represented by a list of ints, self.vals.
+    Each int in the set occurs in self.vals exactly once."""
+
+    def __init__(self):
+        """Create an empty set of integers"""
+        self.vals = []
+
+    def insert(self, e):
+        """Assumes e is an integer and inserts e into self""" 
+        if not e in self.vals:
+            self.vals.append(e)
+
+    def member(self, e):
+        """Assumes e is an integer
+           Returns True if e is in self, and False otherwise"""
+        return e in self.vals
+
+    def remove(self, e):
+        """Assumes e is an integer and removes e from self
+           Raises ValueError if e is not in self"""
+        try:
+            self.vals.remove(e)
+        except:
+            raise ValueError(str(e) + ' not found')
+
+    def __str__(self):
+        """Returns a string representation of self"""
+        self.vals.sort()
+        return '{' + ','.join([str(e) for e in self.vals]) + '}'
+
+    def intersect(self, other):
+        newSet = intSet()
+        for element in [e for e in self.vals if other.member(e)]:
+            newSet.insert(element)
+        return newSet
+        
+    def __len__(self):
+        return len(self.vals)
+```
+
+### Exercise: spell
+9/9 points (graded)
+
+Consider the following code:
+```
+class Spell(object):
+    def __init__(self, incantation, name):
+        self.name = name
+        self.incantation = incantation
+
+    def __str__(self):
+        return self.name + ' ' + self.incantation + '\n' + self.getDescription()
+              
+    def getDescription(self):
+        return 'No description'
+    
+    def execute(self):
+        print(self.incantation)
+
+
+class Accio(Spell):
+    def __init__(self):
+        Spell.__init__(self, 'Accio', 'Summoning Charm')
+
+class Confundo(Spell):
+    def __init__(self):
+        Spell.__init__(self, 'Confundo', 'Confundus Charm')
+
+    def getDescription(self):
+        return 'Causes the victim to become confused and befuddled.'
+
+def studySpell(spell):
+    print(spell)
+
+spell = Accio()
+spell.execute()
+studySpell(spell)
+studySpell(Confundo())
+```
+
+1. What are the parent class(es)? Note that the term "parent class" is interchangable with the term "superclass".
+
+- [x] Spell
+- [ ] Accio
+- [ ] Confundo
+
+2. What are the child class(es)? Note that the term "child class" is interchangable with the term "subclass".
+
+- [ ] Spell
+- [x] Accio
+- [x] Confundo
+
+3. What does the code print out? Try figuring it out in your head before you try running it in Python.
+
+Hint: This code prints out 5 lines. Enter each line that is printed out in its own box, in sequential order.
+
+  1. Accio
+  2. Summoning Charm Accio
+  3. No description
+  4. Confundus Charm Confundo
+  5. Causes the victim to become confused and befuddled.
+
+4. Which `getDescription` method is called when `studySpell(Confundo())` is executed?
+
+- [ ] The getDescription method defined within the Spell class
+- [ ] The getDescription method defined within the Accio class
+- [x] The getDescription method defined within the Confundo class
+
+5. How do we need to modify `Accio` so that `print(Accio())` will print the following description?
+```
+Summoning Charm Accio
+This charm summons an object to the caster, potentially over a significant distance.
+```
+
+```python:
+class Accio(Spell):
+    def __init__(self):
+        Spell.__init__(self, 'Accio', 'Summoning Charm')
+
+    def getDescription(self):
+        return 'This charm summons an object to the caster, potentially over a significant distance.'
+```
+
+### Exercise 4
+7/7 points (graded)
+
+Python supports a limited form of multiple inheritance, demonstrated in the following code:
+```
+class A(object):
+    def __init__(self):
+        self.a = 1
+    def x(self):
+        print("A.x")
+    def y(self):
+        print("A.y")
+    def z(self):
+        print("A.z")
+
+class B(A):
+    def __init__(self):
+        A.__init__(self)
+        self.a = 2
+        self.b = 3
+    def y(self):
+        print("B.y")
+    def z(self):
+        print("B.z")
+
+class C(object):
+    def __init__(self):
+        self.a = 4
+        self.c = 5
+    def y(self):
+        print("C.y")
+    def z(self):
+        print("C.z")
+
+class D(C, B):
+    def __init__(self):
+        C.__init__(self)
+        B.__init__(self)
+        self.d = 6
+    def z(self):
+        print("D.z")
+```
+Which `__init__` methods are invoked and in which order is determined by the coding of the individual `__init__` methods.
+
+When resolving a reference to an attribute of an object that's an instance of class `D`, Python first searches the object's instance variables then uses a simple left-to-right, depth first search through the class hierarchy. In this case that would mean searching the class `C`, followed the class `B` and its superclasses (ie, class `A`, and then any superclasses it may have, et cetera).
+
+With the definitions above if we define
+```
+obj = D()
+```
+then what is printed by each of the following statements?
+
+1. `print(obj.a)`: `2`
+2. `print(obj.b)`: `3`
+3. `print(obj.c)`: `5`
+4. `print(obj.d)`: `6`
+5. `obj.x()`: `A.x`
+6. `obj.y()`: `C.y`
+7. `obj.z()`: `D.z`
 
 ## Lecture 10. An Extended Example
+* [Lecture 10. An Extended Example](#lecture-10-an-extended-example)
+  + [Exercise: hand](#exercise-hand)
+  + [Exercise 1](#exercise-1-9)
+  + [Exercise: genPrimes](#exercise-genprimes)
+  + [Exercise 2](#exercise-2-8)
 
+### Exercise: hand
+5/5 points (graded)
+
+In this problem, you'll be asked to read through an object-oriented implementation of the hand from the word game problem of Problem Set 4. You'll then be asked to implement one of its methods. Note that the implementation of the object-oriented version of the hand is a bit different than how we did things with the functional implementation; pay close attention to doc strings and read through the implementation carefully.
+
+To begin: Download [hand.py](https://raw.githubusercontent.com/lcsm29/edx-mit-6.00.1x/d4f275378820b82aaa3ed1b06dc0f1ff940b3d5d/others/hand.py) and read through the file. Be sure to understand what's going on in the file. Make a few instances of the `Hand` class, and play around with the existing methods.
+
+When you have completed reading through the file, implement the `update` method.
+
+Paste the entire `Hand` class in the box below.
+
+The `__str__` method is this:
+```
+    def __str__(self):
+        '''
+        Display a string representation of the hand.
+        '''
+        output = ''        
+        hand_keys = sorted(self.hand.keys())
+        for letter in hand_keys:
+            for j in range(self.hand[letter]):
+                output += letter
+        return output
+```
+Use this `__str__` method to ensure the grading of the hand's display is consistent.
+```python:
+class Hand(object):
+    def __init__(self, n):
+        '''
+        Initialize a Hand.
+
+        n: integer, the size of the hand.
+        '''
+        assert type(n) == int
+        self.HAND_SIZE = n
+        self.VOWELS = 'aeiou'
+        self.CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
+
+        # Deal a new hand
+        self.dealNewHand()
+
+    def dealNewHand(self):
+        '''
+        Deals a new hand, and sets the hand attribute to the new hand.
+        '''
+        # Set self.hand to a new, empty dictionary
+        self.hand = {}
+
+        # Build the hand
+        numVowels = self.HAND_SIZE // 3
+    
+        for i in range(numVowels):
+            x = self.VOWELS[random.randrange(0,len(self.VOWELS))]
+            self.hand[x] = self.hand.get(x, 0) + 1
+        
+        for i in range(numVowels, self.HAND_SIZE):    
+            x = self.CONSONANTS[random.randrange(0,len(self.CONSONANTS))]
+            self.hand[x] = self.hand.get(x, 0) + 1
+            
+    def setDummyHand(self, handString):
+        '''
+        Allows you to set a dummy hand. Useful for testing your implementation.
+
+        handString: A string of letters you wish to be in the hand. Length of this
+        string must be equal to self.HAND_SIZE.
+
+        This method converts sets the hand attribute to a dictionary
+        containing the letters of handString.
+        '''
+        assert len(handString) == self.HAND_SIZE, "Length of handString ({0}) must equal length of HAND_SIZE ({1})".format(len(handString), self.HAND_SIZE)
+        self.hand = {}
+        for char in handString:
+            self.hand[char] = self.hand.get(char, 0) + 1
+
+
+    def calculateLen(self):
+        '''
+        Calculate the length of the hand.
+        '''
+        ans = 0
+        for k in self.hand:
+            ans += self.hand[k]
+        return ans
+    
+    def __str__(self):
+        '''
+        Display a string representation of the hand.
+        '''
+        output = ''
+        hand_keys = sorted(self.hand.keys())
+        for letter in hand_keys:
+            for j in range(self.hand[letter]):
+                output += letter
+        return output
+
+    def update(self, word):
+        """
+        Does not assume that self.hand has all the letters in word.
+
+        Updates the hand: if self.hand does have all the letters to make
+        the word, modifies self.hand by using up the letters in the given word.
+
+        Returns True if the word was able to be made with the letter in
+        the hand; False otherwise.
+        
+        word: string
+        returns: Boolean (if the word was or was not made)
+        """
+        for char, count in {c: word.count(c) for c in set(word)}.items():
+            if char not in self.hand.keys():
+                return False
+            if count > self.hand[char]:
+                return False
+        for c in word:
+            self.hand[c] = self.hand.get(c, 0) - 1
+        return True
+```
+
+### Exercise 1
+2/2 points (graded)
+
+This problem will ask some questions about the previous problem. You will want to refer to the `Hand` class from `hand.py`.
+
+1. There are two ways to write the `Hand.update` method: you could write this method in a way that gets rid of the key letter in the attribute `hand` dictionary when the frequency of the letter falls to 0, or write it in a way that leaves the key letter in the attribute `hand` dictionary even when the frequency of the letter falls to 0.
+
+Will the two different implementations of the `Hand.update` method lead to `Hand` objects having different hand internal attributes?
+
+- [ ] Yes, always
+- [x] Yes, depending on what happened during the update call
+- [ ] No
+
+2. There are two ways to write the `Hand.update` method: you could write this method in a way that gets rid of the key letter in the attribute `hand` dictionary when the frequency of the letter falls to 0, or write it in a way that leaves the key letter in the attribute `hand` dictionary even when the frequency of the letter falls to 0.
+
+Does the `calculateLen` method, as defined, return different values for the two different implementations of the `update` method?
+
+- [ ] Yes, always
+- [ ] Yes, depending on what happened during the update call
+- [x] No
+### Exercise: genPrimes
+5/5 points (graded)
+
+Write a generator, `genPrimes`, that returns the sequence of prime numbers on successive calls to its `next()` method: 2, 3, 5, 7, 11, ...
+
+#### Hints
+<details>
+<summary>Ideas about the problem</summary>
+<br>
+
+Have the generator keep a list of the primes it's generated. A candidate number `x` is prime if `(x % p) != 0` for all earlier primes `p`.
+</details>
+
+```python:
+def genPrimes(cand=1):
+    primes=[2]
+    while True:
+        cand += 2
+        for p in primes:
+            if cand % p == 0:
+                break
+        else:
+            yield primes[-1]
+            primes.append(cand)
+```
+
+### Exercise 2
+10/10 points (graded)
+
+This problem will ask a series of questions about generators.
+
+1. Thinking about the `genPrimes` generator from the last problem, which of the following can be done only by using a generator, instead of defining a function (that uses any type of construct we've learned about, except generators)?
+
+- [ ] Return 1000000 prime numbers
+- [ ] Print every 10th prime number, until you've printed 20 of them
+- [ ] Keep printing the prime number until the user stops the program
+- [x] Everything that can be done with generator can be done with a function
+
+2. Every procedure that has a yield statement is a generator.
+
+- [x] True
+- [ ] False
+
+3. If a procedure has only one yield statement, but that statement will never be executed, then the procedure is not a generator.
+
+- [ ] True
+- [x] False
+
+4. If we were to use a generator to iterate over a million numbers, how many numbers do we need to store in memory at once?
+
+- [ ] 1
+- [x] 2
+- [ ] 1000
+- [ ] 1000000
+- [ ] Don't need to store anything in memory
+
+For the following tasks, would it be best to use a generator, a standard function, or either?
+
+1. Finding the nth Fibonacci number
+
+- [ ] Generator
+- [x] Standard function
+- [ ] Either a generator or standard function is fine
+
+2. Printing out an unbounded sequence of Fibonacci numbers
+
+- [x] Generator
+- [ ] Standard function
+- [ ] Either a generator or standard function is fine
+
+3. Printing out a bounded sequence of prime numbers, where the prime numbers are successively computed by division by smaller primes
+
+- [ ] Generator
+- [ ] Standard function
+- [x] Either a generator or standard function is fine
+
+4. Printing out an unbounded sequence of prime numbers, where the prime numbers are successively computed by division by smaller primes
+
+- [x] Generator
+- [ ] Standard function
+- [ ] Either a generator or standard function is fine
+
+5. Finding the score of a word from the 6.00x Word Game of Pset 4
+
+- [ ] Generator
+- [x] Standard function
+- [ ] Either a generator or standard function is fine
+
+6. Iterating over a sequence of numbers in a random order, where no number is repeated
+
+- [ ] Generator
+- [x] Standard function
+- [ ] Either a generator or standard function is fine
 
 # Unit 6: Algorithmic Complexity
 ## Lecture 11. Computational Complexity
