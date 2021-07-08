@@ -28,6 +28,13 @@
     + [Problem 5 - Playing a Hand](#problem-5---playing-a-hand)
     + [Problem 6 - Playing a Game](#problem-6---playing-a-game)
     + [Problem 7 - You and your Computer](#problem-7---you-and-your-computer)
+- [Unit 5: Object Oriented Programming](#unit-5-object-oriented-programming)
+  * [Problem Set 5](#problem-set-5)
+    + [Introduction](#introduction-3)
+    + [Problem 1 - Build the Shift Dictionary and Apply Shift](#problem-1---build-the-shift-dictionary-and-apply-shift)
+    + [Problem 2 - PlaintextMessage](#problem-2---plaintextmessage)
+    + [Problem 3 - CiphertextMessage](#problem-3---ciphertextmessage)
+    + [Problem 4 - Decrypt a Story](#problem-4---decrypt-a-story)
 
 # Unit 1: Python Basics
 ## Problem Set 1
@@ -301,7 +308,7 @@ Lowest Payment: 90325.03
 
 # Unit 3: Structured Types
 ## Problem Set 3
-[Solution for the whole Problem Set 3](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps3/ps3_hangman.py)
+[Solution for Problem Set 3, Problem 1-4 (ps3_hangman.py)](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps3/ps3_hangman.py)
 ### Introduction
 Note: Do not be intimidated by this problem! It's actually easier than it looks. We will 'scaffold' this problem, guiding you through the creation of helper functions before you implement the actual game.
 
@@ -687,6 +694,7 @@ All functions return something. If a function you write does not return anything
 
 # Unit 4: Good Programming Practices
 ## Problem Set 4
+[Solution for Problem Set 4, Problem 1-6 (ps4a.py)](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/ps4a.py), [Problem 7 (ps4b.py)](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/ps4b.py)
 ### Introduction
 In this problem set, you'll implement two versions of a wordgame!
 
@@ -766,6 +774,7 @@ Invalid command.
 Enter n to deal a new hand, r to replay the last hand, or e to end game: e
 ```
 </details>
+<br><br>
 
 ### Getting Started
 1. Download and save [ps4a.py](https://raw.githubusercontent.com/lcsm29/edx-mit-6.00.1x/9da82a3e931aa0c762f1fc501ced072ecc49017a/ps4/ps4a.py), [ps4b.py](https://raw.githubusercontent.com/lcsm29/edx-mit-6.00.1x/9da82a3e931aa0c762f1fc501ced072ecc49017a/ps4/ps4b.py), [test_ps4a.py](https://raw.githubusercontent.com/lcsm29/edx-mit-6.00.1x/9da82a3e931aa0c762f1fc501ced072ecc49017a/ps4/test_ps4a.py) and [words.txt](https://raw.githubusercontent.com/lcsm29/edx-mit-6.00.1x/9da82a3e931aa0c762f1fc501ced072ecc49017a/ps4/words.txt), which are the skeleton code you'll be filling in, the test functions, and a text file that contains a list of valid words. Make sure to save all the files  - `ps4a.py`, `ps4b.py`, `test_ps4a.py` and `words.txt` - in the **same folder**. We recommend creating a folder in your Documents folder called 6001x, and inside the 6001x folder, creating a separate folder for each problem set. If you don't follow this instruction, you may end up with issues because the files for this problem set depend on one another.
@@ -816,6 +825,7 @@ These are the provided test functions:
 * **test_getWordScore()**: Test the getWordScore() implementation.
 * **test_updateHand()**: Test the updateHand() implementation.
 * **test_isValidWord()**: Test the isValidWord() implementation.
+<br><br>
 
 ### Problem 1 - Word Scores
 [Solution for Problem Set 4, Problem 1](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_1.py)
@@ -842,6 +852,7 @@ The first step is to implement some code that allows us to calculate the score f
 * **Testing**: If this function is implemented properly, and you run `test_ps4a.py`, you should see that the `test_getWordScore()` tests pass. Also test your implementation of `getWordScore`, using some reasonable English words.
 
 Fill in the code for `getWordScore` in `ps4a.py` and be sure you've passed the appropriate tests in `test_ps4a.py` before pasting your function definition here.
+<br><br>
 
 ### Problem 2 - Dealing with Hands
 [Solution for Problem Set 4, Problem 2](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_2.py)
@@ -910,6 +921,7 @@ You may wish to review the ".copy" method of Python dictionaries (review this an
 </details>
 
 Your implementation of updateHand should be short (ours is 4 lines of code). It does not need to call any helper functions.
+<br><br>
 
 ### Problem 3 - Valid Words
 [Solution for Problem Set 4, Problem 3](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_3.py)
@@ -920,12 +932,14 @@ At this point, we have written code to generate a random hand and display that h
 **Testing**: Make sure the `test_isValidWord` tests pass. In addition, you will want to test your implementation by calling it multiple times on the same hand - what should the correct behavior be? Additionally, the empty string (`''`) is not a valid word - if you code this function correctly, you shouldn't need an additional check for this condition.
 
 Fill in the code for `isValidWord` in `ps4a.py` and be sure you've passed the appropriate tests in `test_ps4a.py` before pasting your function definition here.
+<br><br>
 
 ### Problem 4 - Hand Length
 [Solution for Problem Set 4, Problem 4](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_4.py)
 10.0/10.0 points (graded)
 
 We are now ready to begin writing the code that interacts with the player. We'll be implementing the `playHand` function. This function allows the user to play out a single hand. First, though, you'll need to implement the helper `calculateHandlen` function, which can be done in under five lines of code.
+<br><br>
 
 ### Problem 5 - Playing a Hand
 [Solution for Problem Set 4, Problem 5](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_5.py)
@@ -1012,7 +1026,7 @@ Run out of letters. Total score: 99 points.
 
 Be sure that, in addition to the listed tests, you test the same basic test conditions with varying values of `n`. `n` will never be smaller than the number of letters in the hand.
 </details>
-
+<br><br>
 
 ### Problem 6 - Playing a Game
 [Solution for Problem Set 4, Problem 6](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_6.py)
@@ -1126,6 +1140,7 @@ print('world', end="?")
 print('!')
 ```
 </details>
+<br><br>
 
 ### Problem 7 - You and your Computer
 [Solution for Problem Set 4, Problem 7](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps4/problem_7.py)
@@ -1277,3 +1292,153 @@ Be careful though - you only want to do this preprocessing one time - probably r
 
 Be sure to only paste your definition for playGame from `ps4b.py` in the following box. Do not include any other function definitions.
 </details>
+<br><br>
+
+# Unit 5: Object Oriented Programming
+## Problem Set 5
+[Solution for Problem Set 5, Problem 1-3 (ps5.py)](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps5/ps5.py), [Problem 4 (problem_4.py)](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps5/problem_4.py)
+### Introduction
+Encryption is the process of obscuring information to make it unreadable without special knowledge. For centuries, people have devised schemes to encrypt messages - some better than others - but the advent of the computer and the Internet revolutionized the field. These days, it's hard not to encounter some sort of encryption, whether you are buying something online or logging into a shared computer system. Encryption lets you share information with other trusted people, without fear of disclosure.
+
+A cipher is an algorithm for performing encryption (and the reverse, decryption). The original information is called plaintext. After it is encrypted, it is called ciphertext. The ciphertext message contains all the information of the plaintext message, but it is not in a format readable by a human or computer without the proper mechanism to decrypt it; it should resemble random gibberish to those for whom it is not intended.
+
+A cipher usually depends on a piece of auxiliary information, called a key. The key is incorporated into the encryption process; the same plaintext encrypted with two different keys should have two different ciphertexts. Without the key, it should be difficult to decrypt the resulting ciphertext into readable plaintext.
+
+This assignment will deal with a well-known (though not very secure) encryption method called the Caesar cipher. Some vocabulary to get you started on this problem:
+
+* *Encryption* - the process of obscuring or encoding messages to make them unreadable until they are decrypted
+* *Decryption* - making encrypted messages readable again by decoding them
+* *Cipher* - algorithm for performing encryption and decryption
+* *Plaintext* - the original message
+* *Ciphertext* - the encrypted message. Note: a ciphertext still contains all of the original message information, even if it looks like gibberish.
+
+#### **The Caesar Cipher**
+
+The idea of the Caesar Cipher is to pick an integer and shift every letter of your message by that integer. In other words, suppose the shift is k . Then, all instances of the i-th letter of the alphabet that appear in the plaintext should become the (i+k)-th letter of the alphabet in the ciphertext. You will need to be careful with the case in which i + k > 26 (the length of the alphabet). Here is what the whole alphabet looks like shifted three spots to the right:
+```
+Original:  a b c d e f g h i j k l m n o p q r s t u v w x y z
+ 3-shift:  d e f g h i j k l m n o p q r s t u v w x y z a b c
+```
+Using the above key, we can quickly translate the message "happy" to "kdssb" (note how the 3-shifted alphabet wraps around at the end, so x -> a, y -> b, and z -> c).
+
+**Note!!** We are using the English alphabet for this problem - that is, the following letters in the following order:
+```
+>>> import string
+>>> print string.ascii_lowercase
+abcdefghijklmnopqrstuvwxyz
+```
+We will treat uppercase and lowercase letters individually, so that uppercase letters are always mapped to an uppercase letter, and lowercase letters are always mapped to a lowercase letter. If an uppercase letter maps to "A", then the same lowercase letter should map to "a". Punctuation and spaces should be retained and not changed. For example, a plaintext message with a comma should have a corresponding ciphertext with a comma in the same position.
+
+|    plaintext    |   shift   |    ciphertext    |
+| :-------------: | :-------: | :--------------: |
+|    'abcdef'     |     2     |     'cdefgh'     |
+| 'Hello, World!' |     5     | 'Mjqqt, Btwqi!'  |
+|       ''        | any value |        ''        |
+
+We implemented for you two helper functions: `load_words` and `is_word`. You may use these in your solution and you do not need to understand them completely, but should read the associated comments. You should read and understand the helper code in the rest of the file and use it to guide your solutions.
+
+Getting Started
+
+To get started, download the following files in your working directory.
+
+* [ps5.py](https://raw.githubusercontent.com/lcsm29/edx-mit-6.00.1x/d10619867caf650ce88f0a4721eae658ea585078/ps5/ps5.py) - a file containing three classes that you will have to implement.
+* [words.txt](https://raw.githubusercontent.com/lcsm29/edx-mit-6.00.1x/d10619867caf650ce88f0a4721eae658ea585078/ps5/words.txt) - a file containing valid English words (should be in the same folder as your `ps5.py` file).
+* [story.txt](https://raw.githubusercontent.com/lcsm29/edx-mit-6.00.1x/d10619867caf650ce88f0a4721eae658ea585078/ps5/story.txt) - a file containing an encrypted message that you will have to decode (should be in the same folder as your `ps5.py` file).
+
+This will be your first experience coding with classes! We will have a `Message` class with two subclasses `PlaintextMessage` and `CiphertextMessage`.
+<br><br>
+
+### Problem 1 - Build the Shift Dictionary and Apply Shift
+[Solution for Problem Set 5, Problem 1](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps5/problem_1.py)
+20.0/20.0 points (graded)
+
+The `Message` class contains methods that could be used to apply a cipher to a string, either to encrypt or to decrypt a message (since for Caesar codes this is the same action).
+
+In the next two questions, you will fill in the methods of the `Message` class found in `ps5.py` according to the specifications in the docstrings. The methods in the `Message` class already filled in are:
+
+* `__init__(self, text)`
+* The getter method `get_message_text(self)`
+* The getter method `get_valid_words(self)`, notice that this one returns a copy of `self.valid_words` to prevent someone from mutating the original list.
+
+In this problem, you will fill in two methods:
+
+1. Fill in the `build_shift_dict(self, shift)` method of the `Message` class. Be sure that your dictionary includes both lower and upper case letters, but that the shifted character for a lower case letter and its uppercase version are lower and upper case instances of the same letter. What this means is that if the original letter is "a" and its shifted value is "c", the letter "A" should shift to the letter "C".
+
+If you are unfamiliar with the ordering or characters of the English alphabet, we will be following the letter ordering displayed by `string.ascii_lowercase` and `string.ascii_uppercase`:
+
+```shell:
+>>> import string
+>>> print(string.ascii_lowercase)
+abcdefghijklmnopqrstuvwxyz
+>>> print(string.ascii_uppercase)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+A reminder from the introduction page - characters such as the space character, commas, periods, exclamation points, etc will not be encrypted by this cipher - basically, all the characters within `string.punctuation`, plus the space (`' '`) and all numerical characters (0 - 9) found in `string.digits`.
+
+2. Fill in the `apply_shift(self, shift)` method of the `Message` class. You may find it easier to use `build_shift_dict(self, shift)`. Remember that spaces and punctuation should not be changed by the cipher.
+
+Paste your implementation of the `Message` class in the box below.
+<br><br>
+
+### Problem 2 - PlaintextMessage
+[Solution for Problem Set 5, Problem 2](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps5/problem_2.py)
+15.0/15.0 points (graded)
+
+For this problem, the graders will use our implementation of the `Message` class, so don't worry if you did not get the previous parts correct.
+
+`PlaintextMessage` is a subclass of `Message` and has methods to encode a string using a specified shift value. Our class will always create an encoded version of the message, and will have methods for changing the encoding.
+
+Implement the methods in the class `PlaintextMessage` according to the specifications in `ps5.py`. The methods you should fill in are:
+
+* `__init__(self, text, shift)`: Use the parent class constructor to make your code more concise.
+* The getter method `get_shift(self)`
+* The getter method `get_encrypting_dict(self)`: This should return a COPY of `self.encrypting_dict` to prevent someone from mutating the original dictionary.
+* The getter method `get_message_text_encrypted(self)`
+* `change_shift(self, shift)`: Think about what other methods you can use to make this easier. It shouldn’t take more than a couple lines of code.
+
+Paste your implementation of the entire `PlaintextMessage` class in the box below.
+<br><br>
+
+### Problem 3 - CiphertextMessage
+[Solution for Problem Set 5, Problem 3](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps5/problem_3.py)
+15.0/15.0 points (graded)
+
+For this problem, the graders will use our implementation of the `Message` and `PlaintextMessage` classes, so don't worry if you did not get the previous parts correct.
+
+Given an encrypted message, if you know the shift used to encode the message, decoding it is trivial. If `message` is the encrypted message, and `s` is the shift used to encrypt the message, then `apply_shift(message, 26-s)` gives you the original plaintext message. Do you see why?
+
+The problem, of course, is that you don’t know the shift. But our encryption method only has 26 distinct possible values for the shift! We know English is the main language of these emails, so if we can write a program that tries each shift and maximizes the number of English words in the decoded message, we can decrypt their cipher! A simple indication of whether or not the correct shift has been found is if most of the words obtained after a shift are valid words. Note that this only means that most of the words obtained are actual words. It is possible to have a message that can be decoded by two separate shifts into different sets of words. While there are various strategies for deciding between ambiguous decryptions, for this problem we are only looking for a simple solution.
+
+Fill in the methods in the class `CiphertextMessage` acording to the specifications in `ps5.py`. The methods you should fill in are:
+
+* `__init__(self, text)`: Use the parent class constructor to make your code more concise.
+* `decrypt_message(self)`: You may find the helper function `is_word(wordlist, word)` and the string method `split()` useful. Note that `is_word` will ignore punctuation and other special characters when considering whether a word is valid.
+
+#### Hints
+<details>
+<summary>Using string.split</summary>
+<br>
+
+You may find the function `string.split` useful for dividing the text up into words.
+```shell:
+>>> 'Hello world!'.split('o')
+['Hell', ' w', 'rld!']
+>>> '6.00.1x is pretty fun'.split(' ')
+['6.00.1x', 'is', 'pretty', 'fun']
+```
+</details>
+
+Paste your implementation of the entire CiphertextMessage class in the box below.
+<br><br>
+
+### Problem 4 - Decrypt a Story
+[Solution for Problem Set 5, Problem 4](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/ps5/problem_4.py)
+5.0/5.0 points (graded)
+
+For this problem, the graders will use our implementation of the `Message`, `PlaintextMessage`, and `CiphertextMessage` classes, so don't worry if you did not get the previous parts correct.
+
+Now that you have all the pieces to the puzzle, please use them to decode the file `story.txt`. The file `ps5.py` contains a helper function `get_story_string()` that returns the encrypted version of the story as a string. Create a `CiphertextMessage` object using the story string and use `decrypt_message` to return the appropriate shift value and unencrypted story string.
+
+Paste your function `decrypt_story()` in the box below.
+<br><br>
