@@ -27,3 +27,7 @@ def getWordScore(word, n):
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     returns: int >= 0
     """
+    base = sum(SCRABBLE_LETTER_VALUES.get(c) for c in word.lower())
+    multiplier = len(word)
+    bonus = 50 if multiplier == n else 0
+    return base * multiplier + bonus

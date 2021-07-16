@@ -19,3 +19,4 @@ def calculateHandlen(hand):
     hand: dictionary (string int)
     returns: integer
     """
+    return sum(hand.values())

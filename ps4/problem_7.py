@@ -38,3 +38,18 @@ def playGame(wordList):
 
     wordList: list (string)
     """
+    option, hand = '', {}
+    while option != 'e':
+        option = input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
+        print('Invalid command.\n' if option not in ('n', 'r', 'e') else '', end='')
+        if hand == {} and option == 'r':
+            print('You have not played a hand yet. Please play a new hand first!')
+            continue
+        if option in ('n', 'r'):
+            u_or_c = ''
+            while u_or_c not in ('u', 'c'):
+                u_or_c = input('Enter u to have yourself play, c to have the computer play: ')
+                print('Invalid command.\n' if u_or_c not in ('u', 'c') else '', end='')
+            if option == 'n':
+                hand = dealHand(HAND_SIZE)
+            playHand(hand, wordList, HAND_SIZE) if u_or_c == 'u' else compPlayHand(hand, wordList, HAND_SIZE)

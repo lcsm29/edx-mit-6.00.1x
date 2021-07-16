@@ -23,3 +23,7 @@ def isValidWord(word, hand, wordList):
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
+    for k, v in getFrequencyDict(word).items():
+        if k not in hand or v > hand[k]:
+            return False
+    return False if word.lower() not in wordList else True

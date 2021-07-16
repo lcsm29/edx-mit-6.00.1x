@@ -28,3 +28,7 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
+    updated = hand.copy()
+    for c in word:
+        updated[c] = updated.get(c, 0) - 1
+    return updated
