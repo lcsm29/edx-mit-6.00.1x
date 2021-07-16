@@ -82,8 +82,14 @@ class Hand(object):
         word: string
         returns: Boolean (if the word was or was not made)
         """
-        # Your code here
-        raise NotImplementedError()
+        for char, count in {c: word.count(c) for c in set(word)}.items():
+            if char not in self.hand.keys():
+                return False
+            if count > self.hand[char]:
+                return False
+        for c in word:
+            self.hand[c] = self.hand.get(c, 0) - 1
+        return True
 
     
 myHand = Hand(7)
