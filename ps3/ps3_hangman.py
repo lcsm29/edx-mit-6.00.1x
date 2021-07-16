@@ -67,7 +67,6 @@ def isWordGuessed(secretWord, lettersGuessed):
     return all(0 for c in secretWord if c not in lettersGuessed)
 
 
-
 def getGuessedWord(secretWord, lettersGuessed):
     ''' Returns True if all the letters of secretWord are in lettersGuessed;
         False otherwise
@@ -80,7 +79,6 @@ def getGuessedWord(secretWord, lettersGuessed):
     return ''.join(['_ ' if c not in lettersGuessed else c + ' ' for c in secretWord])
 
 
-
 def getAvailableLetters(lettersGuessed):
     '''
     lettersGuessed: list, what letters have been guessed so far
@@ -88,7 +86,7 @@ def getAvailableLetters(lettersGuessed):
       yet been guessed.
     '''
     return string.ascii_lowercase if not lettersGuessed else ''.join([c for c in string.ascii_lowercase if c not in lettersGuessed])
-    
+
 
 def hangman(secretWord):
     '''
