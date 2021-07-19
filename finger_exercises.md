@@ -3528,6 +3528,28 @@ For the following tasks, would it be best to use a generator, a standard functio
 
 # Unit 6: Algorithmic Complexity
 ## Lecture 11. Computational Complexity
+* [Lecture 11. Computational Complexity](#lecture-11-computational-complexity)
+  + [Exercise 1](#exercise-1-10)
+  + [Exercise 2](#exercise-2-9)
+  + [Exercise 3](#exercise-3-8)
+  + [Exercise 4](#exercise-4-6)
+  + [Exercise 5](#exercise-5-5)
+  + [Exercise 6](#exercise-6-4)
+  + [Exercise 7](#exercise-7-4)
+
+### Exercise 1
+
+### Exercise 2
+
+### Exercise 3
+
+### Exercise 4
+
+### Exercise 5
+
+### Exercise 6
+
+### Exercise 7
 
 
 ## Lecture 12. Searching and Sorting Algorithms
