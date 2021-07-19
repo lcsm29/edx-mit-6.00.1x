@@ -3563,10 +3563,153 @@ For the following tasks, would it be best to use a generator, a standard functio
   + [Exercise 7](#exercise-7-5)
 
 ### Exercise 1
+5/5 points (graded)
+
+Here is some code from lecture:
+```
+def linearSearch(L, x):
+    for e in L:
+        if e == x:
+            return True
+    return False
+Choose which of the following inputs to linearSearch would give the best case, average case, or worst case run time.
+```
+1. Best Case Run Time
+- [ ] `linearSearch([14, 15, 6, 27, 13, 16, 25, 11, 7], 15)`
+- [ ] `linearSearch([21, 1, 25, 22, 30, 13, 7, 24, 12], 24)`
+- [x] `linearSearch([20, 10, 1, 7, 4, 22, 25, 12, 31], 20)`
+- [ ] `linearSearch([9, 3, 12, 24, 7, 8, 23, 11, 19], 8)`
+- [ ] `linearSearch([4, 12, 20, 17, 9, 14, 7, 24, 6], 7)`
+- [ ] `linearSearch([13, 9, 22, 3, 10, 17, 11, 2, 12], 26)`
+
+2. Worst Case Run Time
+- [ ] `linearSearch([14, 15, 6, 27, 13, 16, 25, 11, 7], 15)`
+- [ ] `linearSearch([21, 1, 25, 22, 30, 13, 7, 24, 12], 24)`
+- [ ] `linearSearch([20, 10, 1, 7, 4, 22, 25, 12, 31], 20)`
+- [ ] `linearSearch([9, 3, 12, 24, 7, 8, 23, 11, 19], 8)`
+- [ ] `linearSearch([4, 12, 20, 17, 9, 14, 7, 24, 6], 7)`
+- [x] `linearSearch([13, 9, 22, 3, 10, 17, 11, 2, 12], 26)`
+
+3. Average Case Run Time
+- [ ] `linearSearch([14, 15, 6, 27, 13, 16, 25, 11, 7], 15)`
+- [ ] `linearSearch([21, 1, 25, 22, 30, 13, 7, 24, 12], 24)`
+- [ ] `linearSearch([20, 10, 1, 7, 4, 22, 25, 12, 31], 20)`
+- [x] `linearSearch([9, 3, 12, 24, 7, 8, 23, 11, 19], 8)`
+- [ ] `linearSearch([4, 12, 20, 17, 9, 14, 7, 24, 6], 7)`
+- [ ] `linearSearch([13, 9, 22, 3, 10, 17, 11, 2, 12], 26)`
+
+4. What is the number of steps it will take to run `linearSearch` in the best case? Express your answer in terms of `n`, the number of elements in the list `L`. Indicate addition and multiplication explicitly, with `+` and `*` symbols. Indicate exponentiation with the caret (`^`) symbol. `1`
+ 
+5. What is the number of steps it will take to run `linearSearch` in the worst case? Express your answer in terms of `n`, the number of elements in the list `L`. Indicate addition and multiplication explicitly, with `+` and `*` symbols. Indicate exponentiation with the caret (`^`) symbol. `2*n + 1`
 
 ### Exercise 2
+6/6 points (graded)
+
+For the following programs, fill in the best-case and the worst-case number of steps it will take to run each program.
+
+For these questions, you'll be asked to write a mathematical expression. Use `+`, `-`, `/` signs to indicate addition, subtraction, and division. Explicitly indicate multiplication with a `*` (ie say `6*n` rather than `6n`). Indicate exponentiation with a caret (`^`) (ie `n^4` for `n**4`). Indicate base-2 logarithms with the word log2 followed by parenthesis (ie `log2(n)`).
+
+1. Program 1:
+```
+def program1(x):
+    total = 0
+    for i in range(1000):
+        total += i
+
+    while x > 0:
+        x -= 1
+        total += x
+
+    return total
+```
+- What is the number of steps it will take to run Program 1 in the best case? Express your answer in terms of `n`, the size of the input `x`. `3003`
+- What is the number of steps it will take to run Program 1 in the worst case? Express your answer in terms of `n`, the size of the input `x`. `5*n + 3003`
+
+2. Program 2:
+```
+def program2(x):
+    total = 0
+    for i in range(1000):
+        total = i
+
+    while x > 0:
+        x = x//2
+        total += x
+
+    return total
+```
+- What is the number of steps it will take to run Program 2 in the best case? Express your answer in terms of `n`, the size of the input `x`. `2003`
+- What is the number of steps it will take to run Program 2 in the worst case? Express your answer in terms of `n`, the size of the input `x`. `5*log2(n) + 2008`
+
+3. Program 3:
+```
+def program3(L):
+    totalSum = 0
+    highestFound = None
+    for x in L:
+        totalSum += x
+
+    for x in L:
+        if highestFound == None:
+            highestFound = x
+        elif x > highestFound:
+            highestFound = x
+
+    return (totalSum, highestFound)
+```
+- What is the number of steps it will take to run Program 2 in the best case? Express your answer in terms of `n`, the size of the input `x`. `3`
+- What is the number of steps it will take to run Program 2 in the worst case? Express your answer in terms of `n`, the size of the input `x`. `7*n + 2`
 
 ### Exercise 3
+9/9 points (graded)
+
+For the following programs, fill in the best-case and the worst-case number of steps it will take to run each program.
+
+For these questions, you'll be asked to write a mathematical expression. Use `+`, `-`, `/` signs to indicate addition, subtraction, and division. Explicitly indicate multiplication with a `*` (ie say `6*n` rather than `6n`). Indicate exponentiation with a caret (`^`) (ie `n^4` for `n**4`). Indicate base-2 logarithms with the word log2 followed by parenthesis (ie `log2(n)`).
+
+1. Program 1:
+```
+def program1(L):
+    multiples = []
+    for x in L:
+        for y in L:
+            multiples.append(x*y)
+    return multiples
+```
+- What is the number of steps it will take to run Program 1 in the best case? Express your answer in terms of n, the number of elements in the list L. You can assume list appending takes 1 step. `2`
+- What is the number of steps it will take to run Program 1 in the worst case? Express your answer in terms of n, the number of elements in the list L. You can assume list appending takes 1 step. `3*n^2 + n + 2`
+
+2. Program 2:
+```
+def program2(L):
+    squares = []
+    for x in L:
+        for y in L:
+            if x == y:
+                squares.append(x*y)
+    return squares
+```
+- What is the number of steps it will take to run Program 2 in the best case? Express your answer in terms of n, the number of elements in the list L. `2`
+- What is the number of steps it will take to run Program 2 in the worst case? Express your answer in terms of n, the number of elements in the list L. `4*n^2 + n + 2`
+
+3. Program 3:
+```
+def program3(L1, L2):
+    intersection = []
+    for elt in L1:
+        if elt in L2:
+            intersection.append(elt)
+    return intersection
+```
+- What is the number of steps it will take to run Program 3 in the best case? Express your answer in terms of n, the number of elements in the list L1 (assume len(L1) == len(L2)). `2`
+- What is the number of steps it will take to run Program 3 in the worst case? Express your answer in terms of n, the number of elements in the list L1 (assume len(L1) == len(L2)). `n^2 + 2*n + 2`
+ 
+4. In the last video, Professor Grimson introduced the idea of "asymptotic complexity", which means we describe running time in terms of number of basic steps. We've described the best- and worst-case running times in terms number of basic steps for the three programs above. Now, we'd like you to give the complexity order (ie, "Big O" running time) of each of the above programs. Recall that "Big O" notation gives an upper bound on asymptotic growth of a function. So, should you use the best-case or the worst-case running times for each program? Review the video again if you're unsure of what to put for the following boxes.
+    
+    Note: Your answer should be expressed with a capital letter O, then a mathematical term similar to one described in the introduction to this problem - for example, O(n^5).
+    1. What is the complexity order of Program 1? `O(n^2)`
+    2. What is the complexity order of Program 2? `O(n^2)`
+    3. What is the complexity order of Program 3? `O(n^2)`
 
 ### Exercise 4
 
