@@ -3553,7 +3553,28 @@ For the following tasks, would it be best to use a generator, a standard functio
 
 
 ## Lecture 12. Searching and Sorting Algorithms
+* [Lecture 12. Searching and Sorting Algorithms](#lecture-12-searching-and-sorting-algorithms)
+  + [Exercise 1](#exercise-1-11)
+  + [Exercise 2](#exercise-2-10)
+  + [Exercise 3](#exercise-3-9)
+  + [Exercise 4](#exercise-4-7)
+  + [Exercise 5](#exercise-5-6)
+  + [Exercise 6](#exercise-6-5)
+  + [Exercise 7](#exercise-7-5)
 
+### Exercise 1
+
+### Exercise 2
+
+### Exercise 3
+
+### Exercise 4
+
+### Exercise 5
+
+### Exercise 6
+
+### Exercise 7
 
 # Unit 7: Plotting and Final Thoughts
 ## Lecture 13. Visualization of Data
