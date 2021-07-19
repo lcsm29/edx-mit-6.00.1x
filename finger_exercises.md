@@ -3738,6 +3738,51 @@ For each of the following expressions, select the order of growth class that bes
 * `log(n) + 1000`: `O(log(n))`
 
 ### Exercise 6
+4/4 points (graded)
+
+Consider the following Python procedures. For each one, specify its order of growth.
+1. `O(1)`
+```
+# Assume n has been previously bound to some value
+i = 0
+while i < 5:
+   n *= 2
+   i += 1
+
+print(n)
+```
+
+2. `O(b)`
+```
+def iterPower(a, b):
+   result = 1
+   while b > 0:
+      result *= a
+      b -= 1
+   return result
+``` 
+
+3. `O(b)`
+```
+def recurPower(a, b):
+   print(a, b)
+   if b == 0:
+      return 1
+   else:
+      return a * recurPower(a, b-1)
+```
+
+4. `O(log(b))`
+```
+def recurPowerNew(a, b):
+   print(a, b)
+   if b == 0:
+      return 1
+   elif b%2 == 0:
+      return recurPowerNew(a*a, b/2)
+   else:
+      return a * recurPowerNew(a, b-1)
+```
 
 ### Exercise 7
 
