@@ -3721,6 +3721,21 @@ Determine the complexity of the following tasks.
     - [ ] O(n log n)
 
 ### Exercise 5
+10/10 points (graded)
+
+For each of the following expressions, select the order of growth class that best describes it from the following list: 
+* `O(1)`, `O(log(n))`, `O(n)`, `O(n * log(n))`, `O(n**c)`, or `O(c**n)`
+
+* `5n`: `O(n)`
+* `3 * n**2 + 2*n - 100`: `O(n**c)`
+* `10 * log(n) + 5*n`: `O(n)`
+* `10 * log(n) + 5 * n**2`: `O(n**c)`
+* `3 * n**3 - 2000 * n**2`: `O(n**c)`
+* `2 * n**2`: `O(n**c)`
+* `50*n + n*log(n)`: `O(n * log(n))`
+* `1000 + 2000000`: `O(1)`
+* `2**n + n**2`: `O(c**n)`
+* `log(n) + 1000`: `O(log(n))`
 
 ### Exercise 6
 
