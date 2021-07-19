@@ -35,6 +35,14 @@
     + [Problem 2 - PlaintextMessage](#problem-2---plaintextmessage)
     + [Problem 3 - CiphertextMessage](#problem-3---ciphertextmessage)
     + [Problem 4 - Decrypt a Story](#problem-4---decrypt-a-story)
+- [Unit 6: Algorithmic Complexity](#unit-6-algorithmic-complexity)
+  * [Problem Set 6](#problem-set-6)
+    + [Problem 1](#problem-1-1)
+    + [Problem 2](#problem-2-1)
+    + [Problem 3](#problem-3-1)
+    + [Problem 4](#problem-4)
+    + [Problem 5](#problem-5)
+    + [Problem 6](#problem-6)
 
 # Unit 1: Python Basics
 ## Problem Set 1
@@ -1442,3 +1450,198 @@ Now that you have all the pieces to the puzzle, please use them to decode the fi
 
 Paste your function `decrypt_story()` in the box below.
 <br><br>
+
+# Unit 6: Algorithmic Complexity
+## Problem Set 6
+### Problem 1
+#### Problem 1-1
+The ONLY thing we are interested in when designing programs is that it returns the correct answer.
+- [ ] True
+- [x] False
+
+#### Problem 1-2
+When determining asymptotic complexity, we discard all terms except for the one with the largest growth rate.
+- [x] True
+- [ ] False
+
+#### Problem 1-3
+Bisection search is an example of linear time complexity
+- [ ] True
+- [x] False
+
+#### Problem 1-4
+For large values of `n`, an algorithm that takes `20000 * n**2` steps has better time complexity (takes less time) than one that takes `0.001 * n**5` steps
+- [x] True
+- [ ] False
+
+### Problem 2
+#### Problem 2-1
+Indirection, as talked about in lecture, means you have to traverse the list more than once.
+- [ ] True
+- [x] False
+
+#### Problem 2-2
+The complexity of binary search on a sorted list of `n` items is `O(log n)`.
+- [x] True
+- [ ] False
+
+#### Problem 2-3
+The worst case time complexity for selection sort is `O(n**2)`.
+- [x] True
+- [ ] False
+
+#### Problem 2-4
+The base case for the recursive version of merge sort from lecture is checking ONLY for the list being empty.
+- [ ] True
+- [x] False
+
+### Problem 3
+For each of the following expressions, select the order of growth class that best describes it from the following list: 
+* `O(1)`, `O(log(n))`, `O(n)`, `O(n * log(n))`, `O(n**c)`, or `O(c**n)`. Assume `c` is some constant.
+
+1. `0.000_000_1n + 1_000_000`: `O(n)`
+2. `0.000_1 * n**2 + 20_000 * n - 90_000`: `O(n**c)`
+3. `20n + 900 * log(n) + 100_000`: `O(n)`
+4. `(log(n))**2 + 5 * n**7`: `O(n**c)`
+5. `n**200 - 2 * n**30`: `O(n**c)`
+6. `30 * n**2 + n * log(n)`: `O(n**c)`
+7. `n * log(n) - 3000 * n`: `O(n * log(n))`
+8. `3`: `O(1)`
+9. `5**n + n**5 + n + 5`: `O(c**n)`
+10. `n * log(n) + n**2 + n + log(n) + 1 + 2**n`: `O(c**n)`
+
+### Problem 4
+#### Problem 4-1
+Consider the following Python procedure. Specify its order of growth.: `O(1)`
+```
+def modten(n):
+    return n%10
+```
+
+#### Problem 4-2
+Consider the following Python procedure. Specify its order of growth.: `O(len(n))`
+```
+def multlist(m, n):
+    '''
+    m is the multiplication factor
+    n is a list.
+    '''
+    result = []
+    for i in range(len(n)):
+        result.append(m*n[i])
+    return result   
+```
+
+#### Problem 4-3
+Consider the following Python procedure. Specify its order of growth.: `O(log(n))`
+```
+def foo(n):
+    if n <= 1:
+        return 1
+    return foo(n/2) + 1
+```
+
+#### Problem 4-4
+Consider the following Python procedure. Specify its order of growth.: `O(n)`
+```
+def recur(n):
+    if n <= 0:
+        return 1
+    else:
+        return n*recur(n-1)
+```
+
+#### Problem 4-5
+Consider the following Python procedure. Specify its order of growth.: `O(n**2)`
+```
+def baz(n):
+    for i in range(n):
+        for j in range(n):
+            print( i,j )
+```
+
+### Problem 5
+Here is code for linear search that uses the fact that a set of elements is sorted in increasing order:
+```
+def search(L, e):
+    for i in range(len(L)):
+        if L[i] == e:
+            return True
+        if L[i] > e:
+            return False
+    return False
+```
+    
+Consider the following code, which is an alternative version of search.
+```
+def newsearch(L, e):
+    size = len(L)
+    for i in range(size):
+        if L[size-i-1] == e:
+            return True
+        if L[i] < e:
+            return False
+    return False
+```
+    
+Which of the following statements is correct? You may assume that each function is tested with a list `L` whose elements are sorted in increasing order; for simplicity, assume `L` is a list of positive integers.
+- [ ] `search` and `newsearch` return the same answers for all `L` and `e`.
+- [ ] `search` and `newsearch` return the same answers provided `L` is non-empty.
+- [ ] `search` and `newsearch` return the same answers provided `L` is non-empty and `e` is in `L`.
+- [ ] `search` and `newsearch` never return the same answers.
+- [x] `search` and `newsearch` return the same answers for lists `L` of length 0, 1, or 2.
+- [ ] `search` and `newsearch` return the same answers for lists `L` of length 0 or 1.
+
+### Problem 6
+#### Problem 6-1
+Answer the questions below based on the following sorting function. If it helps, you may paste the code in your programming environment. Study the output to make sure you understand the way it sorts.
+```
+def swapSort(L): 
+    """ L is a list on integers """
+    print("Original L: ", L)
+    for i in range(len(L)):
+        for j in range(i+1, len(L)):
+            if L[j] < L[i]:
+                # the next line is a short 
+                # form for swap L[i] and L[j]
+                L[j], L[i] = L[i], L[j] 
+                print(L)
+    print("Final L: ", L)
+```   
+Does this function sort the list in increasing or decreasing order? (items at lower indices being smaller means it sorts in increasing order, and vice versa)
+- [x] Increasing
+- [ ] Decreasing
+
+#### Problem 6-2
+What is the worst case time complexity of swapSort? Consider different kinds of lists when the length of the list is large.
+- [x] `O(n**2)`
+- [ ] `O(n)`
+- [ ] `O(log(n))`
+- [ ] `O(1)`
+
+#### Problem 6-3
+If we make a small change to the line for j in range(i+1, len(L)): such that the code becomes:
+```
+def modSwapSort(L): 
+    """ L is a list on integers """
+    print("Original L: ", L)
+    for i in range(len(L)):
+        for j in range(len(L)):
+            if L[j] < L[i]:
+                # the next line is a short 
+                # form for swap L[i] and L[j]
+                L[j], L[i] = L[i], L[j] 
+                print(L)
+    print("Final L: ", L)
+```
+What happens to the behavior of swapSort with this new code?
+- [ ] No change
+- [x] `modSwapSort` now orders the list in descending order for all lists.
+- [ ] `modSwapSort` now orders the list in descending order for SOME lists but not all
+- [ ] `modSwapSort` enters an infinite loop.
+
+#### Problem 6-4
+What happens to the time complexity of this modSwapSort?
+- [x] Best and worst cases stay the same.
+- [ ] Worst case stays the same but best case changes.
+- [ ] Best and worst cases change.
