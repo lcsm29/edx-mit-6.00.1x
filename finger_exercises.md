@@ -4135,6 +4135,58 @@ def newSort(L):
 - [x] No. `mySort` and `newSort` examine different numbers of entries, but one cannot always say which function will examine the most entries.
 
 ### Exercise 7
+7/7 points (graded)
+
+This problem will walk through some applications of complexity analysis. Suppose you're asked to implement an application. One of the things it has to do is to report whether or not an item, `x`, is in a list `L`. `L`'s contents do not change over time. Below are two possible ways to implement this functionality. Assume that `mergeSort` is implemented as per the lecture.
+
+`L` is a list with `n` items.
+
+* **Application A**: Every time it's asked to, it performs a linear search through list `L` to find whether it contains `x`.
+* **Application B**: Sort list `L` once before doing anything else (using `mergeSort`). Whenever it's asked to find `x` in `L`, it performs a binary search on `L`.
+
+1. If the application is asked to find `x` in `L` __exactly__ one time, what is the worst case time complexity for Application A?
+- [ ] `O(1)`
+- [ ] `O(log(n))`
+- [x] `O(n)`
+- [ ] `O(n * log(n))`
+- [ ] `O(n**2)`
+
+2. If the application is asked to find `x` in `L` __exactly__ one time, what is the worst case time complexity for Application B?
+- [ ] `O(1)`
+- [ ] `O(log(n))`
+- [ ] `O(n)`
+- [x] `O(n * log(n))`
+- [ ] `O(n**2)`
+
+3. If the application is asked to find `x` in `L` *k* times, what is the worst case time complexity for Application A?
+- [ ] `O(1)`
+- [ ] `O(k + log(n))`
+- [ ] `O(k + n)`
+- [x] `O(k * n)`
+- [ ] `O(n + k*log(n))`
+
+4. If the application is asked to find `x` in `L` *k* times, what is the worst case time complexity for Application B?
+- [ ] `O(k * n)`
+- [ ] `O(n * log(n))`
+- [ ] `O(n + k*log(n))`
+- [x] `O(n*log(n) + k*log(n))`
+- [ ] `O(k*n*log(n) + log(n))`
+
+5. What value(s) of *k* would make Application A be faster (i.e., asymptotically grow slower than) Application B?
+- [x] `k = 1`
+- [ ] `k = n`
+- [ ] `k = log(n)`
+- [ ] `k = n**2`
+- [ ] `k = 2**n`
+6. What value(s) of *k* would make Application A grow at the same rate as Application B?
+- [ ] `k = 1`
+- [ ] `k = n`
+- [x] `k = log(n)`
+- [ ] `k = n**2`
+- [ ] `k = 2**n`
+7. Which application should you choose if you know that there are going to be  requests to find x in L?
+- [ ] Application A
+- [x] Application B
 
 # Unit 7: Plotting and Final Thoughts
 ## Lecture 13. Visualization of Data
