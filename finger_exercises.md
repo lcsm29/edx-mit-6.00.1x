@@ -3536,6 +3536,7 @@ For the following tasks, would it be best to use a generator, a standard functio
   + [Exercise 5](#exercise-5-5)
   + [Exercise 6](#exercise-6-4)
   + [Exercise 7](#exercise-7-4)
+  + [Exercise 8](#exercise-8-2)
 
 ### Exercise 1
 5/5 points (graded)
@@ -3856,6 +3857,23 @@ def unionNew(L1, L2):
    return temp + L2
 ```
 For this problem, assume `n = len(L1) = len(L2)`
+
+### Exercise 8
+1/1 point (graded)
+
+Rank the following terms by order of growth, from smallest to largest. Drag each term to its proper place on the diagram; be sure to use each term exactly once.
+```
+500000
+log(log(n))
+log(n)
+n
+n * log(n)
+n**2
+n**3
+3**n
+n**n
+2**(n**2)
+```
 
 ## Lecture 12. Searching and Sorting Algorithms
 * [Lecture 12. Searching and Sorting Algorithms](#lecture-12-searching-and-sorting-algorithms)
