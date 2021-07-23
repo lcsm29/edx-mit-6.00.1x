@@ -1,3 +1,17 @@
+#   Problem Set 5 - The Caesar Cipher
+#
+#   Released    2021-07-07 14:00 UTC+00
+#   Started     2021-07-08 04:16 UTC+00
+#   Finished    2021-07-08 04:28 UTC+00
+#   https://github.com/lcsm29/edx-mit-6.00.1x
+#
+#   oooo                w r i t t e n   b y      .oooo.    .ooooo.
+#   `888                                       .dP""Y88b  888' `Y88.
+#    888   .ooooo.   .oooo.o ooo. .oo.  .oo.         ]8P' 888    888
+#    888  d88' `"Y8 d88(  "8 `888P"Y88bP"Y88b      .d8P'   `Vbood888
+#    888  888       `"Y88b.   888   888   888    .dP'           888'
+#    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
+#   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
 import string
 
 ### DO NOT MODIFY THIS FUNCTION ###
@@ -48,12 +62,12 @@ def get_story_string():
     """
     Returns: a joke in encrypted text.
     """
-    f = open("story.txt", "r")
+    f = open("ps5_story.txt", "r")
     story = str(f.read())
     f.close()
     return story
 
-WORDLIST_FILENAME = 'words.txt'
+WORDLIST_FILENAME = 'ps5_words.txt'
 
 class Message(object):
     ### DO NOT MODIFY THIS METHOD ###
@@ -102,7 +116,9 @@ class Message(object):
         Returns: a dictionary mapping a letter (string) to 
                  another letter (string). 
         '''
-        pass #delete this line and replace with your code here
+        a = string.ascii_letters
+        return {c: a[(i + shift) % 26] if i < 26
+              else a[(i + shift) % 26].upper() for i, c in enumerate(a)}
 
     def apply_shift(self, shift):
         '''
@@ -116,7 +132,8 @@ class Message(object):
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
-        pass #delete this line and replace with your code here
+        d = self.build_shift_dict(shift)
+        return ''.join(d[c] if c in d.keys() else c for c in self.message_text)
 
 class PlaintextMessage(Message):
     def __init__(self, text, shift):
@@ -136,7 +153,11 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less 
         code is repeated
         '''
-        pass #delete this line and replace with your code here
+        Message.__init__(self, text)
+        self.shift = shift
+        self.encrypting_dict = self.build_shift_dict(shift)
+        self.message_text_encrypted = self.apply_shift(shift)
+
 
     def get_shift(self):
         '''
@@ -144,7 +165,7 @@ class PlaintextMessage(Message):
         
         Returns: self.shift
         '''
-        pass #delete this line and replace with your code here
+        return self.shift
 
     def get_encrypting_dict(self):
         '''
@@ -152,7 +173,7 @@ class PlaintextMessage(Message):
         
         Returns: a COPY of self.encrypting_dict
         '''
-        pass #delete this line and replace with your code here
+        return self.encrypting_dict.copy()
 
     def get_message_text_encrypted(self):
         '''
@@ -160,7 +181,7 @@ class PlaintextMessage(Message):
         
         Returns: self.message_text_encrypted
         '''
-        pass #delete this line and replace with your code here
+        return self.message_text_encrypted
 
     def change_shift(self, shift):
         '''
@@ -173,7 +194,7 @@ class PlaintextMessage(Message):
 
         Returns: nothing
         '''
-        pass #delete this line and replace with your code here
+        self.__init__(self.message_text, shift)
 
 
 class CiphertextMessage(Message):
@@ -187,7 +208,7 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        pass #delete this line and replace with your code here
+        Message.__init__(self, text)
 
     def decrypt_message(self):
         '''
@@ -205,7 +226,12 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        pass #delete this line and replace with your code here
+        candidates ={(i, self.apply_shift(i)): 0 for i in range(26)}
+        for candidate in candidates.keys():
+            for word in candidate[1].split():
+                if is_word(self.valid_words, word):
+                    candidates[candidate] += 1
+        return max(candidates, key=candidates.get)
 
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
