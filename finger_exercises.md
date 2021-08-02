@@ -17,9 +17,9 @@
 - [Unit 6: Algorithmic Complexity](#unit-6-algorithmic-complexity)
   * [Lecture 11. Computational Complexity](#lecture-11-computational-complexity)
   * [Lecture 12. Searching and Sorting Algorithms](#lecture-12-searching-and-sorting-algorithms)
-- [Unit 7: Plotting and Final Thoughts](#unit-7-plotting-and-final-thoughts)
-  * [Lecture 13. Visualization of Data](#lecture-13-visualization-of-data)
-  * [Lecture 14. Summary](#lecture-14-summary)
+- [Unit 7: Plotting](#unit-7-plotting)
+  * [Lecture 13. Plotting](#lecture-13-plotting)
+  * [Summary and Wrap-Up](#summary-and-wrap-up)
 
 
 # Unit 1: Python Basics, Incomplete section
@@ -4188,8 +4188,7 @@ This problem will walk through some applications of complexity analysis. Suppose
 - [ ] Application A
 - [x] Application B
 
-# Unit 7: Plotting and Final Thoughts
-## Lecture 13. Visualization of Data
+# Unit 7: Plotting
+## Lecture 13. Plotting
 
-
-## Lecture 14. Summary
+## Summary and Wrap-Up
