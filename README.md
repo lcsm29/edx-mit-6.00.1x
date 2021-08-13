@@ -3,7 +3,7 @@ A few weeks ago, I have already [finished](https://github.com/lcsm29/MIT6.0001) 
 
 Then, I found [this newer course](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) on edX. The graded assignments and exams did a good job of hooking me up, because that's exactly what I needed. However, after I enrolled in this course, I found out that those assignments are still graded automatically, which is better than nothing but falls short of my expectations. Anyway, they do have slightly different finger exercises and problem sets, so I redid the course once again.
 
-![Certificate](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/cert.png?raw=true)
+[![Certificate](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/cert.png?raw=true)](https://courses.edx.org/certificates/a5e8444108fe4527871ae5b22a9ff203)
 ![Progress](https://github.com/lcsm29/edx-mit-6.00.1x/blob/main/progress.png?raw=true)
 
 ## Contents
